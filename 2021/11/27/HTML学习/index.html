@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML for beginner, Hexo">
+    <meta name="keywords" content="HTML for beginner, Front end,back end">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -385,9 +385,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/HTML/">
+                                <span class="chip bg-color">HTML</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -395,16 +399,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/myBlog/" class="post-category">
-                                myBlog
+                            <a href="/categories/myBlogs/" class="post-category">
+                                myBlogs
                             </a>
                         
-                            <a href="/categories/myBlog/Front-End/" class="post-category">
+                            <a href="/categories/myBlogs/Front-End/" class="post-category">
                                 Front End
-                            </a>
-                        
-                            <a href="/categories/myBlog/Front-End/HTML/" class="post-category">
-                                HTML
                             </a>
                         
                     </div>
@@ -452,85 +452,85 @@
 <h3 id="二、HTML是谁制定的"><a href="#二、HTML是谁制定的" class="headerlink" title="二、HTML是谁制定的"></a>二、HTML是谁制定的</h3><p>W3C ：世界万维网联盟</p>
 <p>W3C 制定HTML的规范，每个浏览器厂家遵守这一规范。</p>
 <p>HTML规范最新的是HTML 5.0，简称H5。</p>
-<h2 id="第二章-HTML基础"><a href="#第二章-HTML基础" class="headerlink" title="第二章 HTML基础"></a>第二章 HTML基础</h2><h3 id="第一个HTML页面"><a href="#第一个HTML页面" class="headerlink" title="第一个HTML页面"></a>第一个HTML页面</h3><pre><code class="html">&lt;!--
+<h2 id="第二章-HTML基础"><a href="#第二章-HTML基础" class="headerlink" title="第二章 HTML基础"></a>第二章 HTML基础</h2><h3 id="第一个HTML页面"><a href="#第一个HTML页面" class="headerlink" title="第一个HTML页面"></a>第一个HTML页面</h3><pre class=" language-html"><code class="language-html"><span class="token comment" spellcheck="true">&lt;!--
 在HTML文件第一行加上这一行代码
 就表示用的是HTML 5.0版本
 去掉就表示HTML 4.0版本
---&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;!--
-        指定浏览器的解码方式，为&quot;utf-8&quot;
+--></span>
+<span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!--
+        指定浏览器的解码方式，为"utf-8"
         并不是设置当前页面的字符编码方式
-        --&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;title&gt;第一个HTML页面&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
+        --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>第一个HTML页面<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
         TOLIE你的未来有无限可能！
-    &lt;/body&gt;
-&lt;/html&gt;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
 <h3 id="HTML基本标签"><a href="#HTML基本标签" class="headerlink" title="HTML基本标签 *"></a>HTML基本标签 *</h3><p>1、段落</p>
-<pre><code class="html">&lt;p&gt;   &lt;/p&gt;
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>2、标题字</p>
 <p>从h1-h6代表标题字，序号越小字体越大。</p>
-<pre><code class="html">&lt;h1&gt; H1&lt;/h1&gt;
-&lt;h2&gt; H2&lt;/h2&gt;
-&lt;h3&gt; H3&lt;/h3&gt;
-&lt;h4&gt; H4&lt;/h4&gt;
-&lt;h5&gt; H5&lt;/h5&gt;
-&lt;h6&gt; H6&lt;/h6&gt;
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span> H1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span> H2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span> H3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span> H4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span><span class="token punctuation">></span></span> H5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">></span></span> H6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>3、换行</p>
 <p>是一个独目标记</p>
-<pre><code class="html">&lt;br&gt;
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>4、水平线</p>
 <p>是一个独目标记</p>
-<pre><code class="html">&lt;hr&gt;
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>5、预留格式</p>
 <p>两个标签之间是什么格式，就在网页上展示什么格式，不做改变。</p>
-<pre><code class="html">    &lt;pre&gt;
+<pre class=" language-html"><code class="language-html">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span><span class="token punctuation">></span></span>
 金樽清酒斗十千，玉盘珍羞直万钱。
 停杯投箸不能食，拔剑四顾心茫然。
 欲渡黄河冰塞川，将登太行雪满山。
 闲来垂钓碧溪上，忽复乘舟梦日边。
 行路难，行路难，多歧路，今安在？
 长风破浪会有时，直挂云帆济沧海。
-    &lt;/pre&gt;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>6、粗体字、斜体字、插入字、删除字</p>
-<pre><code class="html">    &lt;!--粗体字---&gt;
-    &lt;b&gt;TOLIE你的未来有无限可能！&lt;/b&gt;
-    &lt;!--插入字---&gt;
-    &lt;ins&gt;插入字&lt;/ins&gt;
-    &lt;!--斜体字---&gt;
-    &lt;i&gt;斜体字&lt;/i&gt;
-    &lt;!--删除字---&gt;
-    &lt;del&gt;删除字&lt;/del&gt;
+<pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!--粗体字---></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>TOLIE你的未来有无限可能！<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!--插入字---></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ins</span><span class="token punctuation">></span></span>插入字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ins</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!--斜体字---></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">></span></span>斜体字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!--删除字---></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>del</span><span class="token punctuation">></span></span>删除字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>del</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>7、右上角加字、右下角加字</p>
-<pre><code class="html">    &lt;!--显示为10的2次方---&gt;
-    10&lt;sup&gt;2&lt;/sup&gt;
+<pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!--显示为10的2次方---></span>
+    10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sup</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sup</span><span class="token punctuation">></span></span>
 
-    &lt;!--显示为X的下标n---&gt;
-    X&lt;sub&gt;n&lt;/sub&gt;
+    <span class="token comment" spellcheck="true">&lt;!--显示为X的下标n---></span>
+    X<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">></span></span>n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sub</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>8、font标签</p>
 <p>一个字体标签</p>
-<pre><code class="html">     &lt;!--size和color是字体的属性，表示字号和颜色---&gt;   
-    &lt;font size = &quot;10&quot; color = &quot;blue&quot;&gt;NEUQ&lt;/font&gt;
+<pre class=" language-html"><code class="language-html">     <span class="token comment" spellcheck="true">&lt;!--size和color是字体的属性，表示字号和颜色---></span>   
+    &lt;font size = "10" color = "blue">NEUQ<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>font</span><span class="token punctuation">></span></span>
 </code></pre>
-<h3 id="HTML实体符号"><a href="#HTML实体符号" class="headerlink" title="HTML实体符号"></a>HTML实体符号</h3><pre><code class="html">    &lt;!-- “&amp;lt;” 是小于号---&gt;
-    a&amp;lt;b
-    &lt;!-- “&amp;gt;” 是大于号---&gt;
-    b&amp;gt;c
-    &lt;!-- “&amp;nbsp;” 是空格---&gt;
-    abc&amp;nbsp;&amp;nbsp;&amp;nbsp;efg
+<h3 id="HTML实体符号"><a href="#HTML实体符号" class="headerlink" title="HTML实体符号"></a>HTML实体符号</h3><pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!-- “&amp;lt;” 是小于号---></span>
+    a<span class="token entity" title="&lt;">&amp;lt;</span>b
+    <span class="token comment" spellcheck="true">&lt;!-- “&amp;gt;” 是大于号---></span>
+    b<span class="token entity" title="&gt;">&amp;gt;</span>c
+    <span class="token comment" spellcheck="true">&lt;!-- “&amp;nbsp;” 是空格---></span>
+    abc<span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span>efg
 </code></pre>
 <h3 id="HTML的表格"><a href="#HTML的表格" class="headerlink" title="HTML的表格 *"></a>HTML的表格 *</h3><h4 id="基本表格"><a href="#基本表格" class="headerlink" title="基本表格"></a>基本表格</h4><p>1、table标签表示一个表格<br>2、th标签也是一个单元格标签，一般用于表头，自带有加粗，居中效果<br>3、tr标签表示表格的一行<br>4、td标签表示表格中一个单元格</p>
 <ul>
@@ -538,108 +538,108 @@
 <li>align=”center”表示位置居中，也可以设置为居左居右</li>
 <li>width = “40%”表示内容占整个窗口的百分之几，<code>可以随着窗口的变化变化大小</code></li>
 </ul>
-<pre><code class="html">    &lt;!--
+<pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!--
     1、table标签表示一个表格 
     2、th标签也是一个单元格标签，一般用于表头，自带有加粗，居中效果
     3、tr标签表示一行
     4、td标签表示一个单元格
-    --&gt;
-    &lt;!--一个3*3的表格 --&gt;
-    &lt;table border=&quot;1&quot; width = &quot;40%&quot;&gt;
-        &lt;tr align=&quot;center&quot;&gt;
-            &lt;td&gt;序号&lt;/td&gt;
-            &lt;td&gt;姓名&lt;/td&gt;
-            &lt;td&gt;班级&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr align=&quot;center&quot;&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;TOLIE&lt;/td&gt;
-            &lt;td&gt;信管1901&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr align=&quot;center&quot;&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;James&lt;/td&gt;
-            &lt;td&gt;信管1903&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
+    --></span>
+    <span class="token comment" spellcheck="true">&lt;!--一个3*3的表格 --></span>
+    &lt;table border="1" width = "40%">
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>序号<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>姓名<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>班级<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>TOLIE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>信管1901<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>James<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>信管1903<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
 </code></pre>
 <h4 id="单元格合并"><a href="#单元格合并" class="headerlink" title="单元格合并 *"></a>单元格合并 *</h4><p><code>不能跨格合并</code></p>
 <p>row合并：一般把下侧单元格删掉，在上方单元格td标签中添加一个 rowspan 属性，属性值为几就合并几个单元格</p>
-<pre><code class="html">    &lt;!--一个3*3的表格 --&gt;
-    &lt;table border=&quot;1&quot; width = &quot;40%&quot;&gt;
-        &lt;tr align=&quot;center&quot;&gt;
-            &lt;td&gt;序号&lt;/td&gt;
-            &lt;td&gt;姓名&lt;/td&gt;
-            &lt;td&gt;班级&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr align=&quot;center&quot;&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;TOLIE&lt;/td&gt;
-            &lt;td rowspan=&quot;2&quot;&gt;信管1903&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr align=&quot;center&quot;&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;James&lt;/td&gt;
-        &lt;!-- &lt;td&gt;信管1903&lt;/td&gt; --&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
-&lt;/body&gt;
+<pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!--一个3*3的表格 --></span>
+    &lt;table border="1" width = "40%">
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>序号<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>姓名<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>班级<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>TOLIE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">rowspan</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>信管1903<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>James<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!-- &lt;td>信管1903&lt;/td> --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>col合并：删除左右的的单元格皆可，在单元格td标签中添加一个colspan 属性，属性值为几就合并几个单元格</p>
-<pre><code class="html">    &lt;!--一个3*3的表格 --&gt;
-    &lt;table border=&quot;1&quot; width=&quot;40%&quot;&gt;
-        &lt;tr align=&quot;center&quot;&gt;
-            &lt;td&gt;序号&lt;/td&gt;
-            &lt;td&gt;姓名&lt;/td&gt;
-            &lt;td&gt;班级&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr align=&quot;center&quot;&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;!-- &lt;td&gt;TOLIE&lt;/td&gt; --&gt;
-            &lt;td colspan=&quot;2&quot;&gt;信管1903&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr align=&quot;center&quot;&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;James&lt;/td&gt;
-            &lt;td&gt;信管1903&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
+<pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!--一个3*3的表格 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>40%<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>序号<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>姓名<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>班级<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token comment" spellcheck="true">&lt;!-- &lt;td>TOLIE&lt;/td> --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">colspan</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>信管1903<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>James<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>信管1903<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
 </code></pre>
 <h4 id="thead-tbody-tfoot标签"><a href="#thead-tbody-tfoot标签" class="headerlink" title="thead. tbody. tfoot标签"></a>thead. tbody. tfoot标签</h4><p>将表格分为三个部分：头、身体和脚</p>
 <p>不是必须的，但可以方便后期的JS代码编写。</p>
 <p><code>注意拆分之后可能会影响单元格的合并，导致单元格合并失败</code></p>
-<pre><code class="html">    &lt;!--一个3*3的表格 --&gt;
-    &lt;table border=&quot;1&quot; width=&quot;40%&quot;&gt;
-        &lt;thead&gt;
-            &lt;tr align=&quot;center&quot;&gt;
-                &lt;td&gt;序号&lt;/td&gt;
-                &lt;td&gt;姓名&lt;/td&gt;
-                &lt;td&gt;班级&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
+<pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!--一个3*3的表格 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>40%<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>序号<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>姓名<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>班级<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span>
 
-        &lt;tbody&gt;
-            &lt;tr align=&quot;center&quot;&gt;
-                &lt;td&gt;1&lt;/td&gt;
-                &lt;!-- &lt;td&gt;TOLIE&lt;/td&gt; --&gt;
-                &lt;td colspan=&quot;2&quot;&gt;信管1903&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr align=&quot;center&quot;&gt;
-                &lt;td&gt;2&lt;/td&gt;
-                &lt;td&gt;James&lt;/td&gt;
-                &lt;td&gt;信管1903&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token comment" spellcheck="true">&lt;!-- &lt;td>TOLIE&lt;/td> --></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">colspan</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>信管1903<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>James<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>信管1903<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
 
-        &lt;tfoot&gt;
-        &lt;/tfoot&gt;
-    &lt;/table&gt;
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tfoot</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tfoot</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
 </code></pre>
-<h3 id="HTML背景"><a href="#HTML背景" class="headerlink" title="HTML背景"></a>HTML背景</h3><pre><code class="html">    &lt;!--
+<h3 id="HTML背景"><a href="#HTML背景" class="headerlink" title="HTML背景"></a>HTML背景</h3><pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!--
     1.bgcolor 属性表示背景颜色，值为背景颜色的名称
     2.background 属性表示背景图片，值为背景图片的路径
-    --&gt;
-    &lt;body bgcolor=&quot;blue&quot; background=&quot;web/img/cake-1.jpg&quot;&gt;&lt;/body&gt;
+    --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">bgcolor</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blue<span class="token punctuation">"</span></span> <span class="token attr-name">background</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>web/img/cake-1.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 </code></pre>
 <h3 id="HTML的图片"><a href="#HTML的图片" class="headerlink" title="HTML的图片"></a>HTML的图片</h3><ol>
 <li>设置图片高度和宽度的时候，只设置宽度，高度会等比例缩放；</li>
@@ -651,16 +651,16 @@
 <h3 id="HTML超链接"><a href="#HTML超链接" class="headerlink" title="HTML超链接"></a>HTML超链接</h3><p>特点： 1. 超链接下面有下划线；</p>
 <p>​            2.点击之后可以跳转页面；</p>
 <p>​            3.鼠标放在上面会变成小手；</p>
-<pre><code class="html">    //文本超链接
-    &lt;a href=&quot;http://www.baidu.com&quot;&gt;百度&lt;/a&gt;
+<pre class=" language-html"><code class="language-html">    //文本超链接
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.baidu.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>百度<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
     //图片超链接
-    &lt;a href=&quot;http://www.baidu.com&quot;&gt;
-      &lt;img src=&quot;web/img/cake-2.jpg&quot;&gt;
-    &lt;/a&gt;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.baidu.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>web/img/cake-2.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
     //点击超链接之后在本页面实现跳转
-    &lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_self&quot;&gt;百度&lt;/a&gt;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.baidu.com<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_self<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>百度<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
     //点击超链接之后在新页面实现跳转
-    &lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_self&quot;&gt;百度&lt;/a&gt;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.baidu.com<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_self<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>百度<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>herf：是热引用，属性值一定是一个资源的地址，比如”<a target="_blank" rel="noopener" href="https://www.bilibili.com&quot;/">https://www.bilibili.com&quot;</a></p>
 <p>a 标签的target属性的可取值有</p>
@@ -680,29 +680,29 @@
 </ul>
 <p>​    标签：ul （unordered list）属性有个type用于指定序号的形式，可以是圆圈，方块或者点；</p>
 <p>​    表项：li</p>
-<pre><code class="html">    &lt;!-- 有序列表 --&gt;
-    &lt;ol type=&quot;1&quot;&gt;
-      &lt;li&gt;水果
-        &lt;ol type=&quot;a&quot;&gt;
-          &lt;li&gt;苹果&lt;/li&gt;
-          &lt;li&gt;西瓜&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;蔬菜&lt;/li&gt;
-      &lt;li&gt;甜点&lt;/li&gt;
-    &lt;/ol&gt;
+<pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!-- 有序列表 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>水果
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>a<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>苹果<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>西瓜<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>蔬菜<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>甜点<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span>
 
-    &lt;!-- 无序列表 --&gt;
-    &lt;ul type=&quot;circle&quot;&gt;
-      &lt;li&gt;beijing
-        &lt;ul type=&quot;disc&quot;&gt;
-          &lt;li&gt;e&lt;/li&gt;
-          &lt;li&gt;w&lt;/li&gt;
-          &lt;li&gt;s&lt;/li&gt;
-          &lt;li&gt;n&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
+    <span class="token comment" spellcheck="true">&lt;!-- 无序列表 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>beijing
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>disc<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>e<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>w<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>s<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
 </code></pre>
 <h3 id="HTML中的id和name"><a href="#HTML中的id和name" class="headerlink" title="HTML中的id和name"></a>HTML中的id和name</h3><ol>
 <li>在html文档中，任何元素/节点都有唯一的id，id是节点的唯一标识，在同一个html文档中id值不能重复</li>
@@ -731,11 +731,11 @@
 <li>id 属性值用于唯一标识表单，可以理解为 ；</li>
 <li>class 属性值用于标识变量，但不能唯一标识，可以理解为民族；</li>
 </ol>
-<pre><code class="html">&lt;form method=&quot;post&quot; action=&quot;login.do&quot; class=&quot;login&quot; id=&quot;lg&quot;&gt;
-            &lt;input type=&quot;text&quot; placeholder=&quot;用户名&quot; id=&quot;username1&quot; name=&quot;username1&quot;&gt;
-            &lt;input type=&quot;password&quot; placeholder=&quot;密码&quot; id=&quot;password1&quot; name=&quot;password1&quot;&gt;
-            &lt;input type=&quot;button&quot; value=&quot;登 录&quot; class=&quot;btn&quot; id=&quot;login&quot; onclick=&quot;Log()&quot;&gt;
-        &lt;/form&gt;
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>login.do<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>login<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>用户名<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>密码<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>登 录<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>login<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Log()<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
 </code></pre>
 <h3 id="标签：input"><a href="#标签：input" class="headerlink" title="标签：input  **"></a>标签：input  **</h3><ul>
 <li>readonly，只读，用户不能更改，<code>但可以提交到服务器</code>；</li>
@@ -806,13 +806,13 @@
 <li><p>size 用来指示展示几项选项；</p>
 </li>
 </ul>
-<pre><code class="html">    &lt;select name=&quot;degree&quot; multiple size=&quot;2&quot;&gt;
-        &lt;!-- selected表示默认选择 --&gt;
-        &lt;option value=&quot;dz&quot; selected&gt;大专&lt;/option&gt;
-        &lt;option value=&quot;bk&quot;&gt;本科&lt;/option&gt;
-        &lt;option value=&quot;ss&quot;&gt;硕士&lt;/option&gt;
-        &lt;option value=&quot;bs&quot;&gt;博士&lt;/option&gt;
-    &lt;/select&gt;
+<pre class=" language-html"><code class="language-html">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>degree<span class="token punctuation">"</span></span> <span class="token attr-name">multiple</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!-- selected表示默认选择 --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dz<span class="token punctuation">"</span></span> <span class="token attr-name">selected</span><span class="token punctuation">></span></span>大专<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bk<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>本科<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ss<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>硕士<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bs<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>博士<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
 </code></pre>
 <h3 id="第一个form表单"><a href="#第一个form表单" class="headerlink" title="第一个form表单 *"></a>第一个form表单 *</h3><p>注意：</p>
 <ul>
@@ -822,69 +822,69 @@
 <li>确认密码的时候记住不设置name属性值，阻止提交；</li>
 <li>提交格式不管是什么方式都是 <code>name=value&amp;name=value&amp;name=value&amp;name=value</code></li>
 </ul>
-<pre><code class="html">    &lt;form method=&quot;GET&quot; action=&quot;login.do&quot; class=&quot;regist&quot; id=&quot;lg&quot;&gt;
-        &lt;!-- method属性是指定提交方式
+<pre class=" language-html"><code class="language-html">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>GET<span class="token punctuation">"</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>login.do<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>regist<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!-- method属性是指定提交方式
         默认方式，也就是GET方式会把数据展示在地址栏上
-        POST方式不会把数据展示在地址栏--&gt;
-        &lt;table border=&quot;1px&quot;&gt;
-            &lt;tr&gt;
-                &lt;td align=&quot;center&quot;&gt;用户名&lt;/td&gt;
-                &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;用户名&quot; id=&quot;username1&quot; name=&quot;username1&quot;&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td align=&quot;center&quot;&gt;密&amp;nbsp;&amp;nbsp;&amp;nbsp;码&lt;/td&gt;
-                &lt;td&gt;&lt;input type=&quot;password&quot; placeholder=&quot;密码&quot; id=&quot;password&quot; name=&quot;password&quot;&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td align=&quot;center&quot;&gt;确认密码&lt;/td&gt;
-                &lt;td&gt;&lt;input type=&quot;password&quot; placeholder=&quot;确认密码&quot;&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr align=&quot;center&quot;&gt;
-                &lt;!-- 选择按钮的value必须手动指定 --&gt;
-                &lt;td align=&quot;center&quot;&gt;性&amp;nbsp;&amp;nbsp;&amp;nbsp;别&lt;/td&gt;
-                &lt;td&gt;
-                    &lt;!-- checked表示默认选择 --&gt;
-                    &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;1&quot; checked&gt;男
-                    &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;0&quot;&gt;女
-                &lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr align=&quot;center&quot;&gt;
-                &lt;!-- 选择按钮的value必须手动指定 --&gt;
-                &lt;td&gt;爱&amp;nbsp;&amp;nbsp;&amp;nbsp;好&lt;/td&gt;
-                &lt;td&gt;
-                    &lt;!-- checked表示默认选择 --&gt;
-                    &lt;input type=&quot;checkbox&quot; name=&quot;interest&quot; value=&quot;0&quot; checked&gt;读书
-                    &lt;input type=&quot;checkbox&quot; name=&quot;interest&quot; value=&quot;1&quot;&gt;喝酒
-                    &lt;input type=&quot;checkbox&quot; name=&quot;interest&quot; value=&quot;2&quot;&gt;烫头
-                    &lt;input type=&quot;checkbox&quot; name=&quot;interest&quot; value=&quot;3&quot;&gt;保健
-                &lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr align=&quot;center&quot;&gt;
-                &lt;!-- 选择按钮的value必须手动指定 --&gt;
-                &lt;td&gt;学&amp;nbsp;&amp;nbsp;&amp;nbsp;历&lt;/td&gt;
-                &lt;td&gt;
-                    &lt;select name=&quot;degree&quot;&gt;
-                        &lt;!-- selected表示默认选择 --&gt;
-                        &lt;option value=&quot;dz&quot; selected&gt;大专&lt;/option&gt;
-                        &lt;option value=&quot;bk&quot;&gt;本科&lt;/option&gt;
-                        &lt;option value=&quot;ss&quot;&gt;硕士&lt;/option&gt;
-                        &lt;option value=&quot;bs&quot;&gt;博士&lt;/option&gt;
-                    &lt;/select&gt;
-                &lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr align=&quot;center&quot;&gt;
-                &lt;!-- 选择按钮的value必须手动指定 --&gt;
-                &lt;td&gt;个人介绍&lt;/td&gt;
-                &lt;td&gt;
-                    &lt;!-- 文本域没有value属性，用户填写的内容就是value --&gt;
-                    &lt;textarea name=&quot;selfjs&quot; role=&quot;20&quot; rows=&quot;2&quot;&gt;&lt;/textarea&gt;
-                &lt;/td&gt;
-            &lt;/tr&gt;            
-        &lt;/table&gt;
-    &lt;/form&gt;
-    &lt;input type=&quot;reset&quot; value=&quot;重 置&quot;&gt;
-    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-    &lt;input type=&quot;submit&quot; value=&quot;登 录&quot; class=&quot;btn&quot; id=&quot;regist&quot;&gt;
+        POST方式不会把数据展示在地址栏--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1px<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>用户名<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>用户名<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>密<span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span>码<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>密码<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>确认密码<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>确认密码<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token comment" spellcheck="true">&lt;!-- 选择按钮的value必须手动指定 --></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>性<span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span>别<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>
+                    <span class="token comment" spellcheck="true">&lt;!-- checked表示默认选择 --></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sex<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>男
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sex<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>女
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token comment" spellcheck="true">&lt;!-- 选择按钮的value必须手动指定 --></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>爱<span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span>好<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>
+                    <span class="token comment" spellcheck="true">&lt;!-- checked表示默认选择 --></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>interest<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>读书
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>interest<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>喝酒
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>interest<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>烫头
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>interest<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>保健
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token comment" spellcheck="true">&lt;!-- 选择按钮的value必须手动指定 --></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>学<span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span>历<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>degree<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                        <span class="token comment" spellcheck="true">&lt;!-- selected表示默认选择 --></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dz<span class="token punctuation">"</span></span> <span class="token attr-name">selected</span><span class="token punctuation">></span></span>大专<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bk<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>本科<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ss<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>硕士<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bs<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>博士<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token comment" spellcheck="true">&lt;!-- 选择按钮的value必须手动指定 --></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>个人介绍<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>
+                    <span class="token comment" spellcheck="true">&lt;!-- 文本域没有value属性，用户填写的内容就是value --></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>selfjs<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">rows</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>            
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>reset<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>重 置<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity" title="&nbsp;">&amp;nbsp;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>登 录<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>regist<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 </code></pre>
 
                 
@@ -902,7 +902,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">TOLIE</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -925,7 +925,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">John Doe</a>
+                    <a href="/about" target="_blank">TOLIE</a>
                     !
                 </span>
             </div>
@@ -949,7 +949,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/HTML/">
+                                    <span class="chip bg-color">HTML</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1018,21 +1022,25 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/myBlog/" class="post-category">
-                                    myBlog
+                            <a href="/categories/myBlogs/" class="post-category">
+                                    myBlogs
                                 </a>
                             
-                            <a href="/categories/myBlog/Front-End/" class="post-category">
+                            <a href="/categories/myBlogs/Front-End/" class="post-category">
                                     Front End
-                                </a>
-                            
-                            <a href="/categories/myBlog/Front-End/AJAX/" class="post-category">
-                                    AJAX
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/AJAX/">
+                        <span class="chip bg-color">AJAX</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1041,16 +1049,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/27/hello-world/">
+                <a href="/2021/11/27/HTML%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="HTML for beginner">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">HTML for beginner</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1065,11 +1073,28 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/myBlogs/" class="post-category">
+                                    myBlogs
+                                </a>
+                            
+                            <a href="/categories/myBlogs/Front-End/" class="post-category">
+                                    Front End
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HTML/">
+                        <span class="chip bg-color">HTML</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1109,7 +1134,7 @@
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
             + '来源: Hexo<br />'
-            + '文章作者: John Doe<br />'
+            + '文章作者: TOLIE<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归TOLIE所有，任何形式的转载都请注明出处。';
 
@@ -1301,13 +1326,13 @@
                 <span id="year">2019-2021</span>
             
             <span id="year">2019</span>
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">TOLIE</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.7k</span>&nbsp;字
+                class="white-color">14.4k</span>&nbsp;字
             
             
             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="AJAX for beginner, Hexo">
+    <meta name="keywords" content="AJAX for beginner, Front end,back end">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -385,9 +385,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/AJAX/">
+                                <span class="chip bg-color">AJAX</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -395,16 +399,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/myBlog/" class="post-category">
-                                myBlog
+                            <a href="/categories/myBlogs/" class="post-category">
+                                myBlogs
                             </a>
                         
-                            <a href="/categories/myBlog/Front-End/" class="post-category">
+                            <a href="/categories/myBlogs/Front-End/" class="post-category">
                                 Front End
-                            </a>
-                        
-                            <a href="/categories/myBlog/Front-End/AJAX/" class="post-category">
-                                AJAX
                             </a>
                         
                     </div>
@@ -477,21 +477,21 @@
 <li>这里需要注意js文件的引入方式 src=”${pageContext.request.contextPath}/js/weather.js” </li>
 <li>防止出现路径问题</li>
 </ul>
-<pre><code class="jsp">&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
-&lt;%--src=&quot;$&#123;pageContext.request.contextPath&#125;/js/weather.js&quot;--%&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;$&#123;pageContext.request.contextPath&#125;/js/weather.js&quot;&gt;&lt;/script&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/index.css&quot;&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;AJAX GET请求&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;input type=&quot;text&quot; id=&quot;search&quot; name=&quot;search&quot; placeholder=&quot;请输入要查询的内容&quot;&gt;
-&lt;input type=&quot;button&quot; id=&quot;btn&quot; value=&quot;查询&quot; onclick=&quot;Check()&quot;&gt;
-&lt;br&gt;
-&lt;div  id=&quot;result&quot; &gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<pre class=" language-jsp"><code class="language-jsp"><%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--src="$&#123;pageContext.request.contextPath&#125;/js/weather.js"--%>
+<script type="text/javascript" src="$&#123;pageContext.request.contextPath&#125;/js/weather.js"></script>
+<link rel="stylesheet" href="css/index.css">
+<html>
+<head>
+    <title>AJAX GET请求</title>
+</head>
+<body>
+<input type="text" id="search" name="search" placeholder="请输入要查询的内容">
+<input type="button" id="btn" value="查询" onclick="Check()">
+<br>
+<div  id="result" ></div>
+</body>
+</html>
 </code></pre>
 <h5 id="3、js内容"><a href="#3、js内容" class="headerlink" title="3、js内容"></a>3、js内容</h5><ul>
 <li><p>请求URL的填写：</p>
@@ -505,225 +505,225 @@
 </blockquote>
 </li>
 </ul>
-<pre><code class="js">function Check() &#123;
-    // alert(&quot;hello&quot;)
-    const result = document.getElementById(&quot;result&quot;);
-    //1.创建XHR对象
-    const xhr = new XMLHttpRequest();
-    //2.初始化，设定请求方法和请求url
-    xhr.open(&quot;GET&quot;, &quot;/test/server?search=hh&quot;);
-    //3.发送
-    xhr.send();
-    //4.绑定事件，处理返回的结果
-    xhr.onreadystatechange = function () &#123;
-        // 判断服务端返回了所有数据
-        if (xhr.readyState === 4) &#123;
-            // 判断返回响应是否成功
-            if (xhr.status === 200) &#123;
-                // 结果处理
-                result.innerHTML = xhr.response;
-            &#125;
-        &#125;
-    &#125;
-&#125;
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Check</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// alert("hello")</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"result"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//1.创建XHR对象</span>
+    <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//2.初始化，设定请求方法和请求url</span>
+    xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"GET"</span><span class="token punctuation">,</span> <span class="token string">"/test/server?search=hh"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//3.发送</span>
+    xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//4.绑定事件，处理返回的结果</span>
+    xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 判断服务端返回了所有数据</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 判断返回响应是否成功</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">// 结果处理</span>
+                result<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> xhr<span class="token punctuation">.</span>response<span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 id="4、servlet的配置"><a href="#4、servlet的配置" class="headerlink" title="4、servlet的配置"></a>4、servlet的配置</h5><p>（这里制定了路径，所以不用配置xml配置文件</p>
-<pre><code class="java">@WebServlet(&quot;/server&quot;)
-public class searchServlet extends HttpServlet &#123;
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        String search = request.getParameter(&quot;search&quot;);
-        System.out.println(search + &quot;:发来一条get请求&quot;);
-        response.setContentType(&quot;text/html;charset=utf-8&quot;);
-        response.getWriter().write(&quot;get请求已收到&quot;);
-    &#125;
-&#125;
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span><span class="token string">"/server"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">searchServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">)</span> <span class="token keyword">throws</span> ServletException<span class="token punctuation">,</span> IOException <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        String search <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"search"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>search <span class="token operator">+</span> <span class="token string">":发来一条get请求"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"text/html;charset=utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"get请求已收到"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 <h6 id="WebServlet的属性列表"><a href="#WebServlet的属性列表" class="headerlink" title="@WebServlet的属性列表"></a>@WebServlet的属性列表</h6><p>​        <img src="https://raw.githubusercontent.com/TOLIE-OFFICIAL/Pics/main/imges/%40WebServlet%E7%9A%84%E5%B1%9E%E6%80%A7%E5%88%97%E8%A1%A8.png" style="zoom:95%;" /></p>
 <h4 id="1-5-AJAX发送POST请求"><a href="#1-5-AJAX发送POST请求" class="headerlink" title="1.5 AJAX发送POST请求"></a>1.5 AJAX发送POST请求</h4><h5 id="1、js内容"><a href="#1、js内容" class="headerlink" title="1、js内容"></a>1、js内容</h5><ul>
 <li>参数设置：</li>
 </ul>
 <p>1.语法上参数设置比较的随意，只需要服务器端可以解析，就可以；<br>2.send(“a=100&amp;b=100&amp;c=100&amp;d=100”)或者send(“hquwuifahfhoihqi”)都可以传入服务器端<br>3.甚至可以自定义请求头的key和value（需要后端进行适配，否则会报错</p>
-<pre><code class="js">function post() &#123;
-    // alert(&quot;hello&quot;)
-    const result = document.getElementById(&quot;result&quot;)
-    //1.创建XHR对象
-    const xhr = new XMLHttpRequest();
-    //2.初始化，设定请求方法
-    xhr.open(&quot;POST&quot;, &quot;/test/server&quot;);
-    //3.发送
-    xhr.send();
-    //xhr.send(&quot;a=100&amp;b=100&amp;c=100&amp;d=100&quot;);
-    //xhr.send(&quot;hquwuifahfhoihqi&quot;);
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">post</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// alert("hello")</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"result"</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">//1.创建XHR对象</span>
+    <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//2.初始化，设定请求方法</span>
+    xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"POST"</span><span class="token punctuation">,</span> <span class="token string">"/test/server"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//3.发送</span>
+    xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//xhr.send("a=100&amp;b=100&amp;c=100&amp;d=100");</span>
+    <span class="token comment" spellcheck="true">//xhr.send("hquwuifahfhoihqi");</span>
     
-    //4.绑定事件，处理返回的结果
-    xhr.onreadystatechange = function () &#123;
-        // 判断服务端返回了所有数据
-        if (xhr.readyState === 4) &#123;
-            // 判断返回响应是否成功
-            if (xhr.status === 200) &#123;
-                // 结果处理
-                result.innerHTML = xhr.response;
-            &#125;
-        &#125;
-    &#125;
-&#125;
+    <span class="token comment" spellcheck="true">//4.绑定事件，处理返回的结果</span>
+    xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 判断服务端返回了所有数据</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 判断返回响应是否成功</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">// 结果处理</span>
+                result<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> xhr<span class="token punctuation">.</span>response<span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<h5 id="2、servlet的配置（这里制定了路径，所以不用配置xml配置文件"><a href="#2、servlet的配置（这里制定了路径，所以不用配置xml配置文件" class="headerlink" title="2、servlet的配置（这里制定了路径，所以不用配置xml配置文件"></a>2、servlet的配置（这里制定了路径，所以不用配置xml配置文件</h5><pre><code class="java">@WebServlet(&quot;/server&quot;)
-public class searchServlet extends HttpServlet &#123;
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        System.out.println(&quot;发来一条POST请求&quot;);
-        response.setContentType(&quot;text/html;charset=utf-8&quot;);
-        response.getWriter().write(&quot;POST请求已收到&quot;);
-    &#125;
-&#125;
+<h5 id="2、servlet的配置（这里制定了路径，所以不用配置xml配置文件"><a href="#2、servlet的配置（这里制定了路径，所以不用配置xml配置文件" class="headerlink" title="2、servlet的配置（这里制定了路径，所以不用配置xml配置文件"></a>2、servlet的配置（这里制定了路径，所以不用配置xml配置文件</h5><pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span><span class="token string">"/server"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">searchServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doPost</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">)</span> <span class="token keyword">throws</span> ServletException<span class="token punctuation">,</span> IOException <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"发来一条POST请求"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"text/html;charset=utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"POST请求已收到"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="1-6-AJAX设置请求头信息"><a href="#1-6-AJAX设置请求头信息" class="headerlink" title="1.6  AJAX设置请求头信息"></a>1.6  AJAX设置请求头信息</h4><h5 id="1、HTTP请求头信息格式"><a href="#1、HTTP请求头信息格式" class="headerlink" title="1、HTTP请求头信息格式"></a>1、HTTP请求头信息格式</h5><pre><code class="KEY：VALUE">KEY：VALUE
+<h4 id="1-6-AJAX设置请求头信息"><a href="#1-6-AJAX设置请求头信息" class="headerlink" title="1.6  AJAX设置请求头信息"></a>1.6  AJAX设置请求头信息</h4><h5 id="1、HTTP请求头信息格式"><a href="#1、HTTP请求头信息格式" class="headerlink" title="1、HTTP请求头信息格式"></a>1、HTTP请求头信息格式</h5><pre class=" language-KEY：VALUE"><code class="language-KEY：VALUE">KEY：VALUE
 </code></pre>
 <p>比如：<br>Contente-length:接下来的主体长度<br>Contente-type:接下来的主体类型</p>
-<pre><code class="js">// 设置请求头
-xhr.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-form-urlencoded&quot;)
-//这样就可解析 &quot;a=100&amp;b=100&amp;c=100&amp;d=100&quot; 的格式数据
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 设置请求头</span>
+xhr<span class="token punctuation">.</span><span class="token function">setRequestHeader</span><span class="token punctuation">(</span><span class="token string">"Content-Type"</span><span class="token punctuation">,</span><span class="token string">"application/x-www-form-urlencoded"</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//这样就可解析 "a=100&amp;b=100&amp;c=100&amp;d=100" 的格式数据</span>
 </code></pre>
-<h4 id="1-7-Servlet返回json类型的数据"><a href="#1-7-Servlet返回json类型的数据" class="headerlink" title="1.7 Servlet返回json类型的数据"></a>1.7 Servlet返回json类型的数据</h4><pre><code class="java">    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        //指定返回的格式为JSON格式
-        response.setCharacterEncoding(&quot;utf-8&quot;);
-        request.setCharacterEncoding(&quot;utf-8&quot;);
-        response.setContentType(&quot;application/json; charset=utf-8&quot;);
-        //拼接json数据
-        String jsonStr = &quot;&#123;\&quot;name\&quot;:\&quot;&quot;+&quot;TOLIE&quot;+&quot;\&quot;,\&quot;age\&quot;:\&quot;20\&quot;&#125;&quot;;
-        //将数据写入流中
-        response.getWriter().write(jsonStr);
-    &#125;
-&#125;
+<h4 id="1-7-Servlet返回json类型的数据"><a href="#1-7-Servlet返回json类型的数据" class="headerlink" title="1.7 Servlet返回json类型的数据"></a>1.7 Servlet返回json类型的数据</h4><pre class=" language-java"><code class="language-java">    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">)</span> <span class="token keyword">throws</span> ServletException<span class="token punctuation">,</span> IOException <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//指定返回的格式为JSON格式</span>
+        response<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        request<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"application/json; charset=utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//拼接json数据</span>
+        String jsonStr <span class="token operator">=</span> <span class="token string">"&amp;#123;\"name\":\""</span><span class="token operator">+</span><span class="token string">"TOLIE"</span><span class="token operator">+</span><span class="token string">"\",\"age\":\"20\"&amp;#125;"</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//将数据写入流中</span>
+        response<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>jsonStr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="1-8-AJAX处理接收到的json类型返回结果"><a href="#1-8-AJAX处理接收到的json类型返回结果" class="headerlink" title="1.8 AJAX处理接收到的json类型返回结果"></a>1.8 AJAX处理接收到的json类型返回结果</h4><h5 id="1、手动对json数据转化"><a href="#1、手动对json数据转化" class="headerlink" title="1、手动对json数据转化"></a>1、手动对json数据转化</h5><pre><code class="js">function get() &#123;
-    // 建立div对象
-    const result = document.getElementById(&quot;result&quot;)
-    //1.创建XHR对象
-    const xhr = new XMLHttpRequest();
-    //2.初始化，设定请求方法
-    xhr.open(&quot;GET&quot;, &quot;/test/server&quot;);
-    //3.发送
-    xhr.send();
-    //4.绑定事件，处理返回的结果
-    xhr.onreadystatechange = function () &#123;
-        // 判断服务端返回了所有数据
-        if (xhr.readyState === 4) &#123;
-            // 判断返回响应是否成功
-            if (xhr.status === 200) &#123;
-                // 5.结果处理
+<h4 id="1-8-AJAX处理接收到的json类型返回结果"><a href="#1-8-AJAX处理接收到的json类型返回结果" class="headerlink" title="1.8 AJAX处理接收到的json类型返回结果"></a>1.8 AJAX处理接收到的json类型返回结果</h4><h5 id="1、手动对json数据转化"><a href="#1、手动对json数据转化" class="headerlink" title="1、手动对json数据转化"></a>1、手动对json数据转化</h5><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 建立div对象</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"result"</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">//1.创建XHR对象</span>
+    <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//2.初始化，设定请求方法</span>
+    xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"GET"</span><span class="token punctuation">,</span> <span class="token string">"/test/server"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//3.发送</span>
+    xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//4.绑定事件，处理返回的结果</span>
+    xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 判断服务端返回了所有数据</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 判断返回响应是否成功</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">// 5.结果处理</span>
                 
-                //手动对json数据转化
-                let data = JSON.parse(xhr.response);
-                console.log(xhr.response);
-                result.innerHTML = data.name;                
-            &#125;
-        &#125;
-    &#125;
-&#125;
+                <span class="token comment" spellcheck="true">//手动对json数据转化</span>
+                <span class="token keyword">let</span> data <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                result<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> data<span class="token punctuation">.</span>name<span class="token punctuation">;</span>                
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<h5 id="2、自动对json数据转化"><a href="#2、自动对json数据转化" class="headerlink" title="2、自动对json数据转化"></a>2、自动对json数据转化</h5><pre><code class="js">function get() &#123;
-    // alert(&quot;hello&quot;)
-    const result = document.getElementById(&quot;result&quot;)
-    //1.创建XHR对象
-    const xhr = new XMLHttpRequest();
+<h5 id="2、自动对json数据转化"><a href="#2、自动对json数据转化" class="headerlink" title="2、自动对json数据转化"></a>2、自动对json数据转化</h5><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// alert("hello")</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"result"</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">//1.创建XHR对象</span>
+    <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     
-    // 设定响应体数据的一个类型
-    xhr.responseType = &quot;json&quot;;
+    <span class="token comment" spellcheck="true">// 设定响应体数据的一个类型</span>
+    xhr<span class="token punctuation">.</span>responseType <span class="token operator">=</span> <span class="token string">"json"</span><span class="token punctuation">;</span>
     
-    //2.初始化，设定请求方法
-    xhr.open(&quot;GET&quot;, &quot;/test/server&quot;);
-    //3.发送
-    xhr.send();
-    //4.绑定事件，处理返回的结果
-    xhr.onreadystatechange = function () &#123;
-        // 判断服务端返回了所有数据
-        if (xhr.readyState === 4) &#123;
-            // 判断返回响应是否成功
-            if (xhr.status === 200) &#123;
-                // 结果处理
+    <span class="token comment" spellcheck="true">//2.初始化，设定请求方法</span>
+    xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"GET"</span><span class="token punctuation">,</span> <span class="token string">"/test/server"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//3.发送</span>
+    xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//4.绑定事件，处理返回的结果</span>
+    xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 判断服务端返回了所有数据</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 判断返回响应是否成功</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">// 结果处理</span>
                 
-                //自动对json数据转化
-                result.innerHTML = xhr.response.age;
-            &#125;
-        &#125;
-    &#125;
-&#125;
+                <span class="token comment" spellcheck="true">//自动对json数据转化</span>
+                result<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> xhr<span class="token punctuation">.</span>response<span class="token punctuation">.</span>age<span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="1-9-AJAX的IE缓存问题"><a href="#1-9-AJAX的IE缓存问题" class="headerlink" title="1.9 AJAX的IE缓存问题"></a>1.9 AJAX的IE缓存问题</h4><h5 id="1、IE缓存"><a href="#1、IE缓存" class="headerlink" title="1、IE缓存"></a>1、IE缓存</h5><p>在ajax的应用中，当用户访问一次后，再进行访问当XMLHttpRequest请求不变的时，在ie中获取数据不会到服务器端取，而是直接从ie的缓存中取，这会就是ie的缓存问题。==IE缓存可能会导致一些时效性很强的请求不能正常获取最新数据==。</p>
-<h5 id="2、解决方案：添加时间戳"><a href="#2、解决方案：添加时间戳" class="headerlink" title="2、解决方案：添加时间戳"></a>2、解决方案：添加时间戳</h5><pre><code class="js">    //2.初始化，设定请求方法
-    xhr.open(&quot;GET&quot;, &quot;/test/server?t=&quot;+Date.now());
+<h5 id="2、解决方案：添加时间戳"><a href="#2、解决方案：添加时间戳" class="headerlink" title="2、解决方案：添加时间戳"></a>2、解决方案：添加时间戳</h5><pre class=" language-js"><code class="language-js">    <span class="token comment" spellcheck="true">//2.初始化，设定请求方法</span>
+    xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"GET"</span><span class="token punctuation">,</span> <span class="token string">"/test/server?t="</span><span class="token operator">+</span>Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Date.now()就是获取一个当前时间，让每一次请求都不相同，避免不能正常获取最新数据。</p>
 <h4 id="1-10-AJAX的网略请求超时和网络异常处理"><a href="#1-10-AJAX的网略请求超时和网络异常处理" class="headerlink" title="1.10 AJAX的网略请求超时和网络异常处理"></a>1.10 AJAX的网略请求超时和网络异常处理</h4><h5 id="1、主要目的"><a href="#1、主要目的" class="headerlink" title="1、主要目的"></a>1、主要目的</h5><p>让用户在网络请求超时或者网络异常的时候可以收到提醒，避免长时间无响应，优化使用体验。</p>
 <h5 id="2、处理方式"><a href="#2、处理方式" class="headerlink" title="2、处理方式"></a>2、处理方式</h5><ul>
 <li>网络请求超时处理</li>
 </ul>
-<pre><code class="js">//设置超时2s，即超过两秒没有收到回应，就取消请求
-xhr.timeout = 2000;
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//设置超时2s，即超过两秒没有收到回应，就取消请求</span>
+xhr<span class="token punctuation">.</span>timeout <span class="token operator">=</span> <span class="token number">2000</span><span class="token punctuation">;</span>
 
-//设置超时事件之后的方法
-xhr.ontimeout = funcation()&#123;
-    //比如可以是弹窗等等显示或操作
-    alert(&quot;请求超时，请稍后重试！&quot;);
-&#125;
+<span class="token comment" spellcheck="true">//设置超时事件之后的方法</span>
+xhr<span class="token punctuation">.</span>ontimeout <span class="token operator">=</span> <span class="token function">funcation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//比如可以是弹窗等等显示或操作</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"请求超时，请稍后重试！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 <ul>
 <li>网络异常处理</li>
 </ul>
-<pre><code class="js">//设置网络异常事件之后的方法
-xhr.error = funcation()&#123;
-    //比如可以是弹窗等等显示或操作
-    alert(&quot;网络异常，请检查你的网络！&quot;);
-&#125;
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//设置网络异常事件之后的方法</span>
+xhr<span class="token punctuation">.</span>error <span class="token operator">=</span> <span class="token function">funcation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//比如可以是弹窗等等显示或操作</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"网络异常，请检查你的网络！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="1-11-取消AJAX请求"><a href="#1-11-取消AJAX请求" class="headerlink" title="1.11 取消AJAX请求"></a>1.11 取消AJAX请求</h4><h5 id="1、js的ES6规范中let和const"><a href="#1、js的ES6规范中let和const" class="headerlink" title="1、js的ES6规范中let和const"></a>1、js的ES6规范中let和const</h5><p><code>let 声明的变量只在 let 命令所在的代码块 &#123;&#125; 内有效，在 &#123;&#125; 之外不能访问。</code></p>
 <p><code>const 声明一个只读的常量，一旦声明，常量的值就不能改变。</code></p>
 <h5 id="2、-取消AJAX请求"><a href="#2、-取消AJAX请求" class="headerlink" title="2、 取消AJAX请求"></a>2、 取消AJAX请求</h5><p>调用XMLHttpRequest对象的abort()方法，即可完成请求的取消；</p>
-<pre><code class="js">    //获取所有的button对象
-    const btns = document.querySelectorAll(&quot;button&quot;);    
-    //通过let新建一个变量x
-    let x = null;
+<pre class=" language-js"><code class="language-js">    <span class="token comment" spellcheck="true">//获取所有的button对象</span>
+    <span class="token keyword">const</span> btns <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    <span class="token comment" spellcheck="true">//通过let新建一个变量x</span>
+    <span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
     
-    //给第一个button绑定事件
-    btns[0].onclick = function () &#123;
-        x = new XMLHttpRequest();
-        x.open(&quot;GET&quot;,&quot;/test/server&quot;)
-        x.send();
-    &#125;
-    //给第二个button绑定事件
-    btns[1].onclick = function () &#123;
-        x = new XMLHttpRequest();
-        //取消请求
-        x.abort();
-    &#125;
+    <span class="token comment" spellcheck="true">//给第一个button绑定事件</span>
+    btns<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        x <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        x<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"GET"</span><span class="token punctuation">,</span><span class="token string">"/test/server"</span><span class="token punctuation">)</span>
+        x<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//给第二个button绑定事件</span>
+    btns<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        x <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//取消请求</span>
+        x<span class="token punctuation">.</span><span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="1-12-处理用户重复发送请求"><a href="#1-12-处理用户重复发送请求" class="headerlink" title="1.12 处理用户重复发送请求"></a>1.12 处理用户重复发送请求</h4><h6 id="1、目的"><a href="#1、目的" class="headerlink" title="1、目的"></a>1、目的</h6><p>防止服务器收到高频率的相同请求，导致服务器不能及时响应，影响服务器性能</p>
 <h6 id="2、处理"><a href="#2、处理" class="headerlink" title="2、处理"></a>2、处理</h6><p>选择在用户第二次触发事件的时候，将上一个相同请求取消掉</p>
-<pre><code class="js">//通过let新建一个变量x
-let x = null;
-//设置一个标识变量，帮助判断请求是否正在发送
-let isSending = false;
-//获取所有的button对象
-const btns = document.querySelectorAll(&quot;button&quot;);
-btns[0].onclick = function () &#123;
-    //如果请求正在发送，就取消请求
-    if (isSending) &#123;
-        x.abort();
-    &#125;
-    //如果没有请求正在发送，就取消请求
-    x = new XMLHttpRequest();
-    //c请求正在发送，更改标识变量
-    isSending = true;
-    x.open(&quot;GET&quot;, &quot;/test/server&quot;)
-    x.send();
-    x.onreadystatechange = function () &#123;
-        if (x.readyState === 4) &#123;
-            //请求发送结束，更改标识变量
-            isSending = false;
-        &#125;
-    &#125;
-&#125;
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//通过let新建一个变量x</span>
+<span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//设置一个标识变量，帮助判断请求是否正在发送</span>
+<span class="token keyword">let</span> isSending <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//获取所有的button对象</span>
+<span class="token keyword">const</span> btns <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+btns<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//如果请求正在发送，就取消请求</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isSending<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        x<span class="token punctuation">.</span><span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//如果没有请求正在发送，就取消请求</span>
+    x <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//c请求正在发送，更改标识变量</span>
+    isSending <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    x<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"GET"</span><span class="token punctuation">,</span> <span class="token string">"/test/server"</span><span class="token punctuation">)</span>
+    x<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    x<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//请求发送结束，更改标识变量</span>
+            isSending <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 
                 
@@ -741,7 +741,7 @@ btns[0].onclick = function () &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">TOLIE</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -764,7 +764,7 @@ btns[0].onclick = function () &#123;
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">John Doe</a>
+                    <a href="/about" target="_blank">TOLIE</a>
                     !
                 </span>
             </div>
@@ -788,7 +788,11 @@ btns[0].onclick = function () &#123;
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/AJAX/">
+                                    <span class="chip bg-color">AJAX</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -857,21 +861,25 @@ btns[0].onclick = function () &#123;
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/myBlog/" class="post-category">
-                                    myBlog
+                            <a href="/categories/myBlogs/" class="post-category">
+                                    myBlogs
                                 </a>
                             
-                            <a href="/categories/myBlog/JAVA-%E6%A1%86%E6%9E%B6/" class="post-category">
+                            <a href="/categories/myBlogs/JAVA-%E6%A1%86%E6%9E%B6/" class="post-category">
                                     JAVA 框架
-                                </a>
-                            
-                            <a href="/categories/myBlog/JAVA-%E6%A1%86%E6%9E%B6/Spring-5/" class="post-category">
-                                    Spring 5
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -906,21 +914,25 @@ btns[0].onclick = function () &#123;
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/myBlog/" class="post-category">
-                                    myBlog
+                            <a href="/categories/myBlogs/" class="post-category">
+                                    myBlogs
                                 </a>
                             
-                            <a href="/categories/myBlog/Front-End/" class="post-category">
+                            <a href="/categories/myBlogs/Front-End/" class="post-category">
                                     Front End
-                                </a>
-                            
-                            <a href="/categories/myBlog/Front-End/HTML/" class="post-category">
-                                    HTML
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HTML/">
+                        <span class="chip bg-color">HTML</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -960,7 +972,7 @@ btns[0].onclick = function () &#123;
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
             + '来源: Hexo<br />'
-            + '文章作者: John Doe<br />'
+            + '文章作者: TOLIE<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归TOLIE所有，任何形式的转载都请注明出处。';
 
@@ -1152,13 +1164,13 @@ btns[0].onclick = function () &#123;
                 <span id="year">2019-2021</span>
             
             <span id="year">2019</span>
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">TOLIE</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.7k</span>&nbsp;字
+                class="white-color">14.4k</span>&nbsp;字
             
             
             

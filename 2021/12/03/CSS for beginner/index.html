@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS for beginner  (part 1), Hexo">
+    <meta name="keywords" content="CSS for beginner  (part 1), Front end,back end">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -385,9 +385,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/CSS/">
+                                <span class="chip bg-color">CSS</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -395,16 +399,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/myBlog/" class="post-category">
-                                myBlog
+                            <a href="/categories/myBlogs/" class="post-category">
+                                myBlogs
                             </a>
                         
-                            <a href="/categories/myBlog/Front-End/" class="post-category">
+                            <a href="/categories/myBlogs/Front-End/" class="post-category">
                                 Front End
-                            </a>
-                        
-                            <a href="/categories/myBlog/Front-End/CSS/" class="post-category">
-                                CSS
                             </a>
                         
                     </div>
@@ -607,17 +607,17 @@
 </ul>
 <p>其中不需要设置的属性可以忽略（取默认值），但必须保留font-size和font-family属性，否则font属性不起作用。</p>
 <h3 id="四、类选择器"><a href="#四、类选择器" class="headerlink" title="四、类选择器 **"></a>四、类选择器 **</h3><h4 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h4><p>可以快速为页面中的同一标签设置样式，但也是他的缺点，即不能设计差异化的样式。</p>
-<pre><code class="css">    /*格式：标签名  +  &#123;属性:属性值;属性:属性值;属性:属性值;&#125;*/
-    p &#123;
-            font: italic 600 20px &quot;宋体&quot;;
-        &#125;
+<pre class=" language-css"><code class="language-css">    <span class="token comment" spellcheck="true">/*格式：标签名  +  &amp;#123;属性:属性值;属性:属性值;属性:属性值;&amp;#125;*/</span>
+    p &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">font</span><span class="token punctuation">:</span> italic <span class="token number">600</span> <span class="token number">20</span>px <span class="token string">"宋体"</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
-<pre><code class="html">    &lt;!-- a标签 + ”# + id“实现页面内跳转--&gt;
-    &lt;a href=&quot;#wushi&quot;&gt;武师时期&lt;/a&gt;
-    &lt;br&gt;
-    &lt;a href=&quot;#jiahe&quot;&gt;嘉禾时期&lt;/a&gt;
-    &lt;br&gt;
-    &lt;a href=&quot;#luowei&quot;&gt;罗威时期&lt;/a&gt;
+<pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!-- a标签 + ”# + id“实现页面内跳转--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#wushi<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>武师时期<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#jiahe<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>嘉禾时期<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#luowei<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>罗威时期<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
 </code></pre>
 <h4 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h4><ul>
 <li>类命名小技巧</li>
@@ -627,22 +627,22 @@
 <li>不建议使用下划线“_”来命名css选择器；（避免兼容性问题，输入更加方便</li>
 <li>不要使用纯数字或者中文命名，最好使用英文字母表示；</li>
 </ol>
-<pre><code class="css">&lt;!-- 格式：.类名  +  &#123;属性:属性值;属性:属性值;属性:属性值;&#125; --&gt;
-        span &#123;
-            font-size: 100px;
-        &#125;
-        .blue &#123;
-            color: blue;
-        &#125;
-        .orange &#123;
-            color: orange;
-        &#125;
-        .yellow &#123;
-            color: yellow;
-        &#125;
-        .green &#123;
-            color: green;
-        &#125;
+<pre class=" language-css"><code class="language-css">&lt;!-- 格式：<span class="token number">.</span>类名  +  &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>属性<span class="token punctuation">:</span>属性值<span class="token punctuation">;</span>属性<span class="token punctuation">:</span>属性值<span class="token punctuation">;</span>属性<span class="token punctuation">:</span>属性值<span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span> -->
+        span &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token number">.</span>blue &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token number">.</span>orange &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token number">.</span>yellow &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token number">.</span>green &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="多类名选择器"><a href="#多类名选择器" class="headerlink" title="多类名选择器"></a>多类名选择器</h4><p>一个对象可以有多个类名，中间用空格隔开，使得类名选择器使用更加灵活；</p>
 <ul>
@@ -650,24 +650,24 @@
 </ul>
 <p>如果上下样式显示效果有冲突，此时的显示效果跟HTML中元素的类名先后顺序没有关系，</p>
 <p>受CSS样式的书写的上下顺序影响。</p>
-<pre><code class="html">    &lt;style&gt; 
-    .G &#123;
-            font-style: italic;
-        &#125;
+<pre class=" language-html"><code class="language-html">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css"> 
+    <span class="token number">.</span>G &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">font-style</span><span class="token punctuation">:</span> italic<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-        .blue &#123;
-            color: blue;
-        &#125;
-    &lt;/style&gt;
+        <span class="token number">.</span>blue &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
 
-    &lt;body&gt;
-    &lt;span class=&quot;blue G&quot;&gt;G&lt;/span&gt;
-    &lt;/body&gt;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blue G<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>G<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 </code></pre>
-<h4 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h4><pre><code class="css">&lt;!-- 格式：#id名  +  &#123;属性:属性值;属性:属性值;属性:属性值;&#125; --&gt;
-        #font-s &#123;
-            font-size: 100px;
-        &#125;
+<h4 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h4><pre class=" language-css"><code class="language-css">&lt;!-- 格式：#id名  +  &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>属性<span class="token punctuation">:</span>属性值<span class="token punctuation">;</span>属性<span class="token punctuation">:</span>属性值<span class="token punctuation">;</span>属性<span class="token punctuation">:</span>属性值<span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span> -->
+        #font-s &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
 <ul>
 <li>id选择器和类选择器的区别</li>
@@ -678,10 +678,10 @@
 <li>id选择器前面是“#”，类选择器前面是“.”</li>
 </ol>
 <h4 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h4><p>“ * ”代表页面中的所有元素</p>
-<pre><code class="css">&lt;!-- 格式：*  +  &#123;属性:属性值;属性:属性值;属性:属性值;&#125; --&gt;
-* &#123;
+<pre class=" language-css"><code class="language-css">&lt;!-- 格式：*  +  &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>属性<span class="token punctuation">:</span>属性值<span class="token punctuation">;</span>属性<span class="token punctuation">:</span>属性值<span class="token punctuation">;</span>属性<span class="token punctuation">:</span>属性值<span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span> -->
+* &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     color：red；    
-&#125;
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器 *"></a>伪类选择器 *</h4><h5 id="1-链接伪类选择器"><a href="#1-链接伪类选择器" class="headerlink" title="1. 链接伪类选择器"></a>1. 链接伪类选择器</h5><table>
 <thead>
@@ -707,50 +707,50 @@
 <td align="left">选定的链接，即点击但还没有松开的状态</td>
 </tr>
 </tbody></table>
-<pre><code class="css">        /*未访问的链接*/
-        a:link &#123;
-            font-size:18px;
-            color: black;
-        &#125;
-        /*已访问的链接*/
-        a:visited &#123;
-            font-size:18px;
-            color: gray;
-        &#125;
-        /*鼠标放在链接上*/
-        a:hover &#123;
-            font-size:18px;
-            color: blue;
-        &#125;
-        /*点击了链接还没有松开*/
-        a:active &#123;
-            font-size:18px;
-            color: red;
-        &#125;
+<pre class=" language-css"><code class="language-css">        <span class="token comment" spellcheck="true">/*未访问的链接*/</span>
+        <span class="token property">a</span><span class="token punctuation">:</span>link &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span><span class="token number">18</span>px<span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/*已访问的链接*/</span>
+        <span class="token property">a</span><span class="token punctuation">:</span>visited &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span><span class="token number">18</span>px<span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/*鼠标放在链接上*/</span>
+        <span class="token property">a</span><span class="token punctuation">:</span>hover &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span><span class="token number">18</span>px<span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/*点击了链接还没有松开*/</span>
+        <span class="token property">a</span><span class="token punctuation">:</span>active &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span><span class="token number">18</span>px<span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
 <p><code>顺序不能随便调整，必须按照如上的顺序，简记为LV好（LV hao），所以顺序是l-v-h-a</code></p>
 <ul>
 <li>简写链接伪类选择器</li>
 </ul>
-<pre><code class="css">        a &#123;
-            font-size:18px;
-        &#125;
-        /*未访问的链接*/
-        a:link &#123;
-            color: black;
-        &#125;
-        /*已访问的链接*/
-        a:visited &#123;
-            color: gray;
-        &#125;
-        /*鼠标放在链接上*/
-        a:hover &#123;
-            color: blue;
-        &#125;
-        /*点击了链接还没有松开*/
-        a:active &#123;
-            color: red;
-        &#125;
+<pre class=" language-css"><code class="language-css">        a &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span><span class="token number">18</span>px<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/*未访问的链接*/</span>
+        <span class="token property">a</span><span class="token punctuation">:</span>link &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/*已访问的链接*/</span>
+        <span class="token property">a</span><span class="token punctuation">:</span>visited &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/*鼠标放在链接上*/</span>
+        <span class="token property">a</span><span class="token punctuation">:</span>hover &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/*点击了链接还没有松开*/</span>
+        <span class="token property">a</span><span class="token punctuation">:</span>active &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 id="2-结构-位置-伪类选择器-CSS-3的新特性"><a href="#2-结构-位置-伪类选择器-CSS-3的新特性" class="headerlink" title="2. 结构(位置)伪类选择器(CSS 3的新特性)"></a>2. 结构(位置)伪类选择器(CSS 3的新特性)</h5><table>
 <thead>
@@ -776,55 +776,55 @@
 <td>选取属于父元素的<code>倒数</code>第n个子元素，不论元素的类型</td>
 </tr>
 </tbody></table>
-<pre><code class="css">        /* 选择第一个孩子 */
-        li:first-child &#123;
-            color: rgb(76, 0, 9);
-        &#125;
+<pre class=" language-css"><code class="language-css">        <span class="token comment" spellcheck="true">/* 选择第一个孩子 */</span>
+        <span class="token property">li</span><span class="token punctuation">:</span>first-child &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">76</span>, <span class="token number">0</span>, <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-        /* 选择最后一个孩子 */
-        li:last-child &#123;
-            color: rgb(129, 216, 208);
-        &#125;
+        <span class="token comment" spellcheck="true">/* 选择最后一个孩子 */</span>
+        <span class="token property">li</span><span class="token punctuation">:</span>last-child &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">129</span>, <span class="token number">216</span>, <span class="token number">208</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
-<pre><code class="css">        /* 选择偶数孩子 */
-        li:nth-child(even) &#123;
-            color: rgb(0, 49, 83);
-        &#125;
+<pre class=" language-css"><code class="language-css">        <span class="token comment" spellcheck="true">/* 选择偶数孩子 */</span>
+        <span class="token property">li</span><span class="token punctuation">:</span><span class="token function">nth-child</span><span class="token punctuation">(</span>even<span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">49</span>, <span class="token number">83</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-        li:nth-child(2n) &#123;
-            color: rgb(143, 75, 40);
-        &#125;
+        <span class="token property">li</span><span class="token punctuation">:</span><span class="token function">nth-child</span><span class="token punctuation">(</span><span class="token number">2</span>n<span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">143</span>, <span class="token number">75</span>, <span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-        /* 选择奇数孩子 */
-        li:nth-child(odd) &#123;
-            color: rgb(143, 75, 40);
-        &#125;
+        <span class="token comment" spellcheck="true">/* 选择奇数孩子 */</span>
+        <span class="token property">li</span><span class="token punctuation">:</span><span class="token function">nth-child</span><span class="token punctuation">(</span>odd<span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">143</span>, <span class="token number">75</span>, <span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-        li:nth-child(2n-1) &#123;
-            color: rgb(143, 75, 40);
-        &#125;
+        <span class="token property">li</span><span class="token punctuation">:</span><span class="token function">nth-child</span><span class="token punctuation">(</span><span class="token number">2</span>n-<span class="token number">1</span><span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">143</span>, <span class="token number">75</span>, <span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-        /* 选择3的倍数孩子 */
-        li:nth-child(3n) &#123;
-            color: rgb(143, 75, 40);
-        &#125;
+        <span class="token comment" spellcheck="true">/* 选择3的倍数孩子 */</span>
+        <span class="token property">li</span><span class="token punctuation">:</span><span class="token function">nth-child</span><span class="token punctuation">(</span><span class="token number">3</span>n<span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">143</span>, <span class="token number">75</span>, <span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
-<pre><code class="css">        /* 选择倒数第3个孩子 */
-        li:nth-last-child(3) &#123;
-            color: rgb(0, 49, 83);
-        &#125;
+<pre class=" language-css"><code class="language-css">        <span class="token comment" spellcheck="true">/* 选择倒数第3个孩子 */</span>
+        <span class="token property">li</span><span class="token punctuation">:</span><span class="token function">nth-last-child</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">49</span>, <span class="token number">83</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-        /* 选择倒数的奇数孩子，即正数的偶数孩子 */
-        li:nth-last-child(odd) &#123;
-            color: red;
-        &#125;
-        /*其他同理*/
+        <span class="token comment" spellcheck="true">/* 选择倒数的奇数孩子，即正数的偶数孩子 */</span>
+        <span class="token property">li</span><span class="token punctuation">:</span><span class="token function">nth-last-child</span><span class="token punctuation">(</span>odd<span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/*其他同理*/</span>
 </code></pre>
 <h5 id="3-目标伪类选择器"><a href="#3-目标伪类选择器" class="headerlink" title="3. 目标伪类选择器"></a>3. 目标伪类选择器</h5><p>:target 目标伪类选择器：用于选取当前活动的目标元素；</p>
-<pre><code class="css">        :target &#123;
-            color: red;
-            font-family: &#39;Courier New&#39;, Courier, monospace;
-        &#125;
+<pre class=" language-css"><code class="language-css">        <span class="token punctuation">:</span>target &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+            <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Courier New'</span>, Courier, monospace<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 id="五、CSS外观属性"><a href="#五、CSS外观属性" class="headerlink" title="五、CSS外观属性"></a>五、CSS外观属性</h3><h4 id="color-文本颜色"><a href="#color-文本颜色" class="headerlink" title="color     文本颜色"></a>color     文本颜色</h4><p>color属性用于定义文本颜色，取值方式主要有三种：</p>
 <ol>
@@ -848,10 +848,10 @@
 </ol>
 <h4 id="text-indent-首行缩进"><a href="#text-indent-首行缩进" class="headerlink" title="text-indent      首行缩进"></a>text-indent      首行缩进</h4><p>text-indent属性用于设置文本的首行缩进，允许使用负值，<code>建议使用em作为单位</code>；</p>
 <p>1 em就是一个字的宽度，如果是汉字则1 em就是一个汉字的宽度；</p>
-<pre><code class="css">        /*设置本页面中所有段落首行缩进两个字符*/
-        p&#123;
-            text-indent：2em；
-        &#125;
+<pre class=" language-css"><code class="language-css">        <span class="token comment" spellcheck="true">/*设置本页面中所有段落首行缩进两个字符*/</span>
+        p&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            text-indent：<span class="token number">2</span>em；
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="letter-spacing-字间距"><a href="#letter-spacing-字间距" class="headerlink" title="letter-spacing     字间距"></a>letter-spacing     字间距</h4><p>letter-spacing用于设置字符与字符之间的距离，其属性值可以为不同单位的数值，<code>允许使用负值</code>，默认值为normal；</p>
 <h4 id="word-spacing-单词间距"><a href="#word-spacing-单词间距" class="headerlink" title="word-spacing     单词间距"></a>word-spacing     单词间距</h4><p>word-spacing用于设置英文单词之间的间距，<code>对中文字符无效</code>。其属性值可以为不同单位的数值，<code>允许使用负值</code>，默认值为normal；</p>
@@ -868,10 +868,10 @@
 </ol>
 <h4 id="颜色半透明-CSS-3"><a href="#颜色半透明-CSS-3" class="headerlink" title="颜色半透明(CSS 3)"></a>颜色半透明(CSS 3)</h4><p>格式：<code>color: rgba(r, g, b, a);</code></p>
 <p>a 代表透明度，取值范围为[0~1]，0为全透明，1为全不透明；</p>
-<pre><code class="css">        /*给rgb(0, 49, 83)设置为0.1的半透明;*/
-        li:nth-last-child(3) &#123;
-            color: rgba(0, 49, 83, .1);
-        &#125;
+<pre class=" language-css"><code class="language-css">        <span class="token comment" spellcheck="true">/*给rgb(0, 49, 83)设置为0.1的半透明;*/</span>
+        <span class="token property">li</span><span class="token punctuation">:</span><span class="token function">nth-last-child</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">49</span>, <span class="token number">83</span>, <span class="token number">.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="文字阴影-CSS-3"><a href="#文字阴影-CSS-3" class="headerlink" title="文字阴影(CSS 3)"></a>文字阴影(CSS 3)</h4><pre><code>        /* 使 用 格 式 */
         选择器 &#123;
@@ -918,7 +918,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">TOLIE</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -941,7 +941,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">John Doe</a>
+                    <a href="/about" target="_blank">TOLIE</a>
                     !
                 </span>
             </div>
@@ -965,7 +965,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/CSS/">
+                                    <span class="chip bg-color">CSS</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1034,21 +1038,25 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/myBlog/" class="post-category">
-                                    myBlog
+                            <a href="/categories/myBlogs/" class="post-category">
+                                    myBlogs
                                 </a>
                             
-                            <a href="/categories/myBlog/Front-End/" class="post-category">
+                            <a href="/categories/myBlogs/Front-End/" class="post-category">
                                     Front End
-                                </a>
-                            
-                            <a href="/categories/myBlog/Front-End/HTML/" class="post-category">
-                                    HTML
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HTML/">
+                        <span class="chip bg-color">HTML</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1083,21 +1091,25 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/myBlog/" class="post-category">
-                                    myBlog
+                            <a href="/categories/myBlogs/" class="post-category">
+                                    myBlogs
                                 </a>
                             
-                            <a href="/categories/myBlog/JAVA-%E6%A1%86%E6%9E%B6/" class="post-category">
+                            <a href="/categories/myBlogs/JAVA-%E6%A1%86%E6%9E%B6/" class="post-category">
                                     JAVA 框架
-                                </a>
-                            
-                            <a href="/categories/myBlog/JAVA-%E6%A1%86%E6%9E%B6/Spring-5/" class="post-category">
-                                    Spring 5
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1137,7 +1149,7 @@
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
             + '来源: Hexo<br />'
-            + '文章作者: John Doe<br />'
+            + '文章作者: TOLIE<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归TOLIE所有，任何形式的转载都请注明出处。';
 
@@ -1329,13 +1341,13 @@
                 <span id="year">2019-2021</span>
             
             <span id="year">2019</span>
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">TOLIE</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.7k</span>&nbsp;字
+                class="white-color">14.4k</span>&nbsp;字
             
             
             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML5 about forms, Hexo">
+    <meta name="keywords" content="HTML5 about forms, Front end,back end">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -385,9 +385,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/HTML/">
+                                <span class="chip bg-color">HTML</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -395,16 +399,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/myBlog/" class="post-category">
-                                myBlog
+                            <a href="/categories/myBlogs/" class="post-category">
+                                myBlogs
                             </a>
                         
-                            <a href="/categories/myBlog/Front-End/" class="post-category">
+                            <a href="/categories/myBlogs/Front-End/" class="post-category">
                                 Front End
-                            </a>
-                        
-                            <a href="/categories/myBlog/Front-End/HTML/" class="post-category">
-                                HTML
                             </a>
                         
                     </div>
@@ -452,12 +452,12 @@
 <p>2、autofocus：初始化页面之后，让input自动获得焦点；</p>
 <p>3、list和datalist：</p>
 <p>​    datalist与select类似，标签定义选项列表，通常与input元素配合使用该元素，datalist元素的内容不会直接显示在网页上，只是会在用户输入时作为候选项。</p>
-<pre><code class="html">        &lt;input type=&#39;text&#39; name=&#39;capital&#39; list=&#39;address&#39; /&gt;
-        &lt;datalist id=&quot;address&quot;&gt;
-            &lt;option value=&quot;beijing&quot;&gt;北京&lt;/option&gt;
-            &lt;option value=&quot;shanghai&quot;&gt;上海&lt;/option&gt;
-            &lt;option value=&quot;shenzhen&quot;&gt;深圳&lt;/option&gt;
-        &lt;/datalist&gt;
+<pre class=" language-html"><code class="language-html">        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>text<span class="token punctuation">'</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>capital<span class="token punctuation">'</span></span> <span class="token attr-name">list</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>address<span class="token punctuation">'</span></span> <span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>datalist</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>address<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>beijing<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>北京<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>shanghai<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>上海<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>shenzhen<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>深圳<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>datalist</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>​    datalist与select的区别：</p>
 <table>
@@ -496,66 +496,66 @@
 <p>​               formnovalidate 应用于提交按钮，并覆盖 novalidate 选项（如果存在）；</p>
 <p>​               这意味着 ‘提交此表单而不验证，无论一般表单设置如何’。</p>
 <p>代码展示：</p>
-<pre><code class="html">    &lt;!-- &lt;form action=&quot;post&quot; novalidate&gt; --&gt;
-    &lt;form action=&quot;post&quot;&gt;
-        &lt;table border=&quot;1px&quot;&gt;
-            &lt;tr&gt;
-                &lt;td&gt; &lt;label&gt;邮箱:&lt;/label&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;input type=&quot;email&quot; placeholder=&quot;请输入注册邮箱！&quot; name=&quot;email&quot; required&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;label&gt;用户名:&lt;/label&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入用户名！&quot; name=&quot;username&quot; required autocomplete=&quot;on&quot;&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;label&gt;密 码:&lt;/label&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入密码！&quot; name=&quot;password&quot; required pattern=&quot;^\d&#123;5&#125;[abcd]$&quot;&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;
-                    &lt;label for=&quot;&quot;&gt;地址：&lt;/label&gt;
-                &lt;/td&gt;
-                &lt;td&gt;
-                    &lt;input type=&#39;text&#39; name=&#39;capital&#39; list=&#39;address&#39; /&gt;
-                    &lt;datalist id=&quot;address&quot;&gt;
-                        &lt;option value=&quot;beijing&quot;&gt;北京&lt;/option&gt;
-                        &lt;option value=&quot;shanghai&quot;&gt;上海&lt;/option&gt;
-                        &lt;option value=&quot;shenzhen&quot;&gt;深圳&lt;/option&gt;
-                    &lt;/datalist&gt;
-                &lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/table&gt;
+<pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!-- &lt;form action="post" novalidate> --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1px<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>邮箱:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>请输入注册邮箱！<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>用户名:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>请输入用户名！<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token attr-name">autocomplete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>on<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>密 码:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>请输入密码！<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>^\d&amp;#123;5&amp;#125;[abcd]$<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>地址：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>text<span class="token punctuation">'</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>capital<span class="token punctuation">'</span></span> <span class="token attr-name">list</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>address<span class="token punctuation">'</span></span> <span class="token punctuation">/></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>datalist</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>address<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>beijing<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>北京<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>shanghai<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>上海<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>shenzhen<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>深圳<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>datalist</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
 
-        &lt;!--&lt;input type=&quot;submit&quot; formnovalidate&gt;--&gt;
-        &lt;input type=&quot;submit&quot;&gt;
-    &lt;/form&gt;
+        <span class="token comment" spellcheck="true">&lt;!--&lt;input type="submit" formnovalidate>--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>最终效果：</p>
 <p><img src="https://raw.githubusercontent.com/TOLIE-OFFICIAL/Pics/main/imges/image-20211128232845753.png" alt="image-20211128232845753"></p>
 <h3 id="三、HTML约束验证的API"><a href="#三、HTML约束验证的API" class="headerlink" title="三、HTML约束验证的API"></a>三、HTML约束验证的API</h3><p><code>H5中document.getElementById(&quot; &quot;) === id ，但这是H5的新特性，不推荐这样写</code></p>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;validity&lt;/title&gt;
-&lt;/head&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>validity<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
 
-&lt;body&gt;
-    &lt;form action=&quot;&quot;&gt;
-        &lt;input type=&quot;text&quot; id=&quot;username&quot;&gt;
-        &lt;input type=&quot;submit&quot;&gt;
-    &lt;/form&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
 
-    &lt;script&gt;
-        console.log(document.getElementById(&quot;username&quot;) === username)
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-&lt;!--
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span> <span class="token operator">===</span> username<span class="token punctuation">)</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--
 此页面，控制台输出结果为true；
-证明H5中 document.getElementById(&quot; &quot;) === id是正确的
---&gt;
+证明H5中 document.getElementById(" ") === id是正确的
+--></span>
 </code></pre>
 <h4 id="主要的HTML约束验证的API"><a href="#主要的HTML约束验证的API" class="headerlink" title="主要的HTML约束验证的API"></a>主要的HTML约束验证的API</h4><ol>
 <li>willValidate属性：代表元素约束有没有被符合，没有被符合则返回false；</li>
@@ -567,27 +567,27 @@
 <h4 id="validity属性的介绍及演示"><a href="#validity属性的介绍及演示" class="headerlink" title="validity属性的介绍及演示"></a>validity属性的介绍及演示</h4><ul>
 <li>属性介绍：</li>
 </ul>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;validity&lt;/title&gt;
-&lt;/head&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>IE<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>validity<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
 
-&lt;body&gt;
-    &lt;form action=&quot;&quot;&gt;
-        &lt;input type=&quot;text&quot; id=&quot;username&quot;&gt;
-        &lt;input type=&quot;submit&quot;&gt;
-    &lt;/form&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
 
-    &lt;script&gt;
-        console.log(document.getElementById(&quot;username&quot;).validity)
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>validity<span class="token punctuation">)</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
 <ul>
 <li>在此页面控制台上可以得到如下图所示的属性</li>
@@ -596,22 +596,22 @@
 <ul>
 <li>代码演示：</li>
 </ul>
-<pre><code class="html">&lt;!-- valueMissing属性值改成true--&gt;
-&lt;input type=&quot;text&quot; id=&quot;username&quot; required&gt;
+<pre class=" language-html"><code class="language-html"><span class="token comment" spellcheck="true">&lt;!-- valueMissing属性值改成true--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">></span></span>
 
-&lt;!-- patternMismatch属性值改成true--&gt;
-&lt;input type=&quot;text&quot; id=&quot;username&quot; value=&quot;adfafea&quot; pattern=&quot;^\d[5]&quot;&gt;
+<span class="token comment" spellcheck="true">&lt;!-- patternMismatch属性值改成true--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>adfafea<span class="token punctuation">"</span></span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>^\d[5]<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 
-&lt;!-- typeMismatch属性值改成true，以type为email为例--&gt;
-&lt;input type=&quot;email&quot; id=&quot;email&quot; value=&quot;adfafea&quot;&gt;
+<span class="token comment" spellcheck="true">&lt;!-- typeMismatch属性值改成true，以type为email为例--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>adfafea<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 
-&lt;!-- rangeOverflow属性值改成true--&gt;
-&lt;input type=&quot;number&quot; id=&quot;number&quot; max=&quot;5&quot; min=&quot;3&quot; value=&quot;6&quot;&gt;
+<span class="token comment" spellcheck="true">&lt;!-- rangeOverflow属性值改成true--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span> <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span> <span class="token attr-name">min</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     
-&lt;!-- rangeUnderflow属性值改成true--&gt;
-&lt;input type=&quot;number&quot; id=&quot;number&quot; max=&quot;5&quot; min=&quot;3&quot; value=&quot;1&quot;&gt;
+<span class="token comment" spellcheck="true">&lt;!-- rangeUnderflow属性值改成true--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span> <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span> <span class="token attr-name">min</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 
-&lt;!-- tooShort和tooLong 与 minlength和maxlength是对应的，但即使设置了这两个属性·，tooShort和tooLong依然会是false--&gt;
+<span class="token comment" spellcheck="true">&lt;!-- tooShort和tooLong 与 minlength和maxlength是对应的，但即使设置了这两个属性·，tooShort和tooLong依然会是false--></span>
 </code></pre>
 <h4 id="checkValidity-方法的介绍及演示"><a href="#checkValidity-方法的介绍及演示" class="headerlink" title="checkValidity()方法的介绍及演示"></a>checkValidity()方法的介绍及演示</h4><ul>
 <li>方法介绍</li>
@@ -620,23 +620,23 @@
 <ul>
 <li>代码演示</li>
 </ul>
-<pre><code class="html">    &lt;form action=&quot;&quot; method=&quot;GET&quot;&gt;
-        &lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; value=&quot;12345&quot; required pattern=&quot;^\d&#123;5&#125;&quot;&gt;
-        &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; value=&quot;kfajihfioua@163.com&quot;&gt;
-        &lt;input type=&quot;submit&quot;&gt;
-    &lt;/form&gt;
+<pre class=" language-html"><code class="language-html">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>GET<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>12345<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>^\d&amp;#123;5&amp;#125;<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>kfajihfioua@163.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
 
-    &lt;script&gt;
-        if (username.checkValidity()) &#123;
-            alert(&quot;符合正则表达式&quot;)
-        &#125; else &#123;
-            alert(&quot;不符合&quot;)
-        &#125;
-        if (email.checkValidity()) &#123;
-            alert(&quot;符合&quot;)
-        &#125; else &#123;
-            alert(&quot;不符合&quot;)
-        &#125;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>
+        if (username.checkValidity()) <span class="token entity" title="&#123;">&amp;#123;</span>
+            alert("符合正则表达式")
+        <span class="token entity" title="&#125;">&amp;#125;</span> else <span class="token entity" title="&#123;">&amp;#123;</span>
+            alert("不符合")
+        <span class="token entity" title="&#125;">&amp;#125;</span>
+        if (email.checkValidity()) <span class="token entity" title="&#123;">&amp;#123;</span>
+            alert("符合")
+        <span class="token entity" title="&#125;">&amp;#125;</span> else <span class="token entity" title="&#123;">&amp;#123;</span>
+            alert("不符合")
+        <span class="token entity" title="&#125;">&amp;#125;</span>
 </code></pre>
 <h4 id="setCust0mValidity-方法的介绍及演示"><a href="#setCust0mValidity-方法的介绍及演示" class="headerlink" title="setCust0mValidity()方法的介绍及演示"></a>setCust0mValidity()方法的介绍及演示</h4><ul>
 <li>方法介绍</li>
@@ -645,30 +645,30 @@
 <ul>
 <li>代码演示</li>
 </ul>
-<pre><code class="html">&lt;body&gt;
-    &lt;form action=&quot;&quot; method=&quot;GET&quot;&gt;
-        &lt;table&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;label&gt;密 码:&lt;/label&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入密码！&quot; name=&quot;password&quot; oninput=&quot;checkPaw(this)&quot; required
-                        pattern=&quot;^\d&#123;5&#125;$&quot;&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/table&gt;
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>GET<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>密 码:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>请输入密码！<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">oninput</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkPaw(this)<span class="token punctuation">"</span></span> <span class="token attr-name">required</span>
+                        <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>^\d&amp;#123;5&amp;#125;$<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
 
-        &lt;input type=&quot;submit&quot;&gt;
-    &lt;/form&gt;
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
 
-    &lt;script type=&quot;text/javascript&quot;&gt;
-        function checkPaw(obj) &#123;
-            var password = obj.validity;
-            if (true === password.valueMissing) &#123;
-                obj.setCustomValidity(&quot;密码不能为空！&quot;);
-            &#125; else if (true === password.patternMismatch) &#123;
-                obj.setCustomValidity(&quot;密码必须是5位数字！&quot;);
-            &#125;
-        &#125;
-    &lt;/script&gt;
-&lt;/body&gt;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript">
+        <span class="token keyword">function</span> <span class="token function">checkPaw</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> password <span class="token operator">=</span> obj<span class="token punctuation">.</span>validity<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span> <span class="token operator">===</span> password<span class="token punctuation">.</span>valueMissing<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                obj<span class="token punctuation">.</span><span class="token function">setCustomValidity</span><span class="token punctuation">(</span><span class="token string">"密码不能为空！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span> <span class="token operator">===</span> password<span class="token punctuation">.</span>patternMismatch<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                obj<span class="token punctuation">.</span><span class="token function">setCustomValidity</span><span class="token punctuation">(</span><span class="token string">"密码必须是5位数字！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 </code></pre>
 <h3 id="四、HTML自带验证美化"><a href="#四、HTML自带验证美化" class="headerlink" title="四、HTML自带验证美化"></a>四、HTML自带验证美化</h3><p>要做出不一样的表单验证，需要==了解一些伪类和css选择器==</p>
 <ol>
@@ -705,7 +705,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">TOLIE</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -728,7 +728,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">John Doe</a>
+                    <a href="/about" target="_blank">TOLIE</a>
                     !
                 </span>
             </div>
@@ -752,7 +752,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/HTML/">
+                                    <span class="chip bg-color">HTML</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -822,16 +826,12 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/myBlog/" class="post-category">
-                                    myBlog
+                            <a href="/categories/myBlogs/" class="post-category">
+                                    myBlogs
                                 </a>
                             
-                            <a href="/categories/myBlog/Front-End/" class="post-category">
+                            <a href="/categories/myBlogs/Front-End/" class="post-category">
                                     Front End
-                                </a>
-                            
-                            <a href="/categories/myBlog/Front-End/HTML/" class="post-category">
-                                    HTML
                                 </a>
                             
                             
@@ -839,6 +839,14 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HTML/">
+                        <span class="chip bg-color">HTML</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -872,21 +880,25 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/myBlog/" class="post-category">
-                                    myBlog
+                            <a href="/categories/myBlogs/" class="post-category">
+                                    myBlogs
                                 </a>
                             
-                            <a href="/categories/myBlog/Front-End/" class="post-category">
+                            <a href="/categories/myBlogs/Front-End/" class="post-category">
                                     Front End
-                                </a>
-                            
-                            <a href="/categories/myBlog/Front-End/CSS/" class="post-category">
-                                    CSS
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -926,7 +938,7 @@
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
             + '来源: Hexo<br />'
-            + '文章作者: John Doe<br />'
+            + '文章作者: TOLIE<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归TOLIE所有，任何形式的转载都请注明出处。';
 
@@ -1118,13 +1130,13 @@
                 <span id="year">2019-2021</span>
             
             <span id="year">2019</span>
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">TOLIE</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.7k</span>&nbsp;字
+                class="white-color">14.4k</span>&nbsp;字
             
             
             
