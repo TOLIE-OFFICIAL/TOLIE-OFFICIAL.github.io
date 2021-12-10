@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Spring 5 for beginner (part 1), Front end,back end">
+    <meta name="keywords" content="Front end,back end">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Spring 5 for beginner (part 1) | Hexo</title>
+    <title>Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -266,12 +266,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Spring 5 for beginner (part 1)</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -385,29 +385,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Spring/">
-                                <span class="chip bg-color">Spring</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/myBlogs/" class="post-category">
-                                myBlogs
-                            </a>
-                        
-                            <a href="/categories/myBlogs/JAVA-%E6%A1%86%E6%9E%B6/" class="post-category">
-                                JAVA 框架
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -423,7 +406,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-03
+                    2021-12-10
                 </div>
                 
 
@@ -475,15 +458,11 @@
 <p>（5）方便进行事务管理</p>
 <p>（6）降低JavaEE API的开发难度</p>
 </blockquote>
-<h1 id="三、Spring-5的下载与安装"><a href="#三、Spring-5的下载与安装" class="headerlink" title="三、Spring 5的下载与安装"></a>三、Spring 5的下载与安装</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://repo.spring.io/ui/native/release/org/springframework/spring">Spring 5 下载地址</a><blockquote>
+<h1 id="三、Spring-5的下载与安装"><a href="#三、Spring-5的下载与安装" class="headerlink" title="三、Spring 5的下载与安装"></a>三、Spring 5的下载与安装</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://repo.spring.io/ui/native/release/org/springframework/spring">Spring 5 下载地址</a></p>
+<p>需要的jar包位于压缩包的lib目录里</p>
+<p>Spring框架核心的jar包主要是4个，包括：Beans、Core、Context、Expression</p>
 </blockquote>
-</li>
-<li>需要的jar包位于压缩包的lib目录里<blockquote>
-</blockquote>
-</li>
-<li>Spring框架核心的jar包主要是4个，包括：Beans、Core、Context、Expression</li>
-</ul>
 <p><img src="https://raw.githubusercontent.com/TOLIE-OFFICIAL/Pics/main/imges/3C2CE62F5FA903EEB54E3385FCC33BB1.png"></p>
 <h1 id="四、IOC容器"><a href="#四、IOC容器" class="headerlink" title="四、IOC容器"></a>四、IOC容器</h1><ul>
 <li>（1）IOC是什么和IOC的底层原理</li>
@@ -491,15 +470,17 @@
 <li>（3）IOC操作Bean原理（基于xml）</li>
 <li>（4）IOC操作Bean原理（基于注解）</li>
 </ul>
-<h2 id="1-IOC是什么和IOC的底层原理"><a href="#1-IOC是什么和IOC的底层原理" class="headerlink" title="1.IOC是什么和IOC的底层原理"></a>1.IOC是什么和IOC的底层原理</h2><p>（1）控制反转，把对象的创建和对象之间的调用过程交给Spring进行管理</p>
+<h2 id="1-IOC是什么和IOC的底层原理"><a href="#1-IOC是什么和IOC的底层原理" class="headerlink" title="1.IOC是什么和IOC的底层原理"></a>1.IOC是什么和IOC的底层原理</h2><blockquote>
+<p>（1）控制反转，把对象的创建和对象之间的调用过程交给Spring进行管理</p>
 <p>（2）使用IOC的目的：降低耦合度</p>
-<h2 id="2-IOC的底层管理"><a href="#2-IOC的底层管理" class="headerlink" title="2. IOC的底层管理"></a>2. IOC的底层管理</h2><h3 id="（1）xml解析、工厂模式、反射"><a href="#（1）xml解析、工厂模式、反射" class="headerlink" title="（1）xml解析、工厂模式、反射"></a>（1）xml解析、工厂模式、反射</h3><ul>
-<li>工厂模式图所示：</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/TOLIE-OFFICIAL/Pics/main/imges/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.png" alt="工厂模式"></p>
-<ul>
-<li>IOC的过程：</li>
-</ul>
+</blockquote>
+<h2 id="2-IOC的底层管理"><a href="#2-IOC的底层管理" class="headerlink" title="2. IOC的底层管理"></a>2. IOC的底层管理</h2><h3 id="（1）xml解析、工厂模式、反射"><a href="#（1）xml解析、工厂模式、反射" class="headerlink" title="（1）xml解析、工厂模式、反射"></a>（1）xml解析、工厂模式、反射</h3><blockquote>
+<p>工厂模式图所示：</p>
+</blockquote>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.png" alt="工厂模式"></p>
+<blockquote>
+<p>IOC的过程：</p>
+</blockquote>
 <p><img src="https://raw.githubusercontent.com/TOLIE-OFFICIAL/Pics/main/imges/IOC%E8%BF%87%E7%A8%8B.png"></p>
 <h3 id="（2）xml解析、反射"><a href="#（2）xml解析、反射" class="headerlink" title="（2）xml解析、反射"></a>（2）xml解析、反射</h3><h3 id="（3）IOC接口"><a href="#（3）IOC接口" class="headerlink" title="（3）IOC接口"></a>（3）IOC接口</h3><ol>
 <li>IOC思想基于IOC容器完成，IOC容器底层就是对象工厂</li>
@@ -694,14 +675,9 @@ wzh.Spring5.User@49139829
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 <p>运行结果：</p>
-<pre><code>Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
-1.已创建bean实例
-2.set方法设置属性值
-3.调用初始化方法
-4.得到bean实例对象
-wzh.Spring5.bean.User@3e694b3f
-5.调用销毁bean对象方法
-</code></pre>
+<blockquote>
+<p>Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8<br>1.已创建bean实例<br>2.set方法设置属性值<br>3.调用初始化方法<br>4.得到bean实例对象<br>wzh.Spring5.bean.User@3e694b3f<br>5.调用销毁bean对象方法</p>
+</blockquote>
 <p>d. 后置处理器 </p>
 <p>除了这五步基本操作，还有==两步的后置处理==</p>
 <ul>
@@ -1104,6 +1080,28 @@ autowira有常用的两个值
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">context:</span>exclude-filter</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>annotation<span class="token punctuation">"</span></span> <span class="token attr-name">expression</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>org.springframework.stereotype.Component<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">context:</span>component-scan</span><span class="token punctuation">></span></span>
 </code></pre>
+<h3 id="B-基于注解的方式注入属性"><a href="#B-基于注解的方式注入属性" class="headerlink" title="B.基于注解的方式注入属性"></a>B.基于注解的方式注入属性</h3><ol>
+<li><h5 id="Spring针对Bean管理中创建对象提供的注解-1"><a href="#Spring针对Bean管理中创建对象提供的注解-1" class="headerlink" title="Spring针对Bean管理中创建对象提供的注解"></a>Spring针对Bean管理中创建对象提供的注解</h5></li>
+</ol>
+<p>注入对象类型的属性值</p>
+<ul>
+<li><p>@AutoWired：根据属性类型进行自动注入</p>
+</li>
+<li><p>@Qualifier：根据属性名称进行自动注入</p>
+</li>
+<li><p>@Resource：根据属性类型进行自动注入，也可以可以根据属性名称进行自动注入</p>
+</li>
+</ul>
+<p>注入一般类型的属性值</p>
+<ul>
+<li>@Value：注入普通类型属性</li>
+</ul>
+<ol start="2">
+<li><h5 id="实际操作-基于注解的方式注入属性"><a href="#实际操作-基于注解的方式注入属性" class="headerlink" title="实际操作.基于注解的方式注入属性"></a>实际操作.基于注解的方式注入属性</h5></li>
+</ol>
+<ul>
+<li></li>
+</ul>
 
                 
             </div>
@@ -1167,11 +1165,7 @@ autowira有常用的两个值
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Spring/">
-                                    <span class="chip bg-color">Spring</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1221,9 +1215,9 @@ autowira有常用的两个值
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CSS for beginner  (part 1)">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">CSS for beginner  (part 1)</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1238,27 +1232,11 @@ autowira有常用的两个值
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/myBlogs/" class="post-category">
-                                    myBlogs
-                                </a>
-                            
-                            <a href="/categories/myBlogs/Front-End/" class="post-category">
-                                    Front End
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            TOLIE
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1274,9 +1252,9 @@ autowira有常用的两个值
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="AJAX for beginner">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">AJAX for beginner</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1291,27 +1269,11 @@ autowira有常用的两个值
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/myBlogs/" class="post-category">
-                                    myBlogs
-                                </a>
-                            
-                            <a href="/categories/myBlogs/Front-End/" class="post-category">
-                                    Front End
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            TOLIE
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/AJAX/">
-                        <span class="chip bg-color">AJAX</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1549,7 +1511,7 @@ autowira有常用的两个值
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14.4k</span>&nbsp;字
+                class="white-color">17.1k</span>&nbsp;字
             
             
             
