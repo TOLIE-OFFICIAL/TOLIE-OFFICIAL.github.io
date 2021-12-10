@@ -480,7 +480,7 @@
 <p>需要的jar包位于压缩包的lib目录里</p>
 <p>Spring框架核心的jar包主要是4个，包括：Beans、Core、Context、Expression</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/TOLIE-OFFICIAL/Pics/main/imges/3C2CE62F5FA903EEB54E3385FCC33BB1.png"></p>
+<p>![3C2CE62F5FA903EEB54E3385FCC33BB1](Spring 5/3C2CE62F5FA903EEB54E3385FCC33BB1.png)</p>
 <h1 id="四、IOC容器"><a href="#四、IOC容器" class="headerlink" title="四、IOC容器"></a>四、IOC容器</h1><ul>
 <li>（1）IOC是什么和IOC的底层原理</li>
 <li>（2）IOC接口（BeanFactory）</li>
@@ -494,11 +494,11 @@
 <h2 id="2-IOC的底层管理"><a href="#2-IOC的底层管理" class="headerlink" title="2. IOC的底层管理"></a>2. IOC的底层管理</h2><h3 id="（1）xml解析、工厂模式、反射"><a href="#（1）xml解析、工厂模式、反射" class="headerlink" title="（1）xml解析、工厂模式、反射"></a>（1）xml解析、工厂模式、反射</h3><blockquote>
 <p>工厂模式图所示：</p>
 </blockquote>
-<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.png" alt="工厂模式"></p>
+<p>![工厂模式](Spring 5/工厂模式.png)</p>
 <blockquote>
 <p>IOC的过程：</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/TOLIE-OFFICIAL/Pics/main/imges/IOC%E8%BF%87%E7%A8%8B.png"></p>
+<p>![IOC过程](Spring 5/IOC过程.png)</p>
 <h3 id="（2）xml解析、反射"><a href="#（2）xml解析、反射" class="headerlink" title="（2）xml解析、反射"></a>（2）xml解析、反射</h3><h3 id="（3）IOC接口"><a href="#（3）IOC接口" class="headerlink" title="（3）IOC接口"></a>（3）IOC接口</h3><ol>
 <li>IOC思想基于IOC容器完成，IOC容器底层就是对象工厂</li>
 <li>Spring提供实现IOC容器的两种基本方式（两个接口）：<ul>
@@ -525,7 +525,7 @@
 <li>普通bean：在配置文件中定义的bean的类型就是返回类型</li>
 <li>工厂bean：在配置文件中定义的bean的类型可以和返回类型不一样</li>
 </ul>
-<h5 id="实现工厂Bean的操作过程"><a href="#实现工厂Bean的操作过程" class="headerlink" title="* 实现工厂Bean的操作过程"></a>* 实现工厂Bean的操作过程</h5><p>==给Admin类引入一个接口FactoryBean，并使用一个泛型类的写法<User>==</p>
+<h5 id="实现工厂Bean的操作过程"><a href="#实现工厂Bean的操作过程" class="headerlink" title="* 实现工厂Bean的操作过程"></a>* 实现工厂Bean的操作过程</h5><p>==给Admin类引入一个接口FactoryBean，并使用一个泛型类的写法<User>==</User></p>
 <p>实现一个工厂bean，设置Admin确能够返回一个User对象</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//Admin.class</span>
 
@@ -829,7 +829,7 @@ wzh.Spring5.bean.User@41d477ed
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
 </code></pre>
 </li>
-<li><h5 id="注入空值-null-：使用标签"><a href="#注入空值-null-：使用标签" class="headerlink" title="注入空值 (null)：使用标签"></a>注入空值 (null)：使用<null>标签</h5><pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--给tel属性注入空值null--></span>
+<li><h5 id="注入空值-null-：使用标签"><a href="#注入空值-null-：使用标签" class="headerlink" title="注入空值 (null)：使用标签"></a>注入空值 (null)：使用<null>标签</null></h5><pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--给tel属性注入空值null--></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>null</span><span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
