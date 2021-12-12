@@ -419,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-11
+                    2021-12-13
                 </div>
                 
 
@@ -906,6 +906,32 @@ hexo g -d`等价于`hexo generate --deploy
 </code></pre>
 </li>
 </ul>
+<p>1.设置模板，blog根目录 <code>scaffolds/post.md</code><br>加入categories,tags等，这样以后通过 <code>hexo new</code> 生成的模板就不用写这两个单词了。<br>当然，你也可以写入任何你每个文章中都会有的部分。</p>
+<pre><code>---
+title: &#123;&#123; title &#125;&#125;
+date: &#123;&#123; date &#125;&#125;
+categories:
+tags:
+---yaml复制代码
+</code></pre>
+<h2 id="Linux平台下的技巧"><a href="#Linux平台下的技巧" class="headerlink" title="Linux平台下的技巧"></a>Linux平台下的技巧</h2><h3 id="快捷命令"><a href="#快捷命令" class="headerlink" title="快捷命令"></a>快捷命令</h3><p>其实就通过alias，触发一些命令的集合<br>在 <code>~/.bashrc</code> 文件中添加</p>
+<pre><code>alias hs=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&#39;  #启动本地服务
+alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&#39;  #部署博客bash复制代码
+</code></pre>
+<p>甚至你也可以加入备份文章的命令，可以自由发挥。</p>
+<h3 id="博客备份（快捷命令升级版）"><a href="#博客备份（快捷命令升级版）" class="headerlink" title="博客备份（快捷命令升级版）"></a>博客备份（快捷命令升级版）</h3><p>为了保证我们写的文章不丢失、快速迁移博客，都需要备份我们的blog。</p>
+<ol>
+<li><p>博客根目录，执行 <code>git init</code> 创建 git 仓库。</p>
+</li>
+<li><p>在 github（或其他托管平台、自建远程仓库等） 创建仓库并和本地仓库建立联系。</p>
+</li>
+<li><p>在<code>~/.bashrc</code>文件中添加</p>
+<pre><code>alias hs=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&#39;
+alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add . &amp;&amp; git commit -m &quot;update&quot; &amp;&amp; git push -f&#39;bash复制代码
+</code></pre>
+</li>
+</ol>
+<p>这样，我们在执行 <code>hd</code> 进行部署时，就一同将博客进行备份了</p>
 <h2 id="参照"><a href="#参照" class="headerlink" title="参照"></a>参照</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://hexo.io/zh-cn/docs/">hexo官方文档</a></li>
 <li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/">闪烁之狐</a></li>
@@ -988,7 +1014,7 @@ hexo g -d`等价于`hexo generate --deploy
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <div class="social-share" data-sites="facebook,google,qq,qzone,wechat,weibo,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="/libs/share/js/social-share.min.js"></script>
     
 
@@ -1297,7 +1323,7 @@ hexo g -d`等价于`hexo generate --deploy
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.1k</span>&nbsp;字
+                class="white-color">31.4k</span>&nbsp;字
             
             
             
@@ -1505,6 +1531,10 @@ $(function () {
 	
     
 
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
     
 
     
