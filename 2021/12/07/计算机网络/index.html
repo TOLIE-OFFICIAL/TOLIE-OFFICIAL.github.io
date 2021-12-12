@@ -933,11 +933,118 @@
 <blockquote>
 <p>数据链路层负责通过一条链路从一个结点向另一个物理链路直接相连的相邻结点传送数据报。</p>
 </blockquote>
-<h6 id="2-功能概述"><a href="#2-功能概述" class="headerlink" title="2).功能概述"></a>2).功能概述</h6><ol>
-<li>数据链路层在物理层提供服务的基础上向网络层提供服务，其最基本的服务是将源自网络层来的数据<code>可靠地传输</code>到目邻节点的目标机网络层。其主要作用是<code>加强物理层传输原始比特流的功能</code>，将物理层提供的可能出错的物理连接收造成为<code>逻辑上无差错的数据链路</code>，使之对网络层表现为一条无差错的链路。</li>
-<li></li>
+<h6 id="2-功能概述"><a href="#2-功能概述" class="headerlink" title="2).功能概述"></a>2).功能概述</h6><p>​    数据链路层在物理层提供服务的基础上向网络层提供服务，其最基本的服务是将源自网络层来的数据<code>可靠地传输</code>到目邻节点的目标机网络层。其主要作用是<code>加强物理层传输原始比特流的功能</code>，将物理层提供的可能出错的物理连接收造成为<code>逻辑上无差错的数据链路</code>，使之对网络层表现为一条无差错的链路。</p>
+<ol>
+<li>功能一：为网络层提供服务。包括无确认无连接服务，有确认无连接服务，有确认面向连接服务。(有连接一 定有确认!)</li>
+<li>功能二：链路管理，即连接的建立、维持、释放(用于面向连接的服务)。</li>
+<li>功能三：组帧。</li>
+<li>功能四：流量控制。！<code>限制发送方哦~</code></li>
+<li>功能五：差错控制(帧错/位错)。</li>
 </ol>
-<h6 id="4"><a href="#4" class="headerlink" title="4)."></a>4).</h6><h6 id="5-练习题-1"><a href="#5-练习题-1" class="headerlink" title="5).练习题"></a>5).练习题</h6><h6 id="6-练习题"><a href="#6-练习题" class="headerlink" title="6).练习题"></a>6).练习题</h6>
+<h5 id="3-2封装成帧-amp-amp-透明传输"><a href="#3-2封装成帧-amp-amp-透明传输" class="headerlink" title="3.2封装成帧&amp;&amp;透明传输"></a>3.2封装成帧&amp;&amp;透明传输</h5><h6 id="1-封装成帧"><a href="#1-封装成帧" class="headerlink" title="1).封装成帧"></a>1).封装成帧</h6><p>封装成帧：在一段数据的前后部分添加首部和尾部，这样就构成了一个帧。接收端在收到物理层上交的比特流<br>后，就能根据首部和尾部的标记，从收到的比特流中识别帧的开始和结束。</p>
+<p>首部和尾部包含许多的控制信息，他们的一一个重要作用：<code>帧定界</code>( 确定帧的界限)。</p>
+<p>帧同步：接收方应当能从接收到的二进制比特流中区分出帧的起始和终止。</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212223520819.png" alt="帧"></p>
+<h6 id="2-透明传输"><a href="#2-透明传输" class="headerlink" title="2).透明传输"></a>2).透明传输</h6><p>透明传输是指不管所传数据是什么样的比特组合，都应当能够在链路上传送。因此，链路层就“看不见”有什么妨碍数据传输的东西。</p>
+<blockquote>
+<p>当所传数据中的比特组合恰巧与某一个控制信息完全一样时， 就必须采取适当的措施，使收方不会将这样的数据误认为是某种控制信息。这样才能保证数据链路层的传输是透明的。</p>
+</blockquote>
+<h6 id="6-組帧的方法"><a href="#6-組帧的方法" class="headerlink" title="6).組帧的方法"></a>6).組帧的方法</h6><ol>
+<li><p>字符计数法</p>
+<p>实现：在帧首部使用一个计数字段（第-一个字节，八位）来标明帧内字符数。</p>
+<p>缺点：<code>容易出错</code>，一个错了就全都错了。</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212223907956.png" alt="字符计数法"></p>
+</li>
+<li><p>字符(节)填充法</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212224425235.png" alt="字符(节)填充法"></p>
+</li>
+<li><p>零比特填充法</p>
+<p>实现：</p>
+<ul>
+<li>在发送端，扫描整个信息字段，只要连续5个1，就立即填入1个0。</li>
+<li>在接收端收到一个帧时，先找到标志字段确定边界，再用硬件对比特流进行扫描。发现连续5个1时，就把后面的0删除。</li>
+</ul>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212224944798.png" alt="零比特填充法"></p>
+<p>特点：保证了透明传输，在传送的比特流中可以<code>传送任意比特组合</code>，而不会引起对帧边界的判断错误。</p>
+</li>
+<li><p>违规编码法</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212225100510.png" alt="image-20211212225100510"></p>
+</li>
+<li><p>总结</p>
+<p>由于字节计数法中Count字段的脆弱性(其值若有差错将导致灾难性后果)及字符填充实现上的复杂性和不兼容性，<code>目前较普遍使用的帧同步法是比特填充和违规编码法</code>。</p>
+</li>
+</ol>
+<h5 id="3-3-1差错控制"><a href="#3-3-1差错控制" class="headerlink" title="3.3.1差错控制"></a>3.3.1差错控制</h5><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212234912222.png" alt="差错控制"></p>
+<h6 id="1-差错来源-amp-解决"><a href="#1-差错来源-amp-解决" class="headerlink" title="1).差错来源 &amp; 解决"></a>1).差错来源 &amp; 解决</h6><ol>
+<li>全局性<ul>
+<li> 由于线路本身电气特性所产生的<code>随机噪声(热噪声)</code>，是信道固有的，随机存在的。</li>
+<li>解决办法：提高信噪比来减少或避免干扰。(对传感器下手)</li>
+</ul>
+</li>
+<li>局部性<ul>
+<li>外 界特定的短暂原因所造成的冲击噪声，是产生差错的主要原因。</li>
+<li>解决办法：通常利用编码技术来解决。</li>
+</ul>
+</li>
+</ol>
+<h6 id="2-差错"><a href="#2-差错" class="headerlink" title="2).差错"></a>2).差错</h6><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212225520087.png" alt="差错"></p>
+<h6 id="3-差错控制（比特错）"><a href="#3-差错控制（比特错）" class="headerlink" title="3).差错控制（比特错）"></a>3).差错控制（<code>比特错</code>）</h6><ol>
+<li><p>检错编码</p>
+<ul>
+<li><p>奇偶校验码</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212230456367.png" alt="奇偶校验码"></p>
+<p>特点：<code>只能检查出奇数个比特错误，检错能力为50%</code>。</p>
+</li>
+<li><p>循环冗余码CRC</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212230806953.png" alt="循环冗余码CRC"></p>
+<p><code>最终发送的数据：要发送的数据+帧检验序列IFCS(冗余码)</code></p>
+</li>
+<li><p>例题：要发送的数据是1101 0110 11，采用CRC校验，生成多项式是10011，那么最终发送的数据应该是?</p>
+<blockquote>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212232022192.png" alt="答案与解析1"></p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212232124062.png" alt="答案与解析2"></p>
+</blockquote>
+</li>
+<li><p>在数据链路层仅仅使用循环冗余检验CRC差错检测技术，只能做到对帧的无差错接收，即“凡是接收端数据链路层接受的帧，我们都能以非常接近于1的概率认为这些帧在传输过程中没有产生差错”。接收端丢弃的帧虽然曾收到了，但是最终还是因为有差错被丢弃。“凡是接收端数据链路层接收的帧均无差错”。<code>链路层使用CRC检验，能够实现无比特差错的传输，但这还不是可靠传输</code>。</p>
+</li>
+</ul>
+</li>
+<li><p>纠错编码</p>
+<ul>
+<li><p>海明码</p>
+<ol>
+<li><p>特点：<code>发现双比特错，纠正单比特错</code>。</p>
+</li>
+<li><p>工作原理：动一发而牵全身</p>
+</li>
+<li><p>工作流程：</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212232858416.png" alt="海明码工作流程"></p>
+<ul>
+<li><p>确认校验码位数r</p>
+<blockquote>
+<p>海明不等式：2<sup>r</sup> $\geq$  k + r + 1,，其中为冗余信息位，k为信息位</p>
+</blockquote>
+</li>
+<li><p>确认校验码和数据的位置</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212233841320.png" alt="确认校验码和数据的位置"></p>
+</li>
+<li><p>求校验码的值</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212234356641.png" alt="image-20211212234356641"></p>
+</li>
+<li><p>检错并纠错</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212234745329.png" alt="检错并纠错"></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><code>数据链路层编码和物理层的数据编码与调制不同</code>。物理层编码针对的是<code>单个比特</code>，解决传输过程中比特的同步等问题，如曼彻斯特编码。而数据链路层的编码针对的是<code>一组比特</code>，它通过冗余码的技术实现一组二进制比特串在传输过程是否出现了差错。</p>
+</blockquote>
+<h6 id="4"><a href="#4" class="headerlink" title="4)."></a>4).</h6>
                 
             </div>
             <hr/>
@@ -1320,7 +1427,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">29.9k</span>&nbsp;字
+                class="white-color">31.1k</span>&nbsp;字
             
             
             
