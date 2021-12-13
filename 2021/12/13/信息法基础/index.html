@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="about HTTP, Front end,back end">
+    <meta name="keywords" content="信息法基础, Front end,back end">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>about HTTP | TOLIE&#39;s Blogs</title>
+    <title>信息法基础 | TOLIE&#39;s Blogs</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -266,12 +266,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">about HTTP</h1>
+                    <h1 class="description center-align post-title">信息法基础</h1>
                 </div>
             </div>
         </div>
@@ -387,8 +387,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/HTTP/">
-                                <span class="chip bg-color">HTTP</span>
+                            <a href="/tags/laws/">
+                                <span class="chip bg-color">laws</span>
                             </a>
                         
                     </div>
@@ -399,8 +399,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Net/" class="post-category">
-                                Net
+                            <a href="/categories/others/" class="post-category">
+                                others
                             </a>
                         
                     </div>
@@ -412,14 +412,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-27
+                    2021-12-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-12
+                    2021-12-13
                 </div>
                 
 
@@ -443,108 +443,362 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="HTTP协议详解"><a href="#HTTP协议详解" class="headerlink" title="HTTP协议详解"></a>HTTP协议详解</h1><h3 id="重要性："><a href="#重要性：" class="headerlink" title="重要性："></a>重要性：</h3><blockquote>
-<p>无论是以后用WebSevice，还是用rest做大型架构，都离不开对HTTP协议的认识。<br>甚至可以简化的说：</p>
-<p>WebService = Http协议 + XML</p>
-<p>Rest = Http协议 + XML/json实现的</p>
-<p>各种的Api一般也是用Http + XML/json来实现的。</p>
-<p>学习了HTTP协议之后也会方便Ajax的学习。</p>
-</blockquote>
-<h2 id="学习内容："><a href="#学习内容：" class="headerlink" title="学习内容："></a>学习内容：</h2><p>一、原理</p>
-<ol>
-<li>   形象理解Http协议</li>
-<li>   动手试试Http协议</li>
-<li>   Http协议三部分介绍</li>
+                <h3 id="一、专利法"><a href="#一、专利法" class="headerlink" title="一、专利法"></a>一、专利法</h3><h4 id="1-专利的特点"><a href="#1-专利的特点" class="headerlink" title="1.专利的特点"></a>1.专利的特点</h4><ol>
+<li><p>独占性、垄断性</p>
+</li>
+<li><p>公开性（国防专利不适用普通意义上的专利）</p>
+</li>
+<li><p>法定授权性</p>
+</li>
+<li><p>地域限制性</p>
+</li>
+<li><p>时间限制性</p>
+</li>
 </ol>
-<p>二、实战</p>
-<ol>
-<li>   PHP + socket编程发送http请求</li>
-<li>   PHP批量发帖</li>
-<li>   Http协议的防盗链</li>
-</ol>
-<p>三、优化</p>
-<ol>
-<li>   Http协议与缓存控制</li>
-<li>   Http协议与Cookie</li>
-<li>   持久链接</li>
-</ol>
-<h2 id="学习内容：-1"><a href="#学习内容：-1" class="headerlink" title="学习内容："></a>学习内容：</h2><h3 id="一、原理"><a href="#一、原理" class="headerlink" title="一、原理"></a>一、原理</h3><h4 id="A-形象理解Http协议"><a href="#A-形象理解Http协议" class="headerlink" title="A.    形象理解Http协议"></a>A.    形象理解Http协议</h4><h5 id="1）-Http协议的定义："><a href="#1）-Http协议的定义：" class="headerlink" title="1） Http协议的定义："></a>1） Http协议的定义：</h5><blockquote>
-<p>计算机协议和现实的协议是一样的，双方多方都遵循这一个共同的规范，这就是协议。计算机可以全世界共通，这些协议功不可没。</p>
-<p>HTTP协议就是按照一定的规则，向服务器索要数据/发送数据。服务器安照一定的规则进行回应。</p>
-</blockquote>
-<h5 id="2）-Http协议的工作流程"><a href="#2）-Http协议的工作流程" class="headerlink" title="2） Http协议的工作流程"></a>2） Http协议的工作流程</h5><blockquote>
-<p>1、原始状态下客户端与服务器没有连接；（连接就是虚拟电路）</p>
-<p>2、建立链接发送请求到服务器；</p>
-<p>3、服务器沿着建立的连接，返回响应信息。客户端收到响应，并进行解析；</p>
-<p>4、断开连接。</p>
-</blockquote>
-<h5 id="3）-Http请求信息和响应信息的格式"><a href="#3）-Http请求信息和响应信息的格式" class="headerlink" title="3） Http请求信息和响应信息的格式"></a>3） Http请求信息和响应信息的格式</h5><h6 id="1、请求信息："><a href="#1、请求信息：" class="headerlink" title="1、请求信息："></a>1、请求信息：</h6><blockquote>
-<pre><code>        请求行；
-        请求头信息；
-        （换行）
-        请求主体信息（可无）
-</code></pre>
-</blockquote>
-<p><code>！！换行用来分开请求/响应头信息和请求/响应主体信息虽主体信息可有可无，但此空行一定要有。</code></p>
-<h6 id="请求行分为三部分："><a href="#请求行分为三部分：" class="headerlink" title="请求行分为三部分："></a>请求行分为三部分：</h6><p>请求方法、请求路径(URL)、所用的协议。</p>
+<h4 id="2-专利权的特征"><a href="#2-专利权的特征" class="headerlink" title="2.专利权的特征"></a>2.专利权的特征</h4><table>
+<thead>
+<tr>
+<th>特征</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>专利权的保护对象</td>
+<td align="left">专利权的保护对象是发明创造即发明，实用新型和外观设计</td>
+</tr>
+<tr>
+<td>依法定程序授予</td>
+<td align="left">在著作权法当中，著作权是自作品完成之时自动产生，无须履行任何程序，而专利权则不同。</td>
+</tr>
+<tr>
+<td>专利权具有期限及地域限制</td>
+<td align="left">专利权人仅在法律规定的期限内享有法律赋予的专有权，超过期限发明创造即自动进入公有领域，任何单位或个人都可以免费使用。</td>
+</tr>
+<tr>
+<td>专利保护对象的公开性</td>
+<td align="left">就私与公的关系而言，任何发明创造都并</td>
+</tr>
+<tr>
+<td>特殊的专有性</td>
+<td align="left">非凭空产生，它都是从社会公共资源库中所有的知识产权，无论著作权专利权还是商标权，都是支配权和对世权，都具有专有性。但专利权的专有性更强。相同的发明创造，只能产生一项专利权。</td>
+</tr>
+<tr>
+<td>受到更多的限制性</td>
+<td align="left">专利权由于更多地影响到技术进步与社会福利等公共利益，其专有性往往会受到法律更多的限制。</td>
+</tr>
+</tbody></table>
+<h4 id="3-专利权的保护对象"><a href="#3-专利权的保护对象" class="headerlink" title="3.专利权的保护对象"></a>3.专利权的保护对象</h4><table>
+<thead>
+<tr>
+<th align="left">对&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;象</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">技术方案</td>
+<td align="left"><code>运用自然规律解决特定的生产生活问题</code>。但营销技术、立法技术等由于利用的并非自然规律，并不属于专利法的保护范围。<code>不要求已实际应用</code>，但一定具体可行。</td>
+</tr>
+<tr>
+<td align="left">设计方案</td>
+<td align="left">我国专利法还对工业产品的设计方案提供保护，即对产品的形状、图案、色彩等的结合所作出的富有美感的设计构思。</td>
+</tr>
+</tbody></table>
+<h4 id="4-专利权客体"><a href="#4-专利权客体" class="headerlink" title="4.专利权客体"></a>4.专利权客体</h4><ul>
+<li><p>专利权的客体是指能取得专利权，可以受专利法保护的发明创造。</p>
 <blockquote>
-<p>请求方法包括：GET POST HEAD PUT DELETE TRACE OPTIONS</p>
-<p>请求路径就是URL的一部分</p>
+<p>发明是指对产品方法或者其改进，所提出的新的技术方案。</p>
+<p>发明可以分为产品发明和方法发明。</p>
 </blockquote>
-<h6 id="请求头信息格式："><a href="#请求头信息格式：" class="headerlink" title="请求头信息格式："></a>请求头信息格式：</h6><blockquote>
-<p>KEY：VALUE<br>KEY：VALUE<br>………………<br>Contente-length:接下来的主体长度<br>Contente-type:接下来的主体类型</p>
-</blockquote>
-<hr>
-<h6 id="2、响应信息："><a href="#2、响应信息：" class="headerlink" title="2、响应信息："></a>2、响应信息：</h6><pre><code>            响应行
-            响应头信息
-            （换行）
-            响应主体信息
-</code></pre>
-<p><code>！！换行用来分开请求/响应头信息和请求/响应主体信息虽主体信息可有可无，但此空行一定要有。</code></p>
-<p>响应主体信息可以是HTML或者其他内容</p>
-<h6 id="响应行分为三部分："><a href="#响应行分为三部分：" class="headerlink" title="响应行分为三部分："></a>响应行分为三部分：</h6><blockquote>
-<p> 协议 状态码 状态文字信息<br>状态文字信息是像‘ok’这样</p>
-</blockquote>
-<h6 id="响应头信息格式："><a href="#响应头信息格式：" class="headerlink" title="响应头信息格式："></a>响应头信息格式：</h6><blockquote>
-<p> KEY：VALUE<br>KEY：VALUE<br>………………<br>例如：HTTP/1.1 200 OK<br>     Contente-type:text/html<br>     Contente-length:5</p>
-</blockquote>
-<h5 id="4）-请求方法"><a href="#4）-请求方法" class="headerlink" title="4） 请求方法"></a>4） 请求方法</h5><p>  <code>GET POST HEAD PUT DELETE TRACE OPTIONS</code></p>
+</li>
+<li><p>授予发明、实用新型专利的实质条件</p>
 <blockquote>
-<p>（注意要大写</p>
-<p>（注意：这些请求方法虽然Http协议里规定了，但可能有Web Service不支持这些方法。）</p>
+<p>根据我国专利法的规定，授予专利权的发明和实用新型应当具备新颖性、创造性和实用性。</p>
 </blockquote>
-<h6 id="1、HEAD与GET方法基本一致，只是不返回内容"><a href="#1、HEAD与GET方法基本一致，只是不返回内容" class="headerlink" title="1、HEAD与GET方法基本一致，只是不返回内容"></a>1、HEAD与GET方法基本一致，只是不返回内容</h6><h6 id="2、POST的请求方法"><a href="#2、POST的请求方法" class="headerlink" title="2、POST的请求方法"></a>2、POST的请求方法</h6><pre><code>    因为POST比GET多了主体信息
-    
-    所以要在请求头信息里表明主体信息的长度content－length
-    
-    还要标明主体信息的类型content-type:application/x-www-form-urlencoded
-</code></pre>
-<p>GET和POST的区别在于GET请求没法传数据，只能单纯的读取一个接口提供的资源</p>
-<p>而PSOT可以传输一定的数据到后台并进行一定的操作。</p>
-<h6 id="3、TRACE应用情况："><a href="#3、TRACE应用情况：" class="headerlink" title="3、TRACE应用情况："></a>3、TRACE应用情况：</h6><p>比如用了代理上网，想查看代理有没有修改Http请求，这种情况就可以用到TRACE，服务器回把最后收到的请求返回给客户端。</p>
-<h6 id="4、OPTIONS："><a href="#4、OPTIONS：" class="headerlink" title="4、OPTIONS："></a>4、OPTIONS：</h6><p>返回服务器可用的请求方法。</p>
-<h5 id="5）-状态码和状态文字"><a href="#5）-状态码和状态文字" class="headerlink" title="5） 状态码和状态文字"></a>5） 状态码和状态文字</h5><blockquote>
-<p>状态码用来反映服务器的响应情况</p>
-<p>状态文字用来描述状态码的</p>
+</li>
+</ul>
+<h4 id="5-专利权主体"><a href="#5-专利权主体" class="headerlink" title="5.专利权主体"></a>5.专利权主体</h4><p>主体即专利权人</p>
+<ol>
+<li><p>职务发明创造——权利主体即为单位</p>
+<ul>
+<li>执行本单位的任务</li>
+<li>主要利用本单位的物质条件</li>
+</ul>
+</li>
+<li><p>非职务发明</p>
+<ul>
+<li>权利主体即为发明人或设计人</li>
+</ul>
+</li>
+<li><p>合作发明</p>
+<ul>
+<li>两人以上合作完成的发明，权利主体即为共同完成的单位或个人</li>
+</ul>
+</li>
+<li><p>委托完成的发明</p>
+<ul>
+<li>权利主体即为完成方</li>
+</ul>
+</li>
+<li><p>发明创造的受让人、继承人、受赠人</p>
+</li>
+</ol>
+<h4 id="6-不授予专利权的对象"><a href="#6-不授予专利权的对象" class="headerlink" title="6.不授予专利权的对象"></a>6.不授予专利权的对象</h4><ol>
+<li><p>违反国家法律、社会公德或妨害公共利益的发明创造；</p>
+</li>
+<li><p>科学发现</p>
+<ul>
+<li>专利法保护根据科学发现提出的技术方案，但并不保护发现本身。</li>
+</ul>
+</li>
+<li><p>智力活动的规则与方法</p>
+<ul>
+<li>这些规则和方法并没有在自然规律的基础上提出具体的技术解决方案，因此不是专利法意义上的发明创造。</li>
+</ul>
+</li>
+<li><p>疾病的诊断和治疗方法</p>
+</li>
+<li><p>动物和植物品种</p>
+</li>
+<li><p>原子核变换方法获得的物质</p>
+</li>
+<li><p>对平面印刷品的图案、色彩或二者结合作出的主要起标识作用的设计</p>
+</li>
+</ol>
+<h4 id="7-专利权的内容"><a href="#7-专利权的内容" class="headerlink" title="7.专利权的内容"></a>7.专利权的内容</h4><ol>
+<li>独占权：发明和实用新型专利权被授予后，除专利法另有规定的以外，任何单位或者个人未经专利权人许可，都不得实施其专利，即不得为生产经营目的制造、使用、许诺销售、销售、进口其专利产品，或者使用其专利方法以及使用、许诺销售、销售、进口依照该专利方法直接获得的产品。</li>
+<li>转让权：包括专利申请权的转让和专利权的转让。有两种形式：合同转让、继承转让。</li>
+<li>标示权：指专利权人享有在其专利产品或者该产品的包装上标明专利标记和专利号的权利，起到宣传作用，有助于扩大产品的销售，同时也可起到警示作用，使其他人了解这种产品是受到专利保护而不能随意仿造。</li>
+<li>请求保护权：当专利权人认为其专利权受到侵害时，享有向人民法院起诉或请求专利管理部门处理以保护其专利权的权利。</li>
+<li>放弃权：专利权人有权在专利有效期前，以书面形式声明或通过未按时交纳年费的方式自愿放弃专利。</li>
+</ol>
+<h4 id="8-专利权的限制——强制许可"><a href="#8-专利权的限制——强制许可" class="headerlink" title="8.专利权的限制——强制许可"></a>8.专利权的限制——强制许可</h4><ul>
+<li>强制许可又称为非自愿许可，是指国务院专利行政部门依照法律规定，不经专利权人的同意直接许可具备实施条件的申请者实施发明或实用新型专利的一种行政措施。</li>
+</ul>
+<h4 id="9-不构成专利侵权的行为"><a href="#9-不构成专利侵权的行为" class="headerlink" title="9.不构成专利侵权的行为"></a>9.不构成专利侵权的行为</h4><ol>
+<li><p>专利产品或者依照专利方法直接获得的产品，由专利权人或者经其许可的单位、个人售出后，使用、许诺销售、销售、进口该产品的；</p>
+</li>
+<li><p>在专利申请日前已经制造相同产品、使用相同方法或者已经作好制造、使用的必要准备，并且仅在原有范围内继续制造、使用的；</p>
+</li>
+<li><p>临时通过中国领陆、领水、领空的外国运输工具，依照其所属国同中国签订的协议或者共同参加的国际条约，或者依照互惠原则，为运输工具自身需要而在其装置和设备中使用有关专利的；</p>
+</li>
+<li><p>专为科学研究和实验而使用有关专利的；</p>
+</li>
+<li><p>为提供行政审批所需要的信息，制造、使用、进口专利药品或者专利医疗器械的，以及专门为其制造、进口专利药品或者专利医疗器械的。</p>
+</li>
+</ol>
+<h3 id="二、商标法"><a href="#二、商标法" class="headerlink" title="二、商标法"></a>二、商标法</h3><h5 id="1-商标权的定义"><a href="#1-商标权的定义" class="headerlink" title="1.商标权的定义"></a>1.商标权的定义</h5><ul>
+<li>商标所有人依法对其注册商标所享有的专有使用权。我国商标权是指注册商标专有权。</li>
+</ul>
+<h5 id="2-我国商标法的特点"><a href="#2-我国商标法的特点" class="headerlink" title="2.我国商标法的特点"></a>2.我国商标法的特点</h5><p>(1)保护商标的原则：不仅是对注册商标权的保护，也包括对未注册商标的保护；</p>
+<p>(2)保护消费者利益的原则</p>
+<p>(3)采用注册原则：包括申请在先和使用在先互补原则，自愿注册与强制注册并用的原则</p>
+<p>(4)采用审查原则：商标审查由国家及地方的市场监督管理局负责。</p>
+<h5 id="3-商标的禁用问题"><a href="#3-商标的禁用问题" class="headerlink" title="3.商标的禁用问题"></a>3.商标的禁用问题</h5><ol>
+<li>同中华人民共和国的国家名称、国旗、国徽、国歌、军旗、军徽、军歌、勋章等相同或者近似的，以及同中央国家机关的名称、标志、所在地特定地点的名称或者标志性建筑物的名称、图形相同的；</li>
+<li>同外国的国家名称、国旗、国徽、军旗等相同或者近似的，但经该国政府同意的除外；</li>
+<li>同政府间国际组织的名称、旗帜、徽记等相同或者近似的，但经该组织同意或者不易误导公众的除外；</li>
+<li>与表明实施控制、予以保证的官方标志、检验印记相同或者近似的，但经授权的除外；</li>
+<li>同“红十字”、“红新月”的名称、标志相同或者近似的；</li>
+<li>带有民族歧视性的；</li>
+<li>带有欺骗性，容易使公众对商品的质量等特点或者产地产生误认的；</li>
+<li>有害于社会主义道德风尚或者有其他不良影响的。</li>
+<li>县级以上行政区划的地名或者公众知晓的外国地名，不得作为商标。但是，地名具有其他含义或者作为集体商标、证明商标组成部分的除外；已经注册的使用地名的商标继续有效。</li>
+</ol>
+<h5 id="4-商标的种类"><a href="#4-商标的种类" class="headerlink" title="4.商标的种类"></a>4.商标的种类</h5><ol>
+<li>商品商标：生产经营在生产、制造、加工、或经销的商品上所使用的商标；</li>
+<li>服务商标：服务性行业所使用的区别标志，即提供服务的人在其向社会公众提供的服务项目上所使用的标志；</li>
+<li>按构成商标图案的形态分类：文字商标、图形商标、字母商标、数字商标、三维商标、颜色商标及组合商标；</li>
+<li>按使用者的不同进行分类：制造商标销售商标与集体商标；</li>
+<li>按其特殊性质分类：联合商标、防御商标与证明商标；</li>
+</ol>
+<h5 id="5-商标权保护范围和期限"><a href="#5-商标权保护范围和期限" class="headerlink" title="5.商标权保护范围和期限"></a>5.商标权保护范围和期限</h5><h6 id="1-注册商标专用权"><a href="#1-注册商标专用权" class="headerlink" title="1)注册商标专用权"></a>1)注册商标专用权</h6><p>​        注册商标专用权的保护及于相同或类似商标与相同或类似商品上。即：不得在相同或相类似的商品上使用与他人已经注册商标相同或相类似的标志。</p>
+<h6 id="2-注册商标转让权"><a href="#2-注册商标转让权" class="headerlink" title="2)注册商标转让权"></a>2)注册商标转让权</h6><p>​        《商标法》第四十二条　转让注册商标的，转让人和受让人应当签订转让协议，并共同向商标局提出申请。受让人应当保证使用该注册商标的商品质量。</p>
+<h6 id="3-商标许可使用权"><a href="#3-商标许可使用权" class="headerlink" title="3)商标许可使用权"></a>3)商标许可使用权</h6><p>​        商标注册人可以通过签订商标使用许可合同，许可他人使用其注册商标。许可人应当监督被许可人使用其注册商标的商品质量。被许可人应当保证使用该注册商标的商品质量。（《商标法》第四十三条）</p>
+<h5 id="6-商标权保护期限"><a href="#6-商标权保护期限" class="headerlink" title="6.商标权保护期限"></a>6.商标权保护期限</h5><blockquote>
+<p>注册商标的有效期为<code>十年，自核准注册之日起计算</code>。</p>
 </blockquote>
-<h6 id="常见的有："><a href="#常见的有：" class="headerlink" title="常见的有："></a>常见的有：</h6><pre><code>200 OK：服务器正常返回网页
-301/2：永久/临时重定向 （可能会在重定向过程中丢失数据，比如POST可能会变成GET导致数据丢失）
-304 Not Modified：未修改（请求的内容未修改，告诉客户端到缓存里取
-307 Temporay Redirect：在重定向中保持原有数据 
-</code></pre>
-<h6 id="失败的状态码－"><a href="#失败的状态码－" class="headerlink" title="失败的状态码－"></a>失败的状态码－</h6><pre><code> 404 NOT FOUND：请求的网页不存在
- 500：服务器内部错误
- 503：服务器暂时不可用
-</code></pre>
-<h6 id="状态码-定义-说明"><a href="#状态码-定义-说明" class="headerlink" title="状态码    定义    说明"></a>状态码    定义    说明</h6><pre><code>1XX    信息    收到请求，继续处理
-2XX    成功    操作成功收到、理解、接受
-3XX    重定向    为了完成请求，必需采取进一步措施
-4XX    客户端错误    请求的语法有明显错误或不能完全被满足
-5XX    服务端错误    服务器无法完成明显有效的请求
-</code></pre>
-<p>B.    动手试试Http协议<br>C.    Http协议三部分介绍</p>
-<p>二、实战<br>A.    PHP + socket编程发送http请求<br>B.    PHP批量发帖<br>C.    Http协议的防盗链</p>
-<p>三、优化<br>A.    Http协议与缓存控制<br>B.    Http协议与Cookie<br>C.    持久链接</p>
+<p>​        《商标法》第四十条　注册商标有效期满，需要继续使用的，商标注册人应当在期满前十二个月内按照规定办理续展手续；在此期间未能办理的，可以给予六个月的宽展期。每次<code>续展注册的有效期为十年</code>，自该商标上一届有效期满次日起计算。</p>
+<h5 id="7-驰名商标的认定"><a href="#7-驰名商标的认定" class="headerlink" title="7.驰名商标的认定"></a>7.驰名商标的认定</h5><ol>
+<li><p>相关公众对该商标的<code>知晓程度</code>；</p>
+</li>
+<li><p>该商标使用的持续<code>时间</code>；</p>
+</li>
+<li><p>该商标的任何宣传工作的持续时间、程度和地理范围；</p>
+</li>
+<li><p>该商标<code>作为驰名商标受保护的记录</code>；</p>
+</li>
+<li><p>该商标驰名的其他因素。</p>
+</li>
+</ol>
+<h5 id="8-对驰名商标的保护"><a href="#8-对驰名商标的保护" class="headerlink" title="8.对驰名商标的保护"></a>8.对驰名商标的保护</h5><p>就不相同或者不相类似商品申请注册的商标是复制、摹仿或者翻译他人已经在中国注册的驰名商标，<code>误导公众，致使该驰名商标注册人的利益可能受到损害的</code>，不予注册并禁止使用。（即跨类超保护）</p>
+<p>具体包括：</p>
+<ol>
+<li><p>对抗商标恶意抢注；</p>
+</li>
+<li><p>对抗不同商品的相同（似）商标影响；</p>
+</li>
+<li><p>对于近似商标的认定更容易；</p>
+</li>
+<li><p>在立案调查假冒商标犯罪案件时，不受立案金额的限制；</p>
+</li>
+<li><p>防止其它公司以驰名商标为公司名称注册；</p>
+</li>
+<li><p>在电子商务中避免域名注册；</p>
+</li>
+<li><p>保护驰名，不以注册为限。</p>
+</li>
+</ol>
+<h5 id="9-地理标志与商标"><a href="#9-地理标志与商标" class="headerlink" title="9.地理标志与商标"></a>9.地理标志与商标</h5><ol>
+<li><p>二者联系</p>
+<ul>
+<li>地理标志是一种特殊的商标，商标法是其上位法。地理标志可以注册为证明商标或集体商标，可以分为地理标志证明商标和地理标志集体商标。</li>
+</ul>
+</li>
+<li><p>二者区别</p>
+<ul>
+<li><p>在构成要件上：地理标志只能使用特定的地理名称，商标除了地理名称之外，还可以使用图形、色彩等组合；</p>
+</li>
+<li><p>在使用者上：地理标志使用者人数众多，特定的地理范围内，符合要求的特定类型产品提供者都可以使用，而商标的使用者只能商标所有人或者许可的第三人。</p>
+</li>
+<li><p>在功能上：地理标志只能表明商品来源，不能标明具体的生产者，商标可以表明商品的具体生产者；</p>
+</li>
+<li><p>在权利存续时间上：地理标志没有时间限制；商标有时间限制，期满后继续使用的需要续展商标；</p>
+</li>
+<li><p>申请原则上：地理标志是自愿注册申请原则，商标是是自愿注册为主、强制注册为辅的原则。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h5 id="10-商标侵权认定的难点"><a href="#10-商标侵权认定的难点" class="headerlink" title="10.商标侵权认定的难点"></a>10.商标侵权认定的难点</h5><h6 id="1-对侵犯注册商标权行为认定的步骤："><a href="#1-对侵犯注册商标权行为认定的步骤：" class="headerlink" title="1)对侵犯注册商标权行为认定的步骤："></a>1)对侵犯注册商标权行为认定的步骤：</h6><ol>
+<li>确定注册商标专用权的权利范围。确定两要素：核准注册的商标+该注册商标所核定使用的商品。</li>
+<li>确定被控侵权的具体对象。被控侵权的商标+被控侵权的商标所使用的商品。</li>
+<li>商标是否相同或者近似+商品是否属于同一种类或者相类似。</li>
+</ol>
+<h6 id="2-近似商标的认定"><a href="#2-近似商标的认定" class="headerlink" title="2)近似商标的认定"></a>2)近似商标的认定</h6><ol>
+<li>商标外观。即对两个商标的文字、图形或其组合的视觉形象，从普通消费者的角度进行观察，看是否能引起误认或混淆。</li>
+<li>商标读音。从人们的听觉出发，判断两商标是否因读音近似而导致混淆。</li>
+<li>商标含义。分析两个商标是否含义相同或近似并导致消费者对商品来源产生混淆</li>
+</ol>
+<p>3)类似商品的判断</p>
+<ol>
+<li>《类似商品和服务区分表》和《商标注册用商品和服务国际分类表》并不是划分类似商品的依据，只能作为认定类似商品或者服务的参考。</li>
+<li>从商品在功能、用途、生产部门、销售渠道、消费对象等方面是否相同，或者相关公众是否一般认为其存在特定联系、容易造成混淆来判断类似商品；</li>
+<li>不以商品质量的优劣作为判定类似商品的标准。</li>
+</ol>
+<h3 id="三、-著作权"><a href="#三、-著作权" class="headerlink" title="三、  著作权"></a><strong>三、</strong>  <strong>著作权</strong></h3><h4 id="1-著作权的客体与主体"><a href="#1-著作权的客体与主体" class="headerlink" title="1. 著作权的客体与主体"></a><strong>1.</strong> <strong>著作权的客体与主体</strong></h4><h5 id="1-客体"><a href="#1-客体" class="headerlink" title="1) 客体"></a><strong>1)</strong> <strong>客体</strong></h5><p>成为客体的条件：</p>
+<ol>
+<li>作品必须具有<code>独创性</code></li>
+<li>作品必须具有表达性</li>
+<li>作品必须具有可复制性</li>
+<li>作品必须具有合法性</li>
+<li><code>作品必须是著作权法意义上的作品</code></li>
+</ol>
+<p>作品的识别与分类：</p>
+<blockquote>
+<p>①　分类：主要有文字作品、口述作品、音乐作品、戏剧作品、曲艺作品、杂技艺术作品、美术作品等</p>
+<p>②　识别：接触+实质性相似-合法来源=侵权成立</p>
+</blockquote>
+<p>认定实质性相似的主要方法为<strong>整体观感法</strong>和<strong>抽象过滤法</strong>。</p>
+<h5 id="2-主体"><a href="#2-主体" class="headerlink" title="2) 主体"></a><strong>2)</strong> <strong>主体</strong></h5><table>
+<thead>
+<tr>
+<th>分类</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>原始主体</td>
+<td>原始主体中最常见的是作者。</td>
+</tr>
+<tr>
+<td>继受主体</td>
+<td>通过继承、遗赠、赠与、转让等继受方式取得著作权的主体，称著作权继受主体。</td>
+</tr>
+</tbody></table>
+<p>特殊作品的著作权主体</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>演绎作品</td>
+<td>演绎作品的作者仅对演绎部分享有部分著作权，对被演绎的作品不享有著作权。</td>
+</tr>
+<tr>
+<td>合作作品</td>
+<td>合作作品可分割使用，作者对各自创作的部分可以单独享有著作权，但行使著作权时不得侵犯合作作品整体的著作权。</td>
+</tr>
+<tr>
+<td>汇编作品</td>
+<td>其著作权由汇编人享有，但行使著作权时，不得侵犯原作品的著作权。</td>
+</tr>
+<tr>
+<td>职务作品</td>
+<td>由作者享有署名权，著作权的其他权利由法人或者非法人组织享有，法人或者非法人组织可以给予作者奖励。</td>
+</tr>
+<tr>
+<td>委托作品</td>
+<td>受委托创作的作品，委托人可以通过与受托人协商，在合同中约定自己成为著作权人或者共有著作权人。</td>
+</tr>
+</tbody></table>
+<h4 id="2-著作权内容"><a href="#2-著作权内容" class="headerlink" title="2. 著作权内容"></a><strong>2.</strong> <strong>著作权内容</strong></h4><h5 id="1-著作人身权"><a href="#1-著作人身权" class="headerlink" title="1)著作人身权"></a>1)著作人身权</h5><ul>
+<li>发表权：即决定作品是否公之于众的权利；</li>
+<li>署名权：即表明作者身份，在作品上署名的权利；</li>
+<li>修改权：即修改或者授权他人修改作品的权利；</li>
+<li>保护作品完整权：及保护作品不受歪曲、篡改的权利；</li>
+</ul>
+<h5 id="2-著作财产权"><a href="#2-著作财产权" class="headerlink" title="2)著作财产权"></a>2)著作财产权</h5><ul>
+<li>复制权：即以印刷、复印、拓印、录音、录像、翻录、数字化等方式将作品制作一份或者多份的权利；</li>
+<li>发行权：即以出售或者赠与方式向公众提供作品的原件或者复制件的权利；</li>
+<li>出租权：即有偿许可他人临时使用视听作品、计算机软件的原件或者复制件的权利，计算机软件不是出租的主要标的除外；</li>
+<li>展览权：即公开陈列美术作品、摄影作品的原件或者复制件的权利；</li>
+<li>表演权：即公开表演作品，以及用各种手段公开播送作品的表演的权利；</li>
+<li>还有放映权、广播权、信息网络传播权、摄制权、改编权、翻译权、汇编权、应当由著作权人享有的其他权利；</li>
+</ul>
+<h4 id="3-著作权的限制与保护"><a href="#3-著作权的限制与保护" class="headerlink" title="3. 著作权的限制与保护"></a><strong>3.</strong> <strong>著作权的限制与保护</strong></h4><blockquote>
+<p>著作权限制制度是著作权法出于公共利益之目的所规定的约束著作权与有关财产权的行使范围，使范围外的特定行为不构成著作权侵权行为且不必承担侵权责任后果的豁免规范体系。</p>
+</blockquote>
+<h5 id="1-时间限制"><a href="#1-时间限制" class="headerlink" title="1)时间限制"></a>1)时间限制</h5><ul>
+<li><code>作者终身及其死后50年</code></li>
+</ul>
+<h5 id="2-内容行使的限制"><a href="#2-内容行使的限制" class="headerlink" title="2)内容行使的限制"></a>2)内容行使的限制</h5><ul>
+<li><p>合理使用：合理使用是指在法律规定的条件下，不必征得著作权人的同意，也不必向其支付报酬，基于正当目的而使用他人著作权作品的合法行为。</p>
+<p>一般有：为<code>个人学习、研究或者欣赏</code>，使用他人已发表的作品；为介绍、评论某一作品或者说明某问题，在作品中适当引用他人以经发表的作品；为报道新闻，在报纸、期刊、广播电台、电视台等媒体中不可避免地再现或者引用已经发表的作品；国家机关为执行公务在合理范围内使用已经发表的作品；免费表演已经发表的作品，该表演未向公众收取费用，也未向表演者支付报酬，且不以营利为目的；图书馆、档案馆、纪念馆、博物馆、美术馆、文化馆等为陈列或者保存版本的需要，复制本馆收藏的作品；为学校课堂教学或者科学研究，翻译、改编、汇编、播放或者少量复制已经发表的作品，供教学或者科研人员使用，但不得出版发行等。</p>
+</li>
+<li><p>法定许可：法定许可是指使用人在法律明确规定的情形下，不经著作权人同意，有偿使用他人已发表作品的行为。其特点为：必须向著作权人支付报酬，而合理使用则是无偿使用；主体是著作权作品的传播者，而合理使用则没有这种限制；法定许可使用赋予了著作权人以声明方式排除法定许可使用的权利，而合理使用则无此规定。</p>
+</li>
+<li><p>技术措施的保护：著作权法所称的<code>技术措施</code>，是指用于防止、限制未经权利人许可浏览、欣赏作品、表演、录音录像制品或者通过信息网络向公众提供作品、表演、录音录像制品的有效技术、装置或者部件。</p>
+<p>下列情形可以避开技术措施，但不得向他人提供避开技术措施的技术、装置或者部件，不得侵犯权利人依法享有的其他权利：为学校课堂教学或者科学研究，提供<code>少量</code>已经发表的作品，供教学或者科研人员使用，而该作品无法通过正常途径获取；不以营利为目的，以阅读障碍者能够感知的无障碍方式向其提供已经发表的作品，而该作品无法通过正常途径获取；国家机关依照行政、监察、司法程序执行公务；对计算机及其系统或者网络的安全性能进行测试；进行加密研究或者计算机软件反向工程研究。</p>
+</li>
+</ul>
+<h4 id="4-著作权侵权保护"><a href="#4-著作权侵权保护" class="headerlink" title="4.著作权侵权保护"></a>4.著作权侵权保护</h4><h5 id="1-构成要件"><a href="#1-构成要件" class="headerlink" title="1)构成要件"></a>1)构成要件</h5><ol>
+<li><p>确定权利的有效性，包括：<code>属于著作权法保护的作品范围；具备独创性；能以某种有形形式复制</code>。</p>
+</li>
+<li><p>确认侵权的事实</p>
+</li>
+<li><p>行为具有违法性</p>
+</li>
+<li><p>行为人主观有过错：故意或者过失</p>
+</li>
+</ol>
+<h5 id="2-救济措施"><a href="#2-救济措施" class="headerlink" title="2)救济措施"></a>2)救济措施</h5><ul>
+<li>民事救济措施：</li>
+</ul>
+<ol>
+<li>停止侵害请求权：直接侵权行为的构成上采用无过错责任原则；</li>
+<li>损害赔偿请求权：适用过错责任原则；</li>
+<li>名誉恢复请求权；</li>
+</ol>
+<ul>
+<li><p> 通过行政诉讼进行救济；</p>
+</li>
+<li><p>提起刑事诉讼；</p>
+</li>
+</ul>
+<h3 id="四、课程收获"><a href="#四、课程收获" class="headerlink" title="四、课程收获"></a>四、课程收获</h3><p>​        通过信息法基础课程的学习，我了解了知识产权法相关的知识，对我影响非常大。对于课程中的展示过程，我印象最为深刻的是当王瀚林同学讲到合同是否为不道德的时候，老师告诉我们，是否道德不是一个懂法的人应该考虑的事情，我意识到了法律的冷酷。老师说过“法律不保护躺着权利上的人”，这使我深刻理解了学习法律的重要性。法律是我们自我保护的强大武器，我们要积极的正确的使用才能在未来走得更稳更好！感谢老师一个学期的陪伴，课间有遇到您在赶着去另一间教室上课，还遇到我们这样一群不让人省心的孩子，替大家说一句：老师，您辛苦了！</p>
 
                 
             </div>
@@ -571,7 +825,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tolie-official.github.io/2021/11/27/HTTP/">https://tolie-official.github.io/2021/11/27/HTTP/</a>
+                    <a href="https://tolie-official.github.io/2021/12/13/%E4%BF%A1%E6%81%AF%E6%B3%95%E5%9F%BA%E7%A1%80/">https://tolie-official.github.io/2021/12/13/%E4%BF%A1%E6%81%AF%E6%B3%95%E5%9F%BA%E7%A1%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -609,8 +863,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/HTTP/">
-                                    <span class="chip bg-color">HTTP</span>
+                                <a href="/tags/laws/">
+                                    <span class="chip bg-color">laws</span>
                                 </a>
                             
                         </div>
@@ -658,13 +912,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/11/30/Spring%205/">
+                <a href="/2021/12/13/IDEA%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Spring 5 for beginner (part 1)">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="【转载】IDEA 常用快捷键">
                         
-                        <span class="card-title">Spring 5 for beginner (part 1)</span>
+                        <span class="card-title">【转载】IDEA 常用快捷键</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -675,14 +929,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-30
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-13
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JAVA%E6%A1%86%E6%9E%B6/" class="post-category">
-                                    JAVA框架
+                            <a href="/categories/reprint/" class="post-category">
+                                    reprint
                                 </a>
                             
                             
@@ -692,8 +946,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Spring-5/">
-                        <span class="chip bg-color">Spring 5</span>
+                    <a href="/tags/IDEA/">
+                        <span class="chip bg-color">IDEA</span>
                     </a>
                     
                 </div>
@@ -707,13 +961,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/27/HTML%E5%AD%A6%E4%B9%A0/">
+                <a href="/2021/12/11/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E5%9F%BA%E4%BA%8EHexo%E7%9A%84matery%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%8C%96/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="HTML for beginner">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="【转载】基于Hexo的matery主题搭建博客并深度优化">
                         
-                        <span class="card-title">HTML for beginner</span>
+                        <span class="card-title">【转载】基于Hexo的matery主题搭建博客并深度优化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -724,14 +978,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Frond-End/" class="post-category">
-                                    Frond End
+                            <a href="/categories/reprint/" class="post-category">
+                                    reprint
                                 </a>
                             
                             
@@ -741,8 +995,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/HTML/">
-                        <span class="chip bg-color">HTML</span>
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>
