@@ -412,7 +412,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-07
+                    2021-12-10
                 </div>
                 
 
@@ -479,7 +479,7 @@
 </tr>
 <tr>
 <td align="center">半双工通信</td>
-<td>通信的双方都可以发送或接收信息，但任何一-方都不能同时发送和接收，要<code>两条</code>信道。</td>
+<td>通信的双方都可以发送或接收信息，但任何一方都不能同时发送和接收，要<code>两条</code>信道。</td>
 </tr>
 <tr>
 <td align="center">全双工通信</td>
@@ -508,7 +508,7 @@
 <p><code>1 码元可以携带多个比特的信息量</code>。例如，在使用二进制编码时，只有两种不同的码元，一种代表0状态，另一种代<br>表1状态。</p>
 <h6 id="2-波特"><a href="#2-波特" class="headerlink" title="2).波特"></a>2).波特</h6><p>速率也叫数据率，是指<code>数据的传输速率</code>，表示单位时间内传输的数据量。可以用<code>码元传输速率和信息传输速率</code>表示。</p>
 <ol>
-<li><p>码元传输速率：别名码元速率、波形速率、调制速率、符号速率等，它表示单位时间内数字通信系统所传输的码元个数(也可称为<code>脉冲个数或信号变化的次数</code>)，单位是<code>波特(Baud)</code> 。1波特表示数字通信系统每秒传输-一个码元。这里的码元可以是多进制的，也可以是二进制的，但<code>码元速率与进制数无关</code>。<br>简单来说，码元传输速率就是 1s 传输多少个码元，码元传输速率单位的<code>1 Baud =  1码元/秒</code>。</p>
+<li><p>码元传输速率：别名码元速率、波形速率、调制速率、符号速率等，它表示单位时间内数字通信系统所传输的码元个数(也可称为<code>脉冲个数或信号变化的次数</code>)，单位是<code>波特(Baud)</code> 。1波特表示数字通信系统每秒传输一个码元。这里的码元可以是多进制的，也可以是二进制的，但<code>码元速率与进制数无关</code>。<br>简单来说，码元传输速率就是 1s 传输多少个码元，码元传输速率单位的<code>1 Baud =  1码元/秒</code>。</p>
 </li>
 <li><p>信息传输速率：别名信息速率、比特率等，表示单位时间内数字通信系统传输的二进制码元个数(即比特数),单位是比特/秒(b/s) 。<br>简单来说，信息传输速率就是1s传输多少个比特</p>
 <blockquote>
@@ -523,8 +523,8 @@
 </blockquote>
 <h5 id="2-1-4-奈氏准则、香农定理"><a href="#2-1-4-奈氏准则、香农定理" class="headerlink" title="2.1.4  奈氏准则、香农定理*"></a>2.1.4  奈氏准则、香农定理*</h5><h6 id="1-失真"><a href="#1-失真" class="headerlink" title="1).失真"></a>1).失真</h6><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211211234650796.png" alt="失真"></p>
 <p> 影响失真程度的因素：1.码元传输速率；2.信号传输距离；3.噪声干扰；4.传输媒体质量。</p>
-<p>​        （前三种因素与失真程度正相关，最后一种因素与失真程度是负相关，即质量越好，失真程度越低）</p>
-<p>信道带宽：信道带宽是信道能通过的最高频率和最低频率之差。</p>
+<p>​        （前三种因素与失真程度<code>正相关</code>，最后一种因素与失真程度是<code>负相关</code>，即质量越好，失真程度越低）</p>
+<p><code>信道带宽：信道带宽是信道能通过的最高频率和最低频率之差。</code></p>
 <blockquote>
 <p>码间串扰是失真的一种现象，是指接收端收到的信号波形<code>失去了码元之间清晰界限的现象</code>。</p>
 <p>一般指码元传输速率过快，导致失去了码元之间界限的现象。</p>
@@ -532,7 +532,7 @@
 <h6 id="2-奈氏准则-奈奎斯特定理"><a href="#2-奈氏准则-奈奎斯特定理" class="headerlink" title="2).奈氏准则 (奈奎斯特定理)"></a>2).奈氏准则 (奈奎斯特定理)</h6><p>奈氏准则：在<code>理想低通(无噪声，带宽受限)条件</code>下，为了避免码间串扰，极限码元传输速率为2W Baud, <code>W是信道带宽，单位是Hz</code>。</p>
 <p>极限数据率：</p>
 <blockquote>
-<p>理想低通信道下的极限数据传输率 = 2W * log<sub>2</sub>V (b/s)<br>                            V是指有几种码元/码元的离散电平数目<br>                            W是指信道带宽(Hz)</p>
+<p>理想低通信道下的极限数据传输率 = 2W * log<sub>2</sub>V (b/s)<br>                            V 是指有几种码元/码元的离散电平数目<br>                            W 是指信道带宽(Hz)</p>
 </blockquote>
 <p>通过奈氏准则的结论：</p>
 <ol>
@@ -543,11 +543,11 @@
 </ol>
 <h6 id="3-香农定理"><a href="#3-香农定理" class="headerlink" title="3).香农定理"></a>3).香农定理</h6><p>信噪比 = 信号的平均功率/噪声的平均功率，常记为S/N，并用分贝(dB) 作为度量单位，即:</p>
 <blockquote>
-<p>信噪比 (dB) =10 log<sub>10</sub>(S/N) </p>
+<p>信噪比 (1 dB) =10 log<sub>10</sub>[S/N] </p>
 </blockquote>
 <p>香农定理：在<code>带宽受限且有噪声</code>的信道中，为了不产生误差，信息的数据传输速率有上限值。</p>
 <blockquote>
-<p>信道的极限数据传输速率=W log<sub>2</sub>(1+S/N) (b/s)</p>
+<p>信道的极限数据传输速率=W log<sub>2</sub>[1+S/N] (b/s)</p>
 </blockquote>
 <p>通过香农定理的结论：</p>
 <ol>
@@ -555,7 +555,7 @@
 <li>对一定的传输带宽和一.定的信噪比，信息传输速率的上限就确定了。</li>
 <li>只要信息的传输速率低于信道的极限传输速率，就<code>一定能找到某种方法来实现无差错的传输</code>。</li>
 <li>香农定理得出的为极限信息传输速率，实际信道能达到的传输速率要比它低不少。</li>
-<li>从香农定理可以看出，若信道带宽W或信噪比S/N没有上限 (不可能)，那么信道的极限信息传输速率也就没有上<br>限。</li>
+<li>从香农定理可以看出，若信道带宽W或信噪比S/N没有上限 （不可能），那么信道的极限信息传输速率也就没有上<br>限。</li>
 </ol>
 <h6 id="4-奈氏准则和香农定理比较"><a href="#4-奈氏准则和香农定理比较" class="headerlink" title="4).奈氏准则和香农定理比较"></a>4).奈氏准则和香农定理比较</h6><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212002045027.png" alt="奈氏准则和香农定理比较"></p>
 <h6 id="5-练习题"><a href="#5-练习题" class="headerlink" title="5).练习题"></a>5).练习题</h6><p>1.在无噪声的情况下,若某通信链路的带宽为3kHz ,采用4个相位,每个相位具有4种振幅的QAM调制技术,则该通信链路的最大数据传输率是多少?</p>
@@ -583,11 +583,11 @@
 </blockquote>
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212110208530.png" alt="编码与调制"></p>
 <h6 id="3-数字数据编码为数字信号"><a href="#3-数字数据编码为数字信号" class="headerlink" title="3).数字数据编码为数字信号"></a>3).数字数据编码为数字信号</h6><ol>
-<li><p>非归零编码[NRZ] *：<code>高1低0</code>；编码容易实现，但没有检错功能，且无法判断一个码元的开始和结束，以至于收                                    发双方难以保持同步。</p>
+<li><p>非归零编码[NRZ] *：<code>高1低0</code>；编码容易实现，但没有检错功能，且无法判断一个码元的开始和结束，以至于收发双方难以保持同步。</p>
 </li>
-<li><p>归零编码[RZ] ：信号电平在一个码元之内都要恢复到零的这种编码成编码方式。            </p>
+<li><p>归零编码[RZ] ：信号电平在一个码元之内都要恢复到零的这种编码的编码方式。            </p>
 </li>
-<li><p>曼彻斯特编码 *：将一个码元分成两个相等的间隔，前一个间隔为低电平后一个间隔为高电平表示码元1;码元0则正        好相反。也可以采用相反的规定。</p>
+<li><p>曼彻斯特编码 *：将一个码元分成两个相等的间隔，前一个间隔为低电平后一个间隔为高电平表示码元1;码元0则正好相反。也可以采用相反的规定。</p>
 <ul>
 <li><p>该编码的特点是在每-一个码元的中间出现电平跳变，位中间的跳变既作时钟信号(可用于同                                步)，又作数据信号，但它所占的频带宽度是原始的基带宽度的两倍。</p>
 </li>
@@ -603,12 +603,12 @@
 </ul>
 </li>
 <li><p>4B/5B编码：比特流中插入额外的比特以打破一连串的0或1，就是用5个比特来编码4个比特的数据，之后再传给         接收方，因此称为4B/5B。编码效率为80%。</p>
-</li>
-</ol>
 <ul>
 <li>五个比特对应32种状态，只采用16种对应16种不同的4位码，其他的16种作为控制码(帧的开始和结束，线路的状态信息等)或保留。                                            </li>
 </ul>
-<p><img src="/2021/12/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC%E4%BA%8C%E7%AB%A0/image-20211212110435749.png" alt="数字数据编码为数字信号"></p>
+</li>
+</ol>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212110435749.png" alt="数字数据编码为数字信号"></p>
 <h6 id="4-数字数据调制为模拟信号"><a href="#4-数字数据调制为模拟信号" class="headerlink" title="4).数字数据调制为模拟信号"></a>4).数字数据调制为模拟信号</h6><p>数字数据调制技术在发送端将数字信号转换为模拟信号，而在接收端将模拟信号还原为数字信号，分别对应于调制，解调器的调制和解调过程。</p>
 <p><code>调幅+调相 (QAM)</code></p>
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212160345840.png" alt="数字数据调制为模拟信号"></p>
@@ -722,7 +722,103 @@
 <blockquote>
 <p>集线器不能分割冲突域；连在集线器上的工作主机平分带宽。</p>
 </blockquote>
-
+<h5 id="2-4信道复用技术"><a href="#2-4信道复用技术" class="headerlink" title="2.4信道复用技术"></a>2.4信道复用技术</h5><h6 id="1-频分复用（FDM）"><a href="#1-频分复用（FDM）" class="headerlink" title="1).频分复用（FDM）"></a>1).频分复用（FDM）</h6><ul>
+<li><p>频分复用就是将用于传输信道的总带宽划分成若干个子频带（或称子信道），每一个子信道传输一路信号。用户在分配到一定的频带后，在通信过程中自始至终都占用这个频带。频分复用的所有用户在同样的时间占用不同的带宽资源（请注意，这里的“带宽”是频率带宽而不是数据的发送速率）。</p>
+</li>
+<li><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211214223141488.png" alt="频分复用FDM"></p>
+</li>
+<li><p>频分复用 FDM示意图</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211214223744359.png" alt="频分复用 FDM示意图"></p>
+</li>
+</ul>
+<h6 id="2-时分复用TDM"><a href="#2-时分复用TDM" class="headerlink" title="2).时分复用TDM"></a>2).时分复用TDM</h6><ul>
+<li><p>时分复用：将时间划分为一段段等长的时分复用帧（TDM 帧），每一个时分复用的用户在每一个 TDM 帧中占用固定序号的时隙。 每一个用户所占用的时隙是周期性地出现（其周期就是 TDM 帧的长度）。 TDM 信号也称为等时(isochronous)信号。 时分复用的所有用户在不同的时间占用同样的频带宽度。</p>
+</li>
+<li><p>时分复用 TDM示意图</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211214223344222.png" alt="时分复用示意图"></p>
+</li>
+<li><p>特点：</p>
+<ol>
+<li><p>帧的位置不变</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211214223445578.png" alt="特点1"></p>
+</li>
+<li><p>时分复用可能会造成线路资源的浪费</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211214223521972.png" alt="特点2"></p>
+</li>
+</ol>
+</li>
+</ul>
+<h6 id="3-波分复用WDM"><a href="#3-波分复用WDM" class="headerlink" title="3).波分复用WDM"></a>3).波分复用WDM</h6><ul>
+<li>波分复用(Wavelength Division Multiplexing)就是光的频分复用。 </li>
+<li>原理：整个波长频带被划分为若干个波长范围，每个用户占用一个波长范围来进行传输。</li>
+<li><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211214223640819.png" alt="波分复用示意图"></li>
+</ul>
+<h6 id="4-码分复用-CDM"><a href="#4-码分复用-CDM" class="headerlink" title="4).码分复用 CDM"></a>4).码分复用 CDM</h6><ul>
+<li><p>常用的名词是<code>码分多址 CDMA</code> (Code Division Multiple Access)。 </p>
+</li>
+<li><p>特点：</p>
+<ol>
+<li>各用户使用经过特殊挑选的不同码型，因此彼此不会造成干扰。</li>
+<li>这种系统发送的信号有很强的抗干扰能力，其频谱类似于白噪声，不易被敌人发现。</li>
+</ol>
+</li>
+<li><p>码分序列</p>
+<ol>
+<li><p><code>每一个比特时间划分为 m 个短的间隔，称为码片(chip)</code>， 每个码片分配一个“1”或“0”就构成了一个码片序列。</p>
+<blockquote>
+<p>例如，设m=8，某站S的码片序列如下所示：</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211214224144115.png" alt="码片序列"></p>
+</blockquote>
+</li>
+<li><p><code>每个站被指派一个唯一的 m bit 码片序列。 应用中，码片序列中的“1”用“+1”表示，“0”用“-1” 表示</code>。</p>
+</li>
+<li><p>每个站数据的发送：</p>
+<ul>
+<li><p><code>若发送比特 1，则发送自己的 m bit 码片序列。 若发送比特 0，则发送该码片序列的二进制反码。</code></p>
+<blockquote>
+<p>例如，设S 站的码片序列(–1 –1 –1 +1 +1 –1 +1 +1)</p>
+<p>​             S站发送比特 1 时，就发送序列 ( –1 –1 –1 +1 +1 –1 +1 +1 ) </p>
+<p>​             S站发送比特 0 时，就发送序列 ( +1 +1 +1 -1 -1 +1 -1 -1 )</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>码片序列的正交关系 </p>
+<ul>
+<li><p>令向量S表示站S的码片向量，令T表示其他任何站的码片向量。 <code>两个不同站的码片序列正交，就是向量 S 和T 的规格化内积(inner product)都是 0</code>；</p>
+</li>
+<li><p>任何一个码片向量和该码片向量自己的规格化内积都是1；</p>
+</li>
+<li><p>一个码片向量和该码片反码的向量的规格化内积值是 –1 ；</p>
+<blockquote>
+<p>规格化内 积公式：S x T =${1\over m}\sum_1^nS_iT_i$</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h6 id="5-练习题-1"><a href="#5-练习题-1" class="headerlink" title="5).练习题"></a>5).练习题</h6><ul>
+<li><p>假定A、B和C站使用CDMA系统，它们的码片序列如下： </p>
+<p>A：（–1 –1 –1 +1 +1 –1 +1 +1）|   B：（–1 –1 +1 –1 +1 +1 +1 –1）|   C：（–1 +1 –1 +1 +1 +1 –1 –1）</p>
+<p> 问：（1）若A、B两站同时发送比特0，C站发送比特1，则各路信号合成的发送码片序列是什么？</p>
+<p>​          （2）若接收站收到的码片序列为 T=（0 0 -2 +2 0 -2 0 2），则各站分别发送了什么数据？</p>
+<blockquote>
+<p>答：（1）根据题意，A、B两站分别发送其码片序列的反码， C站发送其码片序列的原码，即各站分别发送的码片序列为：</p>
+<p>​         A：（ +1 +1 +1 –1 –1 +1 –1–1 ） </p>
+<p>​        B：（ +1 +1 –1 +1 –1 –1 –1 +1 ） </p>
+<p>​        C：（–1 +1 –1 +1 +1 +1 –1–1 ）</p>
+<p>​        所以，各路信号合成的发送码片序列是 T=A + B + C=（+1 +3 -1 +1 -1 +1 –3 –1 ）</p>
+<p>（2）接收站分别计算下列规格化内积：</p>
+<p>​         A·T= (–1–1–1 +1 +1–1 +1 +1)·(0 0 -2 +2 0 -2 0 2) = +1</p>
+<p>​         B·T= (–1–1 +1 -1 +1 +1 +1 -1)·(0 0 -2 +2 0 -2 0 2) = -1</p>
+<p>​         C·T= (–1 +1 -1 +1 +1 +1 -1 -1)·(0 0 -2 +2 0 -2 0 2) =0</p>
+<p>​        所以，A发送的是1，B发送是0，C没有发送数据</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="第一章课后习题"><a href="#第一章课后习题" class="headerlink" title="第一章课后习题"></a>第一章课后习题</h5>
                 
             </div>
             <hr/>
@@ -748,7 +844,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tolie-official.github.io/2021/12/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC%E4%BA%8C%E7%AB%A0/">https://tolie-official.github.io/2021/12/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC%E4%BA%8C%E7%AB%A0/</a>
+                    <a href="https://tolie-official.github.io/2021/12/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC%E4%BA%8C%E7%AB%A0/">https://tolie-official.github.io/2021/12/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC%E4%BA%8C%E7%AB%A0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -835,6 +931,55 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2021/12/11/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E5%9F%BA%E4%BA%8EHexo%E7%9A%84matery%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%8C%96/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="【转载】基于Hexo的matery主题搭建博客并深度优化">
+                        
+                        <span class="card-title">【转载】基于Hexo的matery主题搭建博客并深度优化</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-11
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/reprint/" class="post-category">
+                                    reprint
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2021/12/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC%E4%B8%80%E7%AB%A0/">
                     <div class="card-image">
                         
@@ -851,9 +996,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -871,55 +1016,6 @@
                     
                     <a href="/tags/Computer-Networks/">
                         <span class="chip bg-color">Computer Networks</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/12/05/HTML%20%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="HTML about Forms">
-                        
-                        <span class="card-title">HTML about Forms</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-05
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Frond-End/" class="post-category">
-                                    Frond End
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/HTML/">
-                        <span class="chip bg-color">HTML</span>
                     </a>
                     
                 </div>
@@ -1112,7 +1208,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">46.1k</span>&nbsp;字
+                class="white-color">47.2k</span>&nbsp;字
             
             
             
