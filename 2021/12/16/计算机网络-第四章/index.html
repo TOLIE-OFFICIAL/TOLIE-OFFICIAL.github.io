@@ -443,7 +443,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="第四章-数据链路层"><a href="#第四章-数据链路层" class="headerlink" title="第四章 数据链路层"></a>第四章 数据链路层</h2><h3 id="4-1-1-网络层的几个重要概念"><a href="#4-1-1-网络层的几个重要概念" class="headerlink" title="4.1.1 网络层的几个重要概念"></a>4.1.1 网络层的几个重要概念</h3><h4 id="1-网络层的位置及功能"><a href="#1-网络层的位置及功能" class="headerlink" title="1).网络层的位置及功能"></a>1).网络层的位置及功能</h4><ul>
+                <h2 id="第四章-网络层"><a href="#第四章-网络层" class="headerlink" title="第四章 网络层"></a>第四章 网络层</h2><h3 id="4-1-1-网络层的几个重要概念"><a href="#4-1-1-网络层的几个重要概念" class="headerlink" title="4.1.1 网络层的几个重要概念"></a>4.1.1 网络层的几个重要概念</h3><h4 id="1-网络层的位置及功能"><a href="#1-网络层的位置及功能" class="headerlink" title="1).网络层的位置及功能"></a>1).网络层的位置及功能</h4><ul>
 <li><p>网络层是OSI参考模型中的第三层，TCP/IP的第二层</p>
 </li>
 <li><p>网络层使用数据链路层的服务，向运输层的“端一端”传输连接提供分组的“点-点”的传送服务</p>
@@ -794,8 +794,32 @@
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211219173101622.png" alt="划分子网的基本思路"></p>
 </li>
 </ul>
-<p>3).定长子网的划分</p>
-<p>4).变长子网的划分</p>
+<p>3).子网掩码</p>
+<ol>
+<li><p>从一个IP数据报的首部并<code>无法判断</code>源主机或目的主机所连接的网络是否进行了子网划分。</p>
+</li>
+<li><p>使用<code>子网掩码(subnet mask)</code>可以找出IP地址中的子网部分。</p>
+</li>
+<li><p>规则:</p>
+<ul>
+<li>子网掩码长度=32位</li>
+<li>某位=1:：IP地址中的对应位为网络号和子网号</li>
+<li>某位=0:：IP地址中的对应位为主机号</li>
+</ul>
+<blockquote>
+<p>(IP地址)  AND  (子网掩码)  = 网络地址</p>
+</blockquote>
+</li>
+<li><p><code>子网掩码是一个网络或一个子网的重要属性</code>。</p>
+<ul>
+<li>路由器在和相邻路由器交换路由信息时，必须把自己所在网络(或子网)的子网掩码告诉相邻路由器。</li>
+<li>路由器的路由表中的每一个项目，除了要给出目的网络地址外，还必须同时给出该网络的子网掩码。</li>
+<li>若一个路由器连接在两个子网.上就拥有两个网络地址和两个子网掩码。</li>
+</ul>
+</li>
+</ol>
+<p>4).定长子网的划分</p>
+<p>5).变长子网的划分</p>
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211219173929177.png" alt="路由器分组转发算法"></p>
 
                 
@@ -1187,7 +1211,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">60.7k</span>&nbsp;字
+                class="white-color">61k</span>&nbsp;字
             
             
             
