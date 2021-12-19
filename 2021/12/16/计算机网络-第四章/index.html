@@ -571,11 +571,11 @@
 <li><code>在 Internet网络中，IP地址唯一地标识了一台计算机或路由器（的接口）</code></li>
 <li>IP地址现在由因特网名字与号码指派公司 ICANN(Internet Corporation for Assigned Names andNumbers)进行分配，总部设在美国，由美国政府通过委托合同授权的形式来管理。</li>
 </ul>
-<h4 id="2-IP-地址表示方法"><a href="#2-IP-地址表示方法" class="headerlink" title="2).IP 地址表示方法"></a>2).IP 地址表示方法</h4><ul>
+<h4 id="2-IP-地址表示方法"><a href="#2-IP-地址表示方法" class="headerlink" title="2).IP 地址表示方法"></a>2).IP 地址表示方法</h4><ol>
 <li><p>点分十进制记法</p>
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211216215456915.png" alt="点分十进制记法"></p>
 </li>
-</ul>
+</ol>
 <h4 id="3-IP-地址的分级结构"><a href="#3-IP-地址的分级结构" class="headerlink" title="3).IP 地址的分级结构"></a>3).IP 地址的分级结构</h4><ul>
 <li><p>每一类地址都由两个固定长度的字段组成，其中一个字段是<code>网络号 net-id</code>，它标志主机（或路由器）所连接到的网络，而另一个字段则是主机号 host-id，它标志该主机（或路由器）。</p>
 </li>
@@ -600,6 +600,51 @@
 <li><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211216221414809.png" alt="IP地址的分类结构"></p>
 </li>
 <li><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211216221945948.png" alt="特殊的IP 地址"></p>
+</li>
+<li><p>A类地址：</p>
+<ul>
+<li>A类网络总数：2<sup>7</sup>=128</li>
+<li>全部地址范围： 0.0.0.0 ~127.255.255.255</li>
+<li>第一个可用网络号：1；网络地址：1.0.0.0</li>
+<li>最后一个可用网络号：126 ；网络地址：126.0.0.0</li>
+<li>每个网络中全部IP地址范围：*.0.0.0 ~*.255.255.255</li>
+<li>每个网络中全部IP地址总数：2<sup>24</sup>=16777216</li>
+<li>每个网络中可用IP地址范围：*.0.0.1 ~*.255.255.254</li>
+<li>每个网络中可用IP地址总数： 2<sup>24</sup>-2=16777214</li>
+</ul>
+<blockquote>
+<p>A类地址网络号字段第一个必须为0，若后续的网络号字段全部为0（即00000000）的IP地址是个保留地址，意思是“<code>本网络</code>”；若后续网络号为全1（即01111111）的IP地址是个保留地址作为本地软件<code>环回测试</code>本主机的进程之间的通信之用。</p>
+</blockquote>
+</li>
+<li><p>B类地址：</p>
+<ul>
+<li>B类网络总数：2<sup>14</sup>=16384</li>
+<li>全部地址范围： 128.0.0.0 ~191.255.255.255</li>
+<li>第一个可用网络号：128.0 ；网络地址：128.1.0.0</li>
+<li>最后一个可用网络号：191.255 ；网络地址：191.255.0.0</li>
+<li>每个网络中全部IP地址范围：*.<em>.0.0 ~</em>.*.255.255</li>
+<li>每个网络中全部IP地址总数：2<sup>16</sup>=65536</li>
+<li>每个网络中可用IP地址范围：*.<em>.0.1 ~</em>.*.255.254</li>
+<li>每个网络中可用IP地址总数： 2<sup>16</sup>-2=65534</li>
+</ul>
+<blockquote>
+<p>B类网络地址128.0.0.0是不可指派的，故可以指派的B类网络数为2<sup>14</sup>-1个；</p>
+</blockquote>
+</li>
+<li><p>C类地址：</p>
+<ul>
+<li>C类网络总数：2<sup>21</sup>=2097152</li>
+<li>全部地址范围： 192.0.0.0 ~223.255.255.255</li>
+<li>第一个可用网络号：192.0.0 ；网络地址：192.0.1.0</li>
+<li>最后一个可用网络号：223.255.255 ；网络地址：223.255.255.0</li>
+<li>每个网络中全部IP地址范围：*.<em>.</em>.0 ~<em>.</em>.*.255</li>
+<li>每个网络中全部IP地址总数：2<sup>8</sup>=256</li>
+<li>每个网络中可用IP地址范围：*.<em>.</em>.1 ~<em>.</em>.*.254</li>
+<li>每个网络中可用IP地址总数： 2<sup>8</sup>-2=254</li>
+</ul>
+<blockquote>
+<p>C类网络地址192.0.0.0是不可指派的，故可以指派的B类网络数为2<sup>21</sup>-1个；</p>
+</blockquote>
 </li>
 </ol>
 <h4 id="5-IP-地址的一些重要特点"><a href="#5-IP-地址的一些重要特点" class="headerlink" title="5).IP 地址的一些重要特点"></a>5).IP 地址的一些重要特点</h4><ul>
@@ -729,7 +774,7 @@
 </li>
 <li><p><strong>第3字段：区分服务（8位，第2个字节）</strong>——用来获得更好的服务。在旧标准中叫做服务类型，但实际上一直未被使用过。1998 年这个字段改名为区分服务。只有在使用区分服务（DiffServ）时，这个字段才起作用。<code>目前，几乎所有路由器都忽略服务类型域</code>。</p>
 </li>
-<li><p><strong>第4字段：总长度（16 位，第3-4字节）</strong>——指出数据报总长度，即<code>首部长度+数据部分长度，单位为字节</code>。<code>因此数据报的最大长度为216-1= 65535 个字节</code>。</p>
+<li><p><strong>第4字段：总长度（16 位，第3-4字节）</strong>——指出数据报总长度，即<code>首部长度+数据部分长度，单位为字节</code>。因此数据报的最大长度为2<sup>16</sup>-1= 65535 个字节。</p>
 <p><code>总长度必须不超过最大传送单元 MTU。</code></p>
 <blockquote>
 <p>例如</p>
@@ -778,24 +823,91 @@
 <li><p><strong>IP 数据报首部的可变部分</strong>是一个选项字段，用来支持排错、测量以及安全等措施，内容很丰富。但实际上这些选项很少被使用</p>
 </li>
 </ul>
-<h3 id="4-6-划分子网"><a href="#4-6-划分子网" class="headerlink" title="4.6 划分子网"></a>4.6 划分子网</h3><p>1).划分子网的原因</p>
+<h3 id="4-6-1-CIDR-地址"><a href="#4-6-1-CIDR-地址" class="headerlink" title="4.6.1 CIDR 地址"></a>4.6.1 CIDR 地址</h3><ul>
+<li>CIDR地址：它的正式名字是<code>无分类域间路由选择 CIDR</code>(Classless Inter-Domain Routing)。（无分类编址）</li>
+<li>CIDR 消除了传统的 A 类、B 类和 C 类地址及划分子网的概念，因而可以更加有效地分配 IPv4 的地址空间</li>
+<li>CIDR使用各种长度的“<code>网络前缀</code>”(network-prefix)来代替分类地址中的网络号和子网号。</li>
+</ul>
+<h4 id="1-无分类的两级编址"><a href="#1-无分类的两级编址" class="headerlink" title="1).无分类的两级编址"></a>1).无分类的两级编址</h4><ul>
+<li><blockquote>
+<p>IP地址 ::= {&lt;网络前缀&gt;, &lt;主机号&gt;}</p>
+</blockquote>
+</li>
+<li><p>分类IP地址的网络号部分此时改称为<code>网络前缀</code>，仍旧用来标识连入Internet的一个网络的网络编号</p>
+</li>
+</ul>
+<h4 id="2-CIDR记法："><a href="#2-CIDR记法：" class="headerlink" title="2).CIDR记法："></a>2).CIDR记法：</h4><ul>
+<li><p>CIDR 使用“斜线记法” ，即在IP地址后面加上一个斜线“/”，然后写上网络前缀所占的比特数</p>
+<blockquote>
+<p>如：128.14.32.0/20</p>
 <ul>
+<li>/20表示该地址的前20个比特是网络号，所以128.14.32.0/20的网络号（网络前缀）是“10000000 00001110 0010”</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h4 id="3-CIDR地址块"><a href="#3-CIDR地址块" class="headerlink" title="3).CIDR地址块"></a>3).CIDR地址块</h4><ul>
+<li><p>网络前缀都相同的、连续的IP地址就组成了一个“CIDR地址块”</p>
+</li>
+<li><p>说明：</p>
+<ol>
+<li><p>每个CIDR地址块中的<code>地址数</code>一定是2的整数次幂。</p>
+</li>
+<li><p>每个CIDR地址块的<code>起始网络地址</code>一定是2的整数次幂或2的整数次幂的倍数，与地址块个数有关</p>
+<blockquote>
+<p>例如，某单位需要4个C类网络地址，则CIDR地址块的起始地址可以是：*.<em>.0.0、</em>.<em>.4.0、</em>.<em>.8.0、</em>.<em>.12.0、</em>.<em>.16.0、</em>.*.20.0 等等</p>
+</blockquote>
+</li>
+<li><p>全 0 和全 1 的主机号地址一般不使用</p>
+<ul>
+<li><code>全“0”的主机号代表网络地址</code></li>
+<li>全“1”的主机号代表网络内广播地址</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="4-路由聚合"><a href="#4-路由聚合" class="headerlink" title="4).路由聚合"></a>4).路由聚合</h4><ul>
+<li><p>路由聚合的方法：把一组路由汇聚为一个单个的路由，即用一个IP地址代表一组IP地址,</p>
+<blockquote>
+<p>例：计算能同时覆盖 198.1.12.0/24，198.1.13.0/24，198.1.14.0/24，198.1.15.0/24 这四条路由的聚合地址<br>解：</p>
+<ul>
+<li>198.1.12.0/24：11000110.00000001.00001100.00000000</li>
+<li>198.1.13.0/24：11000110.00000001.00001101.00000000</li>
+<li>198.1.14.0/24：11000110.00000001.00001110.00000000</li>
+<li>198.1.15.0/24：11000110.00000001.00001111.00000000</li>
+<li>聚合地址： 11000110.00000001.00001100.00000000/22<br>即：198.1.12.0/22</li>
+</ul>
+</blockquote>
+</li>
+<li><p>路由聚合的目的：一个 CIDR 地址块可以表示多个网络地址，路由聚合就是让路由选择协议能够用一个地址通告这多个网络地址，从而使得路由表中的一个项目可以表示多个原来传统分类地址的路由，从而<code>缩小了路由表的规模</code>，增加了网络的可扩展性。</p>
+</li>
+</ul>
+<h4 id="6-超网"><a href="#6-超网" class="headerlink" title="6).超网"></a>6).超网</h4><ul>
+<li><p>前缀长度不超过 23 位的 CIDR 地址块都包含了多个 C 类地址，这些 C 类地址合起来就构成了一个<code>超级网络</code>（超网）。<code>这个超网对外通告一个聚合路由</code>。</p>
+<blockquote>
+<p>例如：</p>
+<ul>
+<li>前缀长度为23位，包含了2(24-23)=2个C类网络（即C类地址块），构成了一个含有256×2=512个IP地址的超级网络（超网），聚合路由为*.*.*0.0/23</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h3 id="4-7-1-划分子网"><a href="#4-7-1-划分子网" class="headerlink" title="4.7.1 划分子网"></a>4.7.1 划分子网</h3><h4 id="1-划分子网的原因"><a href="#1-划分子网的原因" class="headerlink" title="1).划分子网的原因"></a>1).划分子网的原因</h4><ul>
 <li>在 ARPANET 的早期，IP 地址的设计确实不够合理。</li>
 <li>IP 地址空间的利用率有时很低。</li>
 <li>给每一个物理网络分配一个网络号会使路由表变得太大因而使网络性能变坏。</li>
 <li>从1985年起在 IP地址中又增加了一个“子网号字段”，这种做法叫作<code>划分子网(subnetting)</code> 。</li>
 <li>划分子网已成为因特网的正式标准协议。</li>
 </ul>
-<p>2).划分子网的基本思路</p>
-<ul>
+<h4 id="2-划分子网的基本思路"><a href="#2-划分子网的基本思路" class="headerlink" title="2).划分子网的基本思路"></a>2).划分子网的基本思路</h4><ul>
 <li><p>划分子网<code>纯属一个单位内部</code>的事情。单位对外仍然表现为没有划分子网的网络。</p>
 </li>
 <li><p>从“主机号字段”借用若干位作为“<code>子网号 subnet-id</code>”，而主机号 host-id 也就相应减少了若干个位。</p>
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211219173101622.png" alt="划分子网的基本思路"></p>
 </li>
 </ul>
-<p>3).子网掩码</p>
-<ol>
+<h4 id="3-子网掩码"><a href="#3-子网掩码" class="headerlink" title="3).子网掩码"></a>3).子网掩码</h4><ol>
 <li><p>从一个IP数据报的首部并<code>无法判断</code>源主机或目的主机所连接的网络是否进行了子网划分。</p>
 </li>
 <li><p>使用<code>子网掩码(subnet mask)</code>可以找出IP地址中的子网部分。</p>
@@ -808,6 +920,7 @@
 </ul>
 <blockquote>
 <p>(IP地址)  AND  (子网掩码)  = 网络地址</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211219221135092.png" alt="子网掩码"></p>
 </blockquote>
 </li>
 <li><p><code>子网掩码是一个网络或一个子网的重要属性</code>。</p>
@@ -818,8 +931,8 @@
 </ul>
 </li>
 </ol>
-<p>4).定长子网的划分</p>
-<p>5).变长子网的划分</p>
+<h4 id="4-定长子网的划分"><a href="#4-定长子网的划分" class="headerlink" title="4).定长子网的划分"></a>4).定长子网的划分</h4><h4 id="5-变长子网的划分"><a href="#5-变长子网的划分" class="headerlink" title="5).变长子网的划分"></a>5).变长子网的划分</h4><h3 id="4-7-2-划分子网后的分组转发"><a href="#4-7-2-划分子网后的分组转发" class="headerlink" title="4.7.2 划分子网后的分组转发"></a>4.7.2 划分子网后的分组转发</h3><p>判断子网掩码是否一致</p>
+<p>判断网络地址是否一样</p>
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211219173929177.png" alt="路由器分组转发算法"></p>
 
                 
@@ -1211,7 +1324,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">60.9k</span>&nbsp;字
+                class="white-color">62.3k</span>&nbsp;字
             
             
             

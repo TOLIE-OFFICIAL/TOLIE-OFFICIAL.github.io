@@ -460,11 +460,15 @@
 <li>功能四：流量控制。！<code>限制发送方哦~</code></li>
 <li>功能五：差错控制(帧错/位错)。</li>
 </ol>
-<h3 id="3-2-封装成帧-amp-amp-透明传输"><a href="#3-2-封装成帧-amp-amp-透明传输" class="headerlink" title="3.2 封装成帧&amp;&amp;透明传输"></a>3.2 封装成帧&amp;&amp;透明传输</h3><h4 id="1-封装成帧"><a href="#1-封装成帧" class="headerlink" title="1).封装成帧"></a>1).封装成帧</h4><p>封装成帧：在一段数据的前后部分添加首部和尾部，这样就构成了一个帧。接收端在收到物理层上交的比特流<br>后，就能根据首部和尾部的标记，从收到的比特流中识别帧的开始和结束。</p>
-<p>首部和尾部包含许多的控制信息，他们的一个重要作用：<code>帧定界</code>( 确定帧的界限)。</p>
-<p>帧同步：接收方应当能从接收到的二进制比特流中区分出帧的起始和终止。</p>
+<h3 id="3-2-封装成帧-amp-amp-透明传输"><a href="#3-2-封装成帧-amp-amp-透明传输" class="headerlink" title="3.2 封装成帧&amp;&amp;透明传输"></a>3.2 封装成帧&amp;&amp;透明传输</h3><h4 id="1-封装成帧"><a href="#1-封装成帧" class="headerlink" title="1).封装成帧"></a>1).封装成帧</h4><ul>
+<li>封装成帧：在一段数据的前后部分添加首部和尾部，这样就构成了一个帧。接收端在收到物理层上交的比特流后，就能根据首部和尾部的标记，从收到的比特流中识别帧的开始和结束。</li>
+<li>首部和尾部包含许多的控制信息，他们的一个重要作用：<code>帧定界</code>( 确定帧的界限)。</li>
+<li>帧同步：接收方应当能从接收到的二进制比特流中区分出帧的起始和终止。</li>
+</ul>
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212223520819.png" alt="帧"></p>
-<h4 id="2-透明传输"><a href="#2-透明传输" class="headerlink" title="2).透明传输"></a>2).透明传输</h4><p>透明传输是指不管所传数据是什么样的比特组合，都应当能够在链路上传送。因此，链路层就“看不见”有什么妨碍数据传输的东西。</p>
+<h4 id="2-透明传输"><a href="#2-透明传输" class="headerlink" title="2).透明传输"></a>2).透明传输</h4><ul>
+<li>透明传输是指不管所传数据是什么样的比特组合，都应当能够在链路上传送。因此，链路层就“看不见”有什么妨碍数据传输的东西。</li>
+</ul>
 <blockquote>
 <p>当所传数据中的比特组合恰巧与某一个控制信息完全一样时， 就必须采取适当的措施，使收方不会将这样的数据误认为是某种控制信息。这样才能保证数据链路层的传输是透明的。</p>
 </blockquote>
@@ -483,14 +487,14 @@
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212224944798.png" alt="零比特填充法"></p>
 <p>特点：保证了透明传输，在传送的比特流中可以<code>传送任意比特组合</code>，而不会引起对帧边界的判断错误。</p>
 </li>
-<li><h5 id="违规编码法"><a href="#违规编码法" class="headerlink" title="违规编码法"></a>违规编码法</h5><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212225100510.png" alt="image-20211212225100510"></p>
+<li><h5 id="违规编码法"><a href="#违规编码法" class="headerlink" title="违规编码法"></a>违规编码法</h5><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212225100510.png" alt="违规编码法"></p>
 </li>
 <li><h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>由于字节计数法中Count字段的脆弱性(其值若有差错将导致灾难性后果)及字符填充实现上的复杂性和不兼容性，<code>目前较普遍使用的帧同步法是比特填充和违规编码法</code>。</p>
 </li>
 </ol>
 <h3 id="3-3-1-差错控制"><a href="#3-3-1-差错控制" class="headerlink" title="3.3.1 差错控制"></a>3.3.1 差错控制</h3><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212234912222.png" alt="差错控制"></p>
 <blockquote>
-<p>在一-段时间内，传输错误的比特占所传输比特总数的比率称为<code>误码率</code>BER (Bit Error Rate)。</p>
+<p>在一段时间内，传输错误的比特占所传输比特总数的比率称为<code>误码率</code>BER (Bit Error Rate)。</p>
 </blockquote>
 <h4 id="1-差错来源-amp-解决"><a href="#1-差错来源-amp-解决" class="headerlink" title="1).差错来源 &amp; 解决"></a>1).差错来源 &amp; 解决</h4><ol>
 <li>全局性<ul>
@@ -541,7 +545,7 @@
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212233841320.png" alt="确认校验码和数据的位置"></p>
 </li>
 <li><p>求校验码的值</p>
-<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212234356641.png" alt="image-20211212234356641"></p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212234356641.png" alt="求校验码的值"></p>
 </li>
 <li><p>检错并纠错</p>
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211212234745329.png" alt="检错并纠错"></p>
@@ -689,7 +693,7 @@
 <h4 id="3-局域网的拓扑结构"><a href="#3-局域网的拓扑结构" class="headerlink" title="3).局域网的拓扑结构"></a>3).局域网的拓扑结构</h4><ul>
 <li><p>现在主要是<code>星型拓扑结构</code>，总线型、树型和环型不再使用。</p>
 </li>
-<li><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211215215040667.png" alt="image-20211215215040667"></p>
+<li><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211215215040667.png" alt="局域网的拓扑结构"></p>
 </li>
 </ul>
 <table>
@@ -845,7 +849,7 @@
 <h4 id="1-发送一帧所需的平均时间"><a href="#1-发送一帧所需的平均时间" class="headerlink" title="1).发送一帧所需的平均时间"></a>1).发送一帧所需的平均时间</h4><ul>
 <li><p>一个帧从开始发送，经可能发生的碰撞后，将再重传数次（N个争用期），到发送成功且信道转为空闲（即再经过时间  $\zeta$ 使得信道上无信号在传播）时的平均时间。</p>
 </li>
-<li><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211216155744847.png" alt="image-20211216155744847"></p>
+<li><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211216155744847.png" alt="发送一帧所需的平均时间"></p>
 <blockquote>
 <p>信道（平均）利用率 = ${T_0\over N*2\zeta+\zeta+T}$</p>
 </blockquote>
@@ -1503,7 +1507,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">60.9k</span>&nbsp;字
+                class="white-color">62.3k</span>&nbsp;字
             
             
             
