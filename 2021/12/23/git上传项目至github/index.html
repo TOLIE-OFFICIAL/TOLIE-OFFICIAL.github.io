@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="about HTTP, Front end,back end">
+    <meta name="keywords" content="update project, Front end,back end">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>about HTTP | null</title>
+    <title>update project | null</title>
     <link rel="icon" type="image/png" href="/favicon2.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -266,12 +266,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">about HTTP</h1>
+                    <h1 class="description center-align post-title">update project</h1>
                 </div>
             </div>
         </div>
@@ -387,8 +387,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/HTTP/">
-                                <span class="chip bg-color">HTTP</span>
+                            <a href="/tags/project/">
+                                <span class="chip bg-color">project</span>
                             </a>
                         
                     </div>
@@ -399,8 +399,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Net/" class="post-category">
-                                Net
+                            <a href="/categories/project-manage/" class="post-category">
+                                project-manage
                             </a>
                         
                     </div>
@@ -412,14 +412,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-27
+                    2021-12-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-12
+                    2021-12-23
                 </div>
                 
 
@@ -443,108 +443,33 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="HTTP协议详解"><a href="#HTTP协议详解" class="headerlink" title="HTTP协议详解"></a>HTTP协议详解</h1><h3 id="重要性："><a href="#重要性：" class="headerlink" title="重要性："></a>重要性：</h3><blockquote>
-<p>无论是以后用WebSevice，还是用rest做大型架构，都离不开对HTTP协议的认识。<br>甚至可以简化的说：</p>
-<p>WebService = Http协议 + XML</p>
-<p>Rest = Http协议 + XML/json实现的</p>
-<p>各种的Api一般也是用Http + XML/json来实现的。</p>
-<p>学习了HTTP协议之后也会方便Ajax的学习。</p>
-</blockquote>
-<h2 id="学习内容："><a href="#学习内容：" class="headerlink" title="学习内容："></a>学习内容：</h2><p>一、原理</p>
-<ol>
-<li>   形象理解Http协议</li>
-<li>   动手试试Http协议</li>
-<li>   Http协议三部分介绍</li>
-</ol>
-<p>二、实战</p>
-<ol>
-<li>   PHP + socket编程发送http请求</li>
-<li>   PHP批量发帖</li>
-<li>   Http协议的防盗链</li>
-</ol>
-<p>三、优化</p>
-<ol>
-<li>   Http协议与缓存控制</li>
-<li>   Http协议与Cookie</li>
-<li>   持久链接</li>
-</ol>
-<h2 id="学习内容：-1"><a href="#学习内容：-1" class="headerlink" title="学习内容："></a>学习内容：</h2><h3 id="一、原理"><a href="#一、原理" class="headerlink" title="一、原理"></a>一、原理</h3><h4 id="A-形象理解Http协议"><a href="#A-形象理解Http协议" class="headerlink" title="A.    形象理解Http协议"></a>A.    形象理解Http协议</h4><h5 id="1）-Http协议的定义："><a href="#1）-Http协议的定义：" class="headerlink" title="1） Http协议的定义："></a>1） Http协议的定义：</h5><blockquote>
-<p>计算机协议和现实的协议是一样的，双方多方都遵循这一个共同的规范，这就是协议。计算机可以全世界共通，这些协议功不可没。</p>
-<p>HTTP协议就是按照一定的规则，向服务器索要数据/发送数据。服务器安照一定的规则进行回应。</p>
-</blockquote>
-<h5 id="2）-Http协议的工作流程"><a href="#2）-Http协议的工作流程" class="headerlink" title="2） Http协议的工作流程"></a>2） Http协议的工作流程</h5><blockquote>
-<p>1、原始状态下客户端与服务器没有连接；（连接就是虚拟电路）</p>
-<p>2、建立链接发送请求到服务器；</p>
-<p>3、服务器沿着建立的连接，返回响应信息。客户端收到响应，并进行解析；</p>
-<p>4、断开连接。</p>
-</blockquote>
-<h5 id="3）-Http请求信息和响应信息的格式"><a href="#3）-Http请求信息和响应信息的格式" class="headerlink" title="3） Http请求信息和响应信息的格式"></a>3） Http请求信息和响应信息的格式</h5><h6 id="1、请求信息："><a href="#1、请求信息：" class="headerlink" title="1、请求信息："></a>1、请求信息：</h6><blockquote>
-<pre><code>        请求行；
-        请求头信息；
-        （换行）
-        请求主体信息（可无）
+                <h3 id="一、打开终端"><a href="#一、打开终端" class="headerlink" title="一、打开终端"></a>一、打开终端</h3><pre><code>   cd 直接将项目文件夹拖进来；
 </code></pre>
-</blockquote>
-<p><code>！！换行用来分开请求/响应头信息和请求/响应主体信息虽主体信息可有可无，但此空行一定要有。</code></p>
-<h6 id="请求行分为三部分："><a href="#请求行分为三部分：" class="headerlink" title="请求行分为三部分："></a>请求行分为三部分：</h6><p>请求方法、请求路径(URL)、所用的协议。</p>
+<h3 id="二、输入"><a href="#二、输入" class="headerlink" title="二、输入"></a>二、输入</h3><ol>
+<li><p>cd 直接将项目文件夹拖进来；</p>
+</li>
+<li><p>git init</p>
+</li>
+<li><p>git config –global user.name “你的账户名”</p>
+</li>
+<li><p>git config –global user.email “你的账户邮箱”</p>
+</li>
+<li><p>git add 直接将项目文件夹拖进来</p>
+</li>
+<li><p>git commit -m “对项目文件进行注释”</p>
 <blockquote>
-<p>请求方法包括：GET POST HEAD PUT DELETE TRACE OPTIONS</p>
-<p>请求路径就是URL的一部分</p>
+<p>这时候点击回车键，会生成一些描述，就是将项目中的各种文件都进行了创建，并创建相关的描述文件，我们可以对README.md文件进行编辑（下面会提到在哪里进行项目说明）</p>
 </blockquote>
-<h6 id="请求头信息格式："><a href="#请求头信息格式：" class="headerlink" title="请求头信息格式："></a>请求头信息格式：</h6><blockquote>
-<p>KEY：VALUE<br>KEY：VALUE<br>………………<br>Contente-length:接下来的主体长度<br>Contente-type:接下来的主体类型</p>
-</blockquote>
-<hr>
-<h6 id="2、响应信息："><a href="#2、响应信息：" class="headerlink" title="2、响应信息："></a>2、响应信息：</h6><pre><code>            响应行
-            响应头信息
-            （换行）
-            响应主体信息
-</code></pre>
-<p><code>！！换行用来分开请求/响应头信息和请求/响应主体信息虽主体信息可有可无，但此空行一定要有。</code></p>
-<p>响应主体信息可以是HTML或者其他内容</p>
-<h6 id="响应行分为三部分："><a href="#响应行分为三部分：" class="headerlink" title="响应行分为三部分："></a>响应行分为三部分：</h6><blockquote>
-<p> 协议 状态码 状态文字信息<br>状态文字信息是像‘ok’这样</p>
-</blockquote>
-<h6 id="响应头信息格式："><a href="#响应头信息格式：" class="headerlink" title="响应头信息格式："></a>响应头信息格式：</h6><blockquote>
-<p> KEY：VALUE<br>KEY：VALUE<br>………………<br>例如：HTTP/1.1 200 OK<br>     Contente-type:text/html<br>     Contente-length:5</p>
-</blockquote>
-<h5 id="4）-请求方法"><a href="#4）-请求方法" class="headerlink" title="4） 请求方法"></a>4） 请求方法</h5><p>  <code>GET POST HEAD PUT DELETE TRACE OPTIONS</code></p>
+</li>
+<li><p>git remote add origin <a target="_blank" rel="noopener" href="https://url/">https://URL</a></p>
 <blockquote>
-<p>（注意要大写</p>
-<p>（注意：这些请求方法虽然Http协议里规定了，但可能有Web Service不支持这些方法。）</p>
+<p>这时候如果中断中提示：fatal: remote origin already exists.，已经存在了，不用管，执行下一步</p>
 </blockquote>
-<h6 id="1、HEAD与GET方法基本一致，只是不返回内容"><a href="#1、HEAD与GET方法基本一致，只是不返回内容" class="headerlink" title="1、HEAD与GET方法基本一致，只是不返回内容"></a>1、HEAD与GET方法基本一致，只是不返回内容</h6><h6 id="2、POST的请求方法"><a href="#2、POST的请求方法" class="headerlink" title="2、POST的请求方法"></a>2、POST的请求方法</h6><pre><code>    因为POST比GET多了主体信息
-    
-    所以要在请求头信息里表明主体信息的长度content－length
-    
-    还要标明主体信息的类型content-type:application/x-www-form-urlencoded
-</code></pre>
-<p>GET和POST的区别在于GET请求没法传数据，只能单纯的读取一个接口提供的资源</p>
-<p>而PSOT可以传输一定的数据到后台并进行一定的操作。</p>
-<h6 id="3、TRACE应用情况："><a href="#3、TRACE应用情况：" class="headerlink" title="3、TRACE应用情况："></a>3、TRACE应用情况：</h6><p>比如用了代理上网，想查看代理有没有修改Http请求，这种情况就可以用到TRACE，服务器回把最后收到的请求返回给客户端。</p>
-<h6 id="4、OPTIONS："><a href="#4、OPTIONS：" class="headerlink" title="4、OPTIONS："></a>4、OPTIONS：</h6><p>返回服务器可用的请求方法。</p>
-<h5 id="5）-状态码和状态文字"><a href="#5）-状态码和状态文字" class="headerlink" title="5） 状态码和状态文字"></a>5） 状态码和状态文字</h5><blockquote>
-<p>状态码用来反映服务器的响应情况</p>
-<p>状态文字用来描述状态码的</p>
-</blockquote>
-<h6 id="常见的有："><a href="#常见的有：" class="headerlink" title="常见的有："></a>常见的有：</h6><pre><code>200 OK：服务器正常返回网页
-301/2：永久/临时重定向 （可能会在重定向过程中丢失数据，比如POST可能会变成GET导致数据丢失）
-304 Not Modified：未修改（请求的内容未修改，告诉客户端到缓存里取
-307 Temporay Redirect：在重定向中保持原有数据 
-</code></pre>
-<h6 id="失败的状态码－"><a href="#失败的状态码－" class="headerlink" title="失败的状态码－"></a>失败的状态码－</h6><pre><code> 404 NOT FOUND：请求的网页不存在
- 500：服务器内部错误
- 503：服务器暂时不可用
-</code></pre>
-<h6 id="状态码-定义-说明"><a href="#状态码-定义-说明" class="headerlink" title="状态码    定义    说明"></a>状态码    定义    说明</h6><pre><code>1XX    信息    收到请求，继续处理
-2XX    成功    操作成功收到、理解、接受
-3XX    重定向    为了完成请求，必需采取进一步措施
-4XX    客户端错误    请求的语法有明显错误或不能完全被满足
-5XX    服务端错误    服务器无法完成明显有效的请求
-</code></pre>
-<p>B.    动手试试Http协议<br>C.    Http协议三部分介绍</p>
-<p>二、实战<br>A.    PHP + socket编程发送http请求<br>B.    PHP批量发帖<br>C.    Http协议的防盗链</p>
-<p>三、优化<br>A.    Http协议与缓存控制<br>B.    Http协议与Cookie<br>C.    持久链接</p>
+</li>
+<li><p>git push -u origin maste</p>
+</li>
+</ol>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_37625794/article/details/73549997">https://blog.csdn.net/m0_37625794/article/details/73549997</a></p>
 
                 
             </div>
@@ -571,7 +496,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tolie-official.github.io/2021/11/27/HTTP/">https://tolie-official.github.io/2021/11/27/HTTP/</a>
+                    <a href="https://tolie-official.github.io/2021/12/23/git%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E8%87%B3github/">https://tolie-official.github.io/2021/12/23/git%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E8%87%B3github/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -609,8 +534,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/HTTP/">
-                                    <span class="chip bg-color">HTTP</span>
+                                <a href="/tags/project/">
+                                    <span class="chip bg-color">project</span>
                                 </a>
                             
                         </div>
@@ -654,17 +579,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/11/30/Spring%205/">
+                <a href="/2021/12/23/git%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E8%87%B3github/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Spring 5 for beginner (part 1)">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="update project">
                         
-                        <span class="card-title">Spring 5 for beginner (part 1)</span>
+                        <span class="card-title">update project</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -674,26 +600,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JAVA%E6%A1%86%E6%9E%B6/" class="post-category">
-                                    JAVA框架
+                            <a href="/categories/project-manage/" class="post-category">
+                                    project-manage
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Spring-5/">
-                        <span class="chip bg-color">Spring 5</span>
+                    <a href="/tags/project/">
+                        <span class="chip bg-color">project</span>
                     </a>
                     
                 </div>
@@ -707,13 +634,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/27/HTML%E5%AD%A6%E4%B9%A0/">
+                <a href="/2021/12/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC%E5%85%AD%E7%AB%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="HTML for beginner">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Computer Networks (chapter 6)">
                         
-                        <span class="card-title">HTML for beginner</span>
+                        <span class="card-title">Computer Networks (chapter 6)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -724,14 +651,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Frond-End/" class="post-category">
-                                    Frond End
+                            <a href="/categories/Net/" class="post-category">
+                                    Net
                                 </a>
                             
                             
@@ -741,8 +668,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/HTML/">
-                        <span class="chip bg-color">HTML</span>
+                    <a href="/tags/Computer-Networks/">
+                        <span class="chip bg-color">Computer Networks</span>
                     </a>
                     
                 </div>

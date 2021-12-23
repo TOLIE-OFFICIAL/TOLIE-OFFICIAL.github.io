@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>update project</title>
+      <link href="/2021/12/23/git%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E8%87%B3github/"/>
+      <url>/2021/12/23/git%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E8%87%B3github/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、打开终端"><a href="#一、打开终端" class="headerlink" title="一、打开终端"></a>一、打开终端</h3><pre><code>   cd 直接将项目文件夹拖进来；</code></pre><h3 id="二、输入"><a href="#二、输入" class="headerlink" title="二、输入"></a>二、输入</h3><ol><li><p>cd 直接将项目文件夹拖进来；</p></li><li><p>git init</p></li><li><p>git config –global user.name “你的账户名”</p></li><li><p>git config –global user.email “你的账户邮箱”</p></li><li><p>git add 直接将项目文件夹拖进来</p></li><li><p>git commit -m “对项目文件进行注释”</p><blockquote><p>这时候点击回车键，会生成一些描述，就是将项目中的各种文件都进行了创建，并创建相关的描述文件，我们可以对README.md文件进行编辑（下面会提到在哪里进行项目说明）</p></blockquote></li><li><p>git remote add origin <a href="https://url/">https://URL</a></p><blockquote><p>这时候如果中断中提示：fatal: remote origin already exists.，已经存在了，不用管，执行下一步</p></blockquote></li><li><p>git push -u origin maste</p></li></ol><p>原文链接：<a href="https://blog.csdn.net/m0_37625794/article/details/73549997">https://blog.csdn.net/m0_37625794/article/details/73549997</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> project-manage </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> project </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Computer Networks (chapter 6)</title>
       <link href="/2021/12/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC%E5%85%AD%E7%AB%A0/"/>
       <url>/2021/12/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC%E5%85%AD%E7%AB%A0/</url>
@@ -246,6 +271,31 @@
         <tags>
             
             <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>deploy project</title>
+      <link href="/2021/12/04/web%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/"/>
+      <url>/2021/12/04/web%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="部署说明"><a href="#部署说明" class="headerlink" title="部署说明"></a>部署说明</h2><h3 id="一、部署本地服务器"><a href="#一、部署本地服务器" class="headerlink" title="一、部署本地服务器"></a>一、部署本地服务器</h3><blockquote><ol><li>现将users.sql导入MySQL数据库，数据库名为users</li><li>数据库root用户的用户名设置为root，密码为666666</li><li>将fight.war导入eclipse或者idea，选用编码集UTF-8</li><li>为项目部署tomcat</li><li>访问<a href="http://localhost:8080/+%E9%A1%B9%E7%9B%AE%E5%90%8D">http://localhost:8080/+项目名</a></li></ol></blockquote><h3 id="二、部署网络服务器"><a href="#二、部署网络服务器" class="headerlink" title="二、部署网络服务器"></a>二、部署网络服务器</h3><ol><li>阿里云服务器</li></ol><blockquote><p>操作系统：CentOS 7.45  X64,</p><p>服务器：apache-tomcat-8</p><p>JDK：oracle jdk 12.0.1</p><p>工具：SecureCRT 8.3和SecureFX 8.3</p><p>未使用宝塔面板辅助部署</p></blockquote><ol start="2"><li><p>部署步骤</p><blockquote><ol><li><p>上传sql文件并设置大小写不敏感</p><pre><code>vi /etc/my.cnf在[mysqld]后添加lower_case_table_names=1重启mysqlsystemctl restart mysqld.service</code></pre></li><li><p>创建数据库并导入数据</p><pre><code>mysql -uroot -p+密码   CREATE DATABASE 数据库名 DEFAULT CHARACTER SET utf8;   ctrl+c退出数据库   mysql -u root -p+密码 --default-character-set=utf8 数据库名 &lt; sql文件路径</code></pre></li><li><p>部署到tomcat</p><ul><li>修改server.xml</li></ul><pre><code>在&lt;host 添加&lt;Context path=&quot;/名称&quot; docBase=&quot;web文件路径&quot; debug=&quot;0&quot; reloadable=&quot;false&quot; 重启tomcat</code></pre></li></ol></blockquote></li><li><p>已上传的web项目信息</p></li></ol><blockquote><p>个人服务器地址：<a href="http://47.95.194.205:8080/fight/">http://47.95.194.205:8080/fight/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> project-manage </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> project </tag>
             
         </tags>
       
