@@ -467,31 +467,22 @@
 <blockquote>
 <ol>
 <li><p>上传sql文件并设置大小写不敏感</p>
-<pre><code>vi /etc/my.cnf
-在[mysqld]后添加
-lower_case_table_names=1
-重启mysql
-systemctl restart mysqld.service
-</code></pre>
+<p>vi /etc/my.cnf<br>在[mysqld]后添加<br>lower_case_table_names=1<br>重启mysql<br>systemctl restart mysqld.service</p>
 </li>
 <li><p>创建数据库并导入数据</p>
-<pre><code>mysql -uroot -p+密码
-   
-CREATE DATABASE 数据库名 DEFAULT CHARACTER SET utf8;
-   
-ctrl+c退出数据库
-   
-mysql -u root -p+密码 --default-character-set=utf8 数据库名 &lt; sql文件路径
-</code></pre>
+<p>mysql -uroot -p+密码</p>
 </li>
+</ol>
+<p>CREATE DATABASE 数据库名 DEFAULT CHARACTER SET utf8;</p>
+<p>ctrl+c退出数据库</p>
+<p>mysql -u root -p+密码 –default-character-set=utf8 数据库名 &lt; sql文件路径</p>
+<ol start="3">
 <li><p>部署到tomcat</p>
 <ul>
 <li>修改server.xml</li>
+<li>在&lt;host 添加<br>&lt;Context path=”/名称” docBase=”web文件路径” debug=”0” reloadable=”false” </li>
+<li>重启tomcat</li>
 </ul>
-<pre><code>在&lt;host 添加
-&lt;Context path=&quot;/名称&quot; docBase=&quot;web文件路径&quot; debug=&quot;0&quot; reloadable=&quot;false&quot; 
-重启tomcat
-</code></pre>
 </li>
 </ol>
 </blockquote>
@@ -500,7 +491,7 @@ mysql -u root -p+密码 --default-character-set=utf8 数据库名 &lt; sql文件
 </li>
 </ol>
 <blockquote>
-<p>个人服务器地址：<a target="_blank" rel="noopener" href="http://47.95.194.205:8080/fight/">http://47.95.194.205:8080/fight/</a></p>
+<p>个人服务器地址：<a target="_blank" rel="noopener" href="http://47.95.194.205:8080/fight/%EF%BC%88%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B7%B2%E8%BF%87%E6%9C%9F%EF%BC%89">http://47.95.194.205:8080/fight/（服务器已过期）</a></p>
 </blockquote>
 
                 
