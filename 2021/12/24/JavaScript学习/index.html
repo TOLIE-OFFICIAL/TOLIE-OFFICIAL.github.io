@@ -419,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-01
+                    2022-01-02
                 </div>
                 
 
@@ -1167,14 +1167,39 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <ul>
 <li>pop()从数组中<code>删除最后一个</code>元素；</li>
 <li>pop()方法<code>不需要参数</code>；</li>
-<li>pop完毕之后，<code>返回的结果是被删去的元素</code>，原数组也会被更改。</li>
+<li>pop完毕之后，<code>返回的结果是被删去的元素</code>，<code>原数组也会被更改</code>。</li>
 </ul>
 </li>
 <li><p><strong>shift()</strong></p>
 <ul>
 <li>shift()从数组中<code>删除第一个</code>元素；</li>
 <li>shift()方法<code>不需要参数</code>；</li>
-<li>shift完毕之后，<code>返回的结果是被删去的元素</code>，原数组也会被更改。</li>
+<li>shift完毕之后，<code>返回的结果是被删去的元素</code>，<code>原数组也会被更改</code>。</li>
+</ul>
+</li>
+<li><p>splice()</p>
+<ul>
+<li><p><code>删除或替换</code>指定位置的元素</p>
+</li>
+<li><p>shift完毕之后，<code>返回的结果是被删去的元素</code>，<code>原数组也会被更改</code>。</p>
+</li>
+<li><pre><code>array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+</code></pre>
+<ul>
+<li><p><code>start</code></p>
+<p>指定修改的开始位置（从0计数）。如果超出了数组的长度，则从数组末尾开始添加内容；如果是负值，则表示从数组末位开始的第几位（从-1计数，这意味着-n是倒数第n个元素并且等价于<code>array.length-n</code>）；如果负数的绝对值大于数组的长度，则表示开始位置为第0位。</p>
+</li>
+<li><p><code>deleteCount</code> 可选</p>
+<p>整数，表示要移除的数组元素的个数。</p>
+<p>如果 <code>deleteCount</code> 大于 <code>start</code> 之后的元素的总数，则从 <code>start</code> 后面的元素都将被删除（含第 <code>start</code> 位）。</p>
+<p>如果 <code>deleteCount</code> 被省略了，或者它的值大于等于<code>array.length - start</code>(也就是说，如果它大于或者等于<code>start</code>之后的所有元素的数量)，那么<code>start</code>之后数组的所有元素都会被删除。</p>
+<p>如果 <code>deleteCount</code> 是 0 或者负数，则不移除元素。这种情况下，至少应添加一个新元素。</p>
+</li>
+<li><p><code>item1, item2, *...*</code> 可选</p>
+<p>要添加进数组的元素,从<code>start</code> 位置开始。如果不指定，则 <code>splice()</code> 将只删除数组元素。</p>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
@@ -1547,7 +1572,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </code></pre>
 </li>
 </ol>
-<h6 id="7-替换字符和字符转换为数组"><a href="#7-替换字符和字符转换为数组" class="headerlink" title="7).替换字符和字符转换为数组"></a>7).替换字符和字符转换为数组</h6><ol>
+<h6 id="7-字符串大小写转换"><a href="#7-字符串大小写转换" class="headerlink" title="7).字符串大小写转换"></a>7).字符串大小写转换</h6><ol>
 <li><p>toUpperCase()<br>字符串的英文字符全部转换为大写；</p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> Str <span class="token operator">=</span> <span class="token string">'red,blue,Pink'</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Str<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1588,6 +1613,39 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </li>
 </ol>
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211224141620235.png" alt="innerText和innerHTML的区别"></p>
+<h5 id="事件类型"><a href="#事件类型" class="headerlink" title="事件类型"></a>事件类型</h5><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tags/html_ref_eventattributes.asp">HTML 事件参考手册</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">事件发生时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">onclick</td>
+<td align="left">用户点击 HTML 元素</td>
+</tr>
+<tr>
+<td align="left">onmouseover</td>
+<td align="left">鼠标指针移动到指定的元素上时发生</td>
+</tr>
+<tr>
+<td align="left">onmouseout</td>
+<td align="left">用户从一个 HTML 元素上移开鼠标时发生</td>
+</tr>
+<tr>
+<td align="left">onkeydown</td>
+<td align="left">用户按下键盘按键</td>
+</tr>
+<tr>
+<td align="left">onload</td>
+<td align="left">浏览器已完成页面的加载</td>
+</tr>
+<tr>
+<td align="left">onchange</td>
+<td align="left">HTML 元素改变</td>
+</tr>
+</tbody></table>
 
                 
             </div>
@@ -1971,7 +2029,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">79.3k</span>&nbsp;字
+                class="white-color">79.8k</span>&nbsp;字
             
             
             
