@@ -419,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-24
+                    2022-01-06
                 </div>
                 
 
@@ -749,7 +749,8 @@ span &amp;<span class="token hexcode">#123</span><span class="token punctuation"
     <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
 &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 </code></pre>
-<h5 id="2-结构-位置-伪类选择器-CSS-3的新特性"><a href="#2-结构-位置-伪类选择器-CSS-3的新特性" class="headerlink" title="2. 结构(位置)伪类选择器(CSS 3的新特性)"></a>2. 结构(位置)伪类选择器(CSS 3的新特性)</h5><table>
+<h5 id="2-结构-位置-伪类选择器-CSS-3的新特性"><a href="#2-结构-位置-伪类选择器-CSS-3的新特性" class="headerlink" title="2. 结构(位置)伪类选择器(CSS 3的新特性)"></a>2. 结构(位置)伪类选择器(CSS 3的新特性)</h5><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/idomyway/article/details/93921248?spm=1001.2101.3001.6650.5&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5.no_search_link">CSS3 - :nth-child()选择前几个元素</a></p>
+<table>
 <thead>
 <tr>
 <th>结构(位置)伪类选择器</th>
@@ -766,11 +767,15 @@ span &amp;<span class="token hexcode">#123</span><span class="token punctuation"
 </tr>
 <tr>
 <td>:nth-child(n)</td>
-<td>选取属于父元素的第n个子元素，不论元素的类型</td>
+<td>选取属于父元素的第n个子元素，<code>不论元素的类型</code></td>
 </tr>
 <tr>
 <td>:nth-last-child(n)</td>
-<td>选取属于父元素的<code>倒数</code>第n个子元素，不论元素的类型</td>
+<td>选取属于父元素的<code>倒数</code>第n个子元素，<code>不论元素的类型</code></td>
+</tr>
+<tr>
+<td>:nth-of-type()</td>
+<td>冒号前是选择器，选取与此选择器同一类的元素</td>
 </tr>
 </tbody></table>
 <pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 选择第一个孩子 */</span>
@@ -817,6 +822,44 @@ span &amp;<span class="token hexcode">#123</span><span class="token punctuation"
 &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/*其他同理*/</span>
 </code></pre>
+<pre class=" language-css"><code class="language-css">div<span class="token number">.</span><span class="token property">message</span><span class="token punctuation">:</span><span class="token function">nth-of-type</span><span class="token punctuation">(</span>-n+<span class="token number">2</span><span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+<span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">1</span>px <span class="token hexcode">#999</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/*选取div.message 的前两个元素*/</span>
+</code></pre>
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style language-css">
+        <span class="token property">li</span><span class="token punctuation">:</span>first-child&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*第一个绿色*/</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token property">li</span><span class="token punctuation">:</span><span class="token function">nth-child</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*第二个蓝色*/</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token property">li</span><span class="token punctuation">:</span>last-child&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*倒数第二个橙色*/</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token property">li</span><span class="token punctuation">:</span><span class="token function">nth-last-child</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*最后一个红色*/</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>第一个绿色<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>第二个蓝色<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>第三个默认色<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>第四个默认色<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>倒数第二个橙色<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>        
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>最后一个红色<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>        
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>    
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20220106140841616.png" alt="网页效果"></p>
 <h5 id="3-目标伪类选择器"><a href="#3-目标伪类选择器" class="headerlink" title="3. 目标伪类选择器"></a>3. 目标伪类选择器</h5><p>:target 目标伪类选择器：用于选取当前活动的目标元素；</p>
 <pre class=" language-css"><code class="language-css"><span class="token punctuation">:</span>target &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
@@ -1468,7 +1511,7 @@ a &amp;<span class="token hexcode">#123</span><span class="token punctuation">;<
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.7k</span>&nbsp;字
+                class="white-color">82.9k</span>&nbsp;字
             
             
             
