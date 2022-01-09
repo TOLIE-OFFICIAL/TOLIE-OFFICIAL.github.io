@@ -419,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-06
+                    2022-01-08
                 </div>
                 
 
@@ -1644,16 +1644,16 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li><strong>API</strong> ( Application Programming Interface，应用程序编程接口)是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。<code>简单理解为API是给程序员提供的一种工具,以便能更轻松的实现想要完成的功能。</code></li>
 <li><strong>Web API</strong>是<code>浏览器</code>提供的一套操作<code>浏览器功能和页面元素</code>的API（ BOM和DOM）。</li>
 </ul>
-<h4 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h4><h5 id="1-1-什么是DOM"><a href="#1-1-什么是DOM" class="headerlink" title="1.1 什么是DOM"></a>1.1 什么是DOM</h5><p><code>文档对象模型</code>( Document Object Model ,简称DOM) ,，是W3C组织推荐的处理可扩展标记语言( HTML或者XML )的标准编程<code>接口</code>。</p>
+<h4 id="第六章-DOM"><a href="#第六章-DOM" class="headerlink" title="第六章 DOM"></a>第六章 DOM</h4><h5 id="6-1-什么是DOM"><a href="#6-1-什么是DOM" class="headerlink" title="6.1 什么是DOM"></a>6.1 什么是DOM</h5><p><code>文档对象模型</code>( Document Object Model ,简称DOM) ,，是W3C组织推荐的处理可扩展标记语言( HTML或者XML )的标准编程<code>接口</code>。</p>
 <p>W3C已经定义了一系列的DOM接口，通过这些DOM接口可以改变网页的内容、结构和样式。</p>
-<h5 id="1-2-DOM树"><a href="#1-2-DOM树" class="headerlink" title="1.2 DOM树"></a>1.2 DOM树</h5><ul>
+<h5 id="6-2-DOM树"><a href="#6-2-DOM树" class="headerlink" title="6.2 DOM树"></a>6.2 DOM树</h5><ul>
 <li>文档：一个页面就是一个文档，<em>DOM中使用document表示</em>；</li>
 <li>元素：页面中的所有标签都是元素， <em>DOM中使用element表示</em>；</li>
 <li>节点：网页中的所有内容都是节点(标签、属性、文本、注释等) ， <em>DOM中使用node表示</em>；</li>
 <li>DOM把以上的内容都看做是<code>对象</code>；</li>
 </ul>
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20211224140057312.png" alt="DOM树"></p>
-<h5 id="1-3-获取元素"><a href="#1-3-获取元素" class="headerlink" title="1.3 获取元素"></a>1.3 获取元素</h5><h6 id="1-通过ID获取元素"><a href="#1-通过ID获取元素" class="headerlink" title="1).通过ID获取元素"></a>1).通过ID获取元素</h6><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//获取到id为date的元素</span>
+<h5 id="6-3-获取元素"><a href="#6-3-获取元素" class="headerlink" title="6.3 获取元素"></a>6.3 获取元素</h5><h6 id="1-通过ID获取元素"><a href="#1-通过ID获取元素" class="headerlink" title="1).通过ID获取元素"></a>1).通过ID获取元素</h6><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//获取到id为date的元素</span>
 <span class="token keyword">var</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'date'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h6 id="2-通过标签名获取元素"><a href="#2-通过标签名获取元素" class="headerlink" title="2).通过标签名获取元素"></a>2).通过标签名获取元素</h6><p>​    document . getElementsByTagName (‘标签’ )，其返回的是<code>获取过来元素对象的集合</code>以<code>伪数组</code>的形式存储的。</p>
@@ -1703,7 +1703,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
-<h5 id="1-4-事件基础"><a href="#1-4-事件基础" class="headerlink" title="1.4 事件基础"></a>1.4 事件基础</h5><p>JavaScript使我们有能力创建动态页面，而事件是可以被JavaScript侦测到的行为。可以简单理解为<code>触发——响应机制</code>。<br>网页中的每个元素都可以产生某些可以触发JavaScript的事件，例如,我们可以在用户点击某按钮时产生一个事件，然后去执行某些操作。</p>
+<h5 id="6-4-事件基础"><a href="#6-4-事件基础" class="headerlink" title="6.4 事件基础"></a>6.4 事件基础</h5><p>JavaScript使我们有能力创建动态页面，而事件是可以被JavaScript侦测到的行为。可以简单理解为<code>触发——响应机制</code>。<br>网页中的每个元素都可以产生某些可以触发JavaScript的事件，例如,我们可以在用户点击某按钮时产生一个事件，然后去执行某些操作。</p>
 <h6 id="1-事件三要素"><a href="#1-事件三要素" class="headerlink" title="1).事件三要素"></a>1).事件三要素</h6><p>事件是有三部分组成：包括事件源、事件类型、事件处理程序，我们也称为事件三要素。</p>
 <ol>
 <li><p>事件源</p>
@@ -1764,7 +1764,7 @@ btn<span class="token punctuation">.</span>onclick <span class="token operator">
 </tr>
 </tbody></table>
 <h6 id="3-事件流"><a href="#3-事件流" class="headerlink" title="3).事件流"></a>3).事件流</h6><p>？？？？</p>
-<h5 id="1-5-操作元素"><a href="#1-5-操作元素" class="headerlink" title="1.5 操作元素"></a>1.5 操作元素</h5><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20220105171433240.png" alt="操作元素"></p>
+<h5 id="6-5-操作元素"><a href="#6-5-操作元素" class="headerlink" title="6.5 操作元素"></a>6.5 操作元素</h5><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20220105171433240.png" alt="操作元素"></p>
 <h6 id="1-改变元素内容"><a href="#1-改变元素内容" class="headerlink" title="1).改变元素内容"></a>1).改变元素内容</h6><ol>
 <li><h6 id="element-innerText"><a href="#element-innerText" class="headerlink" title="element. innerText"></a>element. innerText</h6><p>从起始位置到终止位置的内容，但<code>它去除html标签，同时空格和换行也会去掉</code>；<em><strong>不识别html标签，非标准</strong></em></p>
 </li>
@@ -1966,7 +1966,7 @@ box<span class="token punctuation">.</span>style<span class="token punctuation">
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 <ul>
-<li>element. classNane<strong>类名样式操作</strong></li>
+<li>element. className<strong>类名样式操作</strong></li>
 </ul>
 <p>使用element. className更改元素的样式适合于<code>样式较多或者功能复杂的情况</code>。</p>
 <p><code>其本质是在标签内添加/修改类名的方式，使标签应用写好的样式</code></p>
@@ -2078,6 +2078,189 @@ box<span class="token punctuation">.</span>style<span class="token punctuation">
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
+<h5 id="6-6-自定义属性"><a href="#6-6-自定义属性" class="headerlink" title="6.6 自定义属性"></a>6.6 自定义属性</h5><p><code>自定义属性目的：是为了保存并使用数据。有些数据可以保存到页面中而不用保存到数据库中。</code></p>
+<p>H5给我们新增了自定义属性:</p>
+<ol>
+<li><strong>设置H5自定义属性</strong></li>
+</ol>
+<blockquote>
+<p>H5规定自定义属性<code>data-</code>开头做为<code>属性名并且赋值</code>。比如&lt;div data-index=”1”&gt;&lt;/div&gt;”</p>
+</blockquote>
+<h6 id="1-获取自定义属性值"><a href="#1-获取自定义属性值" class="headerlink" title="1).获取自定义属性值"></a>1).获取自定义属性值</h6><p>程序员自己添加的属性我们称为<code>自定义属性</code>。</p>
+<ol>
+<li>element.属性名</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ol start="2">
+<li>element.getAttribute(‘属性名’)</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ol start="3">
+<li>两者区别</li>
+</ol>
+<ul>
+<li><strong>element.属性</strong>：<code>获取内置属性值</code>（元素本身自带的属性）</li>
+<li>**element.getAttribute( ‘属性’)**：<code>主要获得自定义的属性 （标准）我们程序员自定义的属性</code>。也可以获取内置属性</li>
+</ul>
+<ol start="4">
+<li><p><strong>H5新增</strong>elerment.dataset. *index *或者 element.dataset[ ‘<em>index</em>‘ ] </p>
+<p><code>ie 11才开始支持</code></p>
+</li>
+</ol>
+<pre class=" language-JS"><code class="language-JS">// h5新增的获取自定义属性的方法
+var box = document.getElementById('box');
+console.log(box.dataset.index); //这里的dataset是一个集合里面存放了所有以data开头的自定义属性。
+console.log(box.dataset['index']);
+
+
+//如果自定义属性里面有多个 '-' 链接的单词，我们获取的时候采取驼峰命名法
+console.log(div.dataset.listName)
+</code></pre>
+<h6 id="2-设置自定义属性"><a href="#2-设置自定义属性" class="headerlink" title="2).设置自定义属性"></a>2).设置自定义属性</h6><ol>
+<li><p>设置内置属性值</p>
+<blockquote>
+<p>element .属性=’值’</p>
+</blockquote>
+</li>
+<li><p>设置自定义属性值</p>
+<blockquote>
+<p>element . setAttribute(‘属性’，’值’) ;</p>
+</blockquote>
+</li>
+<li><p> <code>setAttribute也可以用来修改内置属性值</code></p>
+</li>
+</ol>
+<h6 id="2-移除自定义属性"><a href="#2-移除自定义属性" class="headerlink" title="2).移除自定义属性"></a>2).移除自定义属性</h6><blockquote>
+<p>element . removeAttribute (‘属性’) ;</p>
+</blockquote>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 2.设置元素属性值</span>
+<span class="token comment" spellcheck="true">// (1) element.属性= '值'</span>
+div<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token string">'test'</span> <span class="token punctuation">;</span>
+div<span class="token punctuation">.</span>className <span class="token operator">=</span> <span class="token string">'navs'</span> <span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// (2) element. setAttribute('属性'，'值');主要针对于自定义属性</span>
+div<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">'index'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+div<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span> <span class="token string">'class'</span><span class="token punctuation">,</span> <span class="token string">'footer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment" spellcheck="true">//一个是class 一个是classname 注意区分</span>
+
+div<span class="token punctuation">.</span><span class="token function">removeAttribute</span><span class="token punctuation">(</span><span class="token string">'index'</span><span class="token punctuation">)</span>
+</code></pre>
+<h5 id="6-7-节点操作"><a href="#6-7-节点操作" class="headerlink" title="6.7 节点操作"></a>6.7 节点操作</h5><h6 id="1-节点获取"><a href="#1-节点获取" class="headerlink" title="1). 节点获取"></a>1). 节点获取</h6><p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20220108113431959.png" alt="节点操作"></p>
+<p>HTML <code>DOM树中的所有节点均可通过JavaScript进行访问</code>，所有HTML元素(节点)均可被修改，也可以创建或删除。</p>
+<h6 id="2-节点属性"><a href="#2-节点属性" class="headerlink" title="2). 节点属性"></a>2). 节点属性</h6><p>一般地 ,节点至少拥有<code>nodeType (节点类型)</code>、<code>nodeName (节点名称)</code>和<code>nodeValue (节点值)</code>这三个基本属性。</p>
+<blockquote>
+<p>元素节点的 nodeType 为 1</p>
+<p>属性节点的 nodeType 为 2</p>
+<p>文本节点的 nodeType  为 3 (文本节点包含文字、空格、换行等)</p>
+</blockquote>
+<h6 id="3-节点层级"><a href="#3-节点层级" class="headerlink" title="3). 节点层级"></a>3). 节点层级</h6><p>利用DOM树可以把节点划分为不同的层级关系，<code>常见的父子兄层级关系</code>。</p>
+<ol>
+<li><h6 id="父级节点"><a href="#父级节点" class="headerlink" title="父级节点"></a>父级节点</h6></li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//const box = document.querySelector('.box');</span>
+        <span class="token keyword">const</span> x <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.box i'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/* x.onclick = function () &amp;#123;
+            //设定box的display属性为none，将其隐藏；
+            //box的display属性为block，将其显示出来；
+            box.style.display = 'none';
+        &amp;#125; */</span>
+
+        <span class="token comment" spellcheck="true">//x.parentNode即上方获取的box节点</span>
+        <span class="token comment" spellcheck="true">//element.parent获取的是离此节点最近的父级节点</span>
+        <span class="token comment" spellcheck="true">//如果找不到父节点，则返回 null</span>
+        x<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            x<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">'none'</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+</code></pre>
+<ol start="2">
+<li>子级节点</li>
+</ol>
+<blockquote>
+<p>parentNode . chilaNodes (标准)</p>
+<p>//获取所有子节点，包含：元素节点、文本节点等等</p>
+</blockquote>
+<p>parentNode. childNodes返回<code>包含指定节点的子节点的集合，包含：元素节点、文本节点等等</code>，该集合为<code>即时更新</code>的集合。</p>
+<p>如果只想要获得里面的元素节点,则需要专[处理。所以我们一 般不提倡使用childNodes方法。</p>
+<blockquote>
+<p>parentNode. children (非标准)</p>
+<p>//获取所有的子级元素节点</p>
+</blockquote>
+<p>parentNode. children是一个只读属性，<code>返回所有的子元素节点的集合</code>。它只返回子元素节点，其他节点不返回**(这个是我们重点掌握的)**。</p>
+<p>虽然children是一个非标准 ，但是得到了各个浏览器的支持，可以放心使用，<strong>兼容性良好</strong>。</p>
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>IE<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span> <span class="token attr-name">index</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>7<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+        <span class="token keyword">var</span> ul <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//childNodes 获得的是所有的子节点，包含：元素节点、文本节点等等</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ul<span class="token punctuation">.</span>childNodes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//获取所有的子级元素节点</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ul<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20220108121041889.png" alt="获取子级节点"></p>
+<blockquote>
+<p>parentNode . firstChild</p>
+</blockquote>
+<p>parentNode . firstChild返回<code>第一个子节点</code>，找不到则返回 null 。<code>同样，也是包含所有的节点</code>。</p>
+<blockquote>
+<p>parentNode . lastChild</p>
+</blockquote>
+<p>parentNode .lasttChild返回<code>最后一个子节点</code>，找不到则返回 null 。<code>同样，也是包含所有的节点</code>。</p>
+<p><span style="color:red; font-weight:bold;font-size:18px">注意:以下这两个方法有兼容性问题，IE9以上才支持，可能存在兼容性问题。</span></p>
+<blockquote>
+<p>parentNode . firstElementChild</p>
+</blockquote>
+<p>parentNode . firstElementChild返回<code>第一个元素子节点</code>，找不到则返回 null 。</p>
+<blockquote>
+<p>parentNode . lastElementChild</p>
+</blockquote>
+<p>parentNode . lastElementChild返回<code>最后一个元素子节点</code>，找不到则返回 null 。</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> ul <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 1.firstChild第一个子节点,不管是文本节点还是元素节点</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ul<span class="token punctuation">.</span>firstChild<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 2.lastChild第一个子节点,不管是文本节点还是元素节点</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ul<span class="token punctuation">.</span>lastChild<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//注意:以下这两个方法有兼容性问题，IE9以上才支持。</span>
+<span class="token comment" spellcheck="true">//3. firstElementChild 返回第一个子元素节点</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ul<span class="token punctuation">.</span>firstElementChild<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//4. lastElementChild 返回最后一个子元素节点</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ul<span class="token punctuation">.</span>lastElementChild<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20220108124649993.png" alt="获取第一个或最后一个节点"></p>
+<p><span style="color:red; font-weight:bold;font-size:18px">实际开发中，一般使用parentNode.children[parentNode.children.length-1]和parentNode.children[0] 获得最后一个 和 第一个子元素</span></p>
 <h4 id="第章"><a href="#第章" class="headerlink" title="第章"></a>第章</h4><h4 id="第章-1"><a href="#第章-1" class="headerlink" title="第章"></a>第章</h4><h4 id="第章-2"><a href="#第章-2" class="headerlink" title="第章"></a>第章</h4><h5 id><a href="#" class="headerlink" title></a></h5>
                 
             </div>
@@ -2461,7 +2644,7 @@ box<span class="token punctuation">.</span>style<span class="token punctuation">
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">83.2k</span>&nbsp;字
+                class="white-color">88.1k</span>&nbsp;字
             
             
             
