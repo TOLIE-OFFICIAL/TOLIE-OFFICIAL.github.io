@@ -419,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-09
+                    2022-01-10
                 </div>
                 
 
@@ -1547,11 +1547,15 @@ li &amp;<span class="token hexcode">#123</span><span class="token punctuation">;
 <table>
 <thead>
 <tr>
-<th>none</th>
-<th>和关键字 <code>hidden</code> 类似，不显示边框。在这种情况下，如果没有设定背景图片，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-width"><code>border-width</code></a> 计算后的值将是 <code>0</code>，即使先前已经指定过它的值。在单元格边框重叠情况下，<code>none</code> 值优先级最低，意味着如果存在其他的重叠边框，则会显示为那个边框。</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody><tr>
+<td>none</td>
+<td>和关键字 <code>hidden</code> 类似，不显示边框。在这种情况下，如果没有设定背景图片，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-width"><code>border-width</code></a> 计算后的值将是 <code>0</code>，即使先前已经指定过它的值。在单元格边框重叠情况下，<code>none</code> 值优先级最低，意味着如果存在其他的重叠边框，则会显示为那个边框。</td>
+</tr>
+<tr>
 <td>hidden</td>
 <td>和关键字 <code>none</code> 类似，不显示边框。在这种情况下，如果没有设定背景图片，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-width"><code>border-width</code></a> 计算后的值将是 <code>0</code>，即使先前已经指定过它的值。在单元格边框重叠情况下，<code>hidden</code> 值优先级最高，意味着如果存在其他的重叠边框，边框不会显示。</td>
 </tr>
@@ -1593,6 +1597,234 @@ li &amp;<span class="token hexcode">#123</span><span class="token punctuation">;
 <blockquote>
 <p>border-collapse: collapse 表示相邻边框合并在一起。</p>
 </blockquote>
+<h5 id="2-内边距-padding）"><a href="#2-内边距-padding）" class="headerlink" title="2.内边距(padding）"></a>2.内边距(padding）</h5><p>一个元素的内边距区域指的是<code>其内容与其边框之间的空间</code>。</p>
+<blockquote>
+<p><strong>注意：</strong></p>
+<ul>
+<li>内边距控制的是<code>元素内部空出的空间</code>。相反，外边距margin操作元素<em>外部</em>空出的空间。</li>
+<li><code>padding也会影响盒子的大小</code>。也就是说，如果盒子已经有了宽度和高度，此时再指定内边框，会撑大盒子。</li>
+<li><code>如何盒子本身没有指定width / height属性，则此时padding不会撑开盒子的宽 / 高</code>。</li>
+</ul>
+</blockquote>
+<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 应用于所有边 */</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">1</span>em<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* 上边下边 | 左边右边 */</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">5%</span> <span class="token number">10%</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* 上边 | 左边右边 | 下边 */</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">1</span>em <span class="token number">2</span>em <span class="token number">2</span>em<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* 上边 | 右边 | 下边 | 左边 */</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">5</span>px <span class="token number">1</span>em <span class="token number">0</span> <span class="token number">2</span>em<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* 全局值 */</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> initial<span class="token punctuation">;</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> unset<span class="token punctuation">;</span>
+</code></pre>
+<h5 id="3-外边距（margin）"><a href="#3-外边距（margin）" class="headerlink" title="3.外边距（margin）"></a>3.外边距（margin）</h5><p>margin属性用于设置外边距，即控制盒子和盒子之间的距离。</p>
+<p><strong>语法</strong></p>
+<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 应用于所有边 */</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">1</span>em<span class="token punctuation">;</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> -<span class="token number">3</span>px<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* 上边下边 | 左边右边 */</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">5%</span> auto<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* 上边 | 左边右边 | 下边 */</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">1</span>em auto <span class="token number">2</span>em<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* 上边 | 右边 | 下边 | 左边 */</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">2</span>px <span class="token number">1</span>em <span class="token number">0</span> auto<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* 全局值 */</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> initial<span class="token punctuation">;</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> unset<span class="token punctuation">;</span>
+</code></pre>
+<h6 id="外边距典型应用——块级盒子水平居中对齐"><a href="#外边距典型应用——块级盒子水平居中对齐" class="headerlink" title="外边距典型应用——块级盒子水平居中对齐"></a>外边距典型应用——块级盒子水平居中对齐</h6><p>外边距可以让块级盒子水平居中，但是必须满足两个条件：</p>
+<ul>
+<li><p>盒子必须指定了宽度(width)；</p>
+</li>
+<li><p>盒子左右的外边距都设置为auto；</p>
+</li>
+</ul>
+<blockquote>
+<p>常见的写法,以下三种都可以:</p>
+<ol>
+<li>margin-left: auto; margin-right auto;</li>
+<li>margin: auto;</li>
+<li>margin: 0 auto;</li>
+</ol>
+</blockquote>
+<h6 id="外边距典型应用——行内元素或者行内块元素水平居中对齐"><a href="#外边距典型应用——行内元素或者行内块元素水平居中对齐" class="headerlink" title="外边距典型应用——行内元素或者行内块元素水平居中对齐"></a>外边距典型应用——行内元素或者行内块元素水平居中对齐</h6><blockquote>
+<p>行内元素或者行内块元素水平居中给其父元素添加<span style="color:red;font-size:20px">text -align:center</span> 即可。</p>
+</blockquote>
+<h6 id="外边距合并"><a href="#外边距合并" class="headerlink" title="外边距合并"></a>外边距合并</h6><p>使用margin定义块元素的<code>垂直外边距</code>时，可能会出现<code>外边距的合并</code>。</p>
+<p><strong>1.相邻块元素垂直外边距的合并</strong></p>
+<p>当上下相邻的两个块元素<span style="color:red;font-size:16px"> (兄弟关系)</span>相遇时，如果上面的元素有下外边距margin-bottom，下面的元素有上外边距margin-top ，<code>则他们之间的垂直间距不是margin-bottom与margin-top之和。取两个值中的较大者这种现象被称为相邻块元素垂直外边距的合并</code>。</p>
+<p><strong>解决方案</strong>： 尽量只给一个盒子添加margin值。</p>
+<p><strong>2.嵌套块元素垂直外边距的塌陷</strong><br>对于两个嵌套关系<span style="color:red;font-size:16px">(父子关系)</span>的块元素，<code>元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值</code>。</p>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20220110183921855.png" alt="嵌套块元素垂直外边距的塌陷"></p>
+<p><strong>解决方案</strong>:</p>
+<ol>
+<li>可以为父元素定义上边框；<code>tansparant 透明色</code></li>
+<li>可以为父元素定义上内边距；</li>
+<li>可以为父元素添加 overflow:hidden 。</li>
+<li>其他方法，比如浮动、固定、绝对定位的盒子不会有塌陷问题，</li>
+</ol>
+<h6 id="清除内外边距"><a href="#清除内外边距" class="headerlink" title="清除内外边距"></a>清除内外边距</h6><p>网页元素很多都带有默认的内外边距，而且不同浏览器默认的也不一致。<code>因此我们在布局前，有必要先清除下网页元索的内外边距</code>。</p>
+<pre class=" language-css"><code class="language-css">* &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">/*清除内边距*/</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">/*清除外边距*/</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+</code></pre>
+<blockquote>
+<p><strong>注意</strong>：行内元素为了照顾兼容性，<code>尽量只设置左右内外边距，不要设置上下内外边距</code>。但是转换为块级和行内块元素就可以了</p>
+</blockquote>
+<h5 id="4-PS基本操作"><a href="#4-PS基本操作" class="headerlink" title="4.PS基本操作"></a>4.PS基本操作</h5><p>因为网页美工大部分效果图都是利用PS ( Photoshop )来做的，所以以后我们大部分切图工作都是在PS里面完成。</p>
+<ul>
+<li>文件→打开:可以打开我们要测量的图片；</li>
+<li>Ctrl+R：可以打开标尺,或者视图—-&gt;标尺；</li>
+<li>右击标尺 ，把里面的单位改为像素；</li>
+<li>Ctrl+加号(+)可以放大视图， Ctrl+减号(-)可以缩小视图；</li>
+<li>按住空格键，鼠标可以变成小手，拖动PS视图；</li>
+<li>用选区拖动可以测量大小；</li>
+<li>Ctrl+ D可以取消选区，或者在旁边空白处点击一下也可以取消选区。</li>
+</ul>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20220110185733754.png" alt="PS的基本切图操作"></p>
+<h5 id="小总结"><a href="#小总结" class="headerlink" title="小总结"></a>小总结</h5><ol>
+<li><p>布局为啥用不同盒子 ?</p>
+<p>标签都是有语义的，合理的地方用合理的标签。比如产品标题就用h，大量文字段落就用p。</p>
+</li>
+<li><p>为啥每个盒子都有一个类名?</p>
+<p>类名就是给每个盒子起了一个名字，可以更好的找到这个盒子，选取盒子更容易，后期维护也方便。</p>
+</li>
+<li><p>到底用margin还是padding ?</p>
+<p>大部分情况两个可以混用，两者各有优缺点，但是根据实际情况，总是有更简单的方法实现。</p>
+</li>
+<li><p>自己做没有思路?</p>
+<p>布局有很多种实现方式，同学们可以开始先模仿写法，然后再做出自己的风格。</p>
+</li>
+</ol>
+<h5 id="5-圆角边框（CSS3）"><a href="#5-圆角边框（CSS3）" class="headerlink" title="5.圆角边框（CSS3）"></a>5.圆角边框（CSS3）</h5><p><strong>border- radius</strong>属性用于设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个(椭)圆与边框的交集形成圆角效果。</p>
+<p><strong>语法</strong></p>
+<blockquote>
+<p>border- radius : length;</p>
+<p>/* 定义圆形半径或椭圆的半长轴，半短轴。负值无效。 */</p>
+<p>border- radius : percentage;</p>
+<p>/* 使用百分数定义圆形半径或椭圆的半长轴，半短轴。水平半轴相对于盒模型的宽度；垂直半轴相对于盒模型的高度。负值无效。 */</p>
+</blockquote>
+<p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20220110214130560.png" alt="border-radius:一个值时;"></p>
+<pre class=" language-css"><code class="language-css">&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">1</span>em/<span class="token number">5</span>em<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/* 等价于： */</span>
+    <span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> <span class="token number">1</span>em <span class="token number">5</span>em<span class="token punctuation">;</span>
+    <span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> <span class="token number">1</span>em <span class="token number">5</span>em<span class="token punctuation">;</span>
+    <span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> <span class="token number">1</span>em <span class="token number">5</span>em<span class="token punctuation">;</span>
+    <span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span>  <span class="token number">1</span>em <span class="token number">5</span>em<span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">4</span>px <span class="token number">3</span>px <span class="token number">6</span>px / <span class="token number">2</span>px <span class="token number">4</span>px<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/* 等价于： */</span>
+    <span class="token property">border-top-left-radius</span><span class="token punctuation">:</span>     <span class="token number">4</span>px <span class="token number">2</span>px<span class="token punctuation">;</span>
+    <span class="token property">border-top-right-radius</span><span class="token punctuation">:</span>    <span class="token number">3</span>px <span class="token number">4</span>px<span class="token punctuation">;</span>
+    <span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> <span class="token number">6</span>px <span class="token number">2</span>px<span class="token punctuation">;</span>
+    <span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span>  <span class="token number">3</span>px <span class="token number">4</span>px<span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>圆形作法</strong></p>
+<pre class=" language-css"><code class="language-css"><span class="token number">.</span>yuanxing &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span>pink<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/* border- radius: 100px; */</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* 更常用 */</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>圆角矩形</strong></p>
+<pre class=" language-css"><code class="language-css"><span class="token number">.</span>juxing &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">300</span>px <span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span>pink<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/*圆角矩形设置为高度的一半*/</span>
+    <span class="token comment" spellcheck="true">/*border-radils: 50px;*/</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* 更常用 */</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>    
+</code></pre>
+<h5 id="6-盒子阴影（CSS3）"><a href="#6-盒子阴影（CSS3）" class="headerlink" title="6.盒子阴影（CSS3）"></a>6.盒子阴影（CSS3）</h5><p><strong>box- shadow</strong>属性为盒子添加阴影。</p>
+<p><strong>语法</strong></p>
+<blockquote>
+<p>box-shadow: h-shadow v-shadow blur spread color inset ;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>h-shadow</em></td>
+<td align="left">必需。水平阴影的位置。允许负值。</td>
+</tr>
+<tr>
+<td align="left"><em>v-shadow</em></td>
+<td align="left">必需。垂直阴影的位置。允许负值。</td>
+</tr>
+<tr>
+<td align="left"><em>blur</em></td>
+<td align="left">可选。模糊距离。</td>
+</tr>
+<tr>
+<td align="left"><em>spread</em></td>
+<td align="left">可选。阴影的尺寸。</td>
+</tr>
+<tr>
+<td align="left"><em>color</em></td>
+<td align="left">可选。阴影的颜色。请参阅 CSS 颜色值。</td>
+</tr>
+<tr>
+<td align="left">inset</td>
+<td align="left">可选。将外部阴影 (outset) 改为内部阴影。</td>
+</tr>
+</tbody></table>
+<p><strong>注意</strong>：</p>
+<ol>
+<li>默认的是外阴影(outset)，<code>但是不可以写这个单词，否则导致阴影无效</code>；</li>
+<li><code>盒子阴影不占用空间</code>，不会影响其他盒子排列。</li>
+</ol>
+<h5 id="7-文字阴影（CSS3）"><a href="#7-文字阴影（CSS3）" class="headerlink" title="7.文字阴影（CSS3）"></a>7.文字阴影（CSS3）</h5><p><strong>语法</strong></p>
+<blockquote>
+<p>text-shadow: h-shadow v-shadow blur color;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>h-shadow</em></td>
+<td align="left">必需。水平阴影的位置。允许负值。</td>
+</tr>
+<tr>
+<td align="left"><em>v-shadow</em></td>
+<td align="left">必需。垂直阴影的位置。允许负值。</td>
+</tr>
+<tr>
+<td align="left"><em>blur</em></td>
+<td align="left">可选。模糊的距离。</td>
+</tr>
+<tr>
+<td align="left"><em>color</em></td>
+<td align="left">可选。阴影的颜色。参阅 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/css_colors_legal.asp">CSS 颜色值</a>。</td>
+</tr>
+</tbody></table>
+<p>2022年1月10日22:02:45</p>
 
                 
             </div>
@@ -1619,7 +1851,7 @@ li &amp;<span class="token hexcode">#123</span><span class="token punctuation">;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tolie-official.github.io/2021/12/03/CSS%20for%20beginner/">https://tolie-official.github.io/2021/12/03/CSS%20for%20beginner/</a>
+                    <a href="https://tolie-official.github.io/2021/12/03/CSS%20for%20beginner%20(part%201)/">https://tolie-official.github.io/2021/12/03/CSS%20for%20beginner%20(part%201)/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1976,7 +2208,7 @@ li &amp;<span class="token hexcode">#123</span><span class="token punctuation">;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">88.1k</span>&nbsp;字
+                class="white-color">89.8k</span>&nbsp;字
             
             
             
