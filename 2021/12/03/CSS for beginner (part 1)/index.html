@@ -419,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-18
+                    2022-02-01
                 </div>
                 
 
@@ -1275,6 +1275,7 @@ div.i &#123;
 **注意**:
 
 * before 和after创建一个元素，但是属于&#96;行内元素&#96;；
+* &#96;img、input和其他的单标签是没有after和before伪元素的&#96;，因为单标签本身不能有子元素，所以不能通过input::before来写一些图标之类的内容，即使写了样式也不会生效；
 * 新创建的这个元素在文档树中是找不到的，所以我们称为伪元素；
 * 语法：element::before &#123; &#125;；
 * &#96;before和after必须有content属性&#96;；
@@ -1320,7 +1321,7 @@ div.i &#123;
   &lt;div&gt;是&lt;&#x2F;div&gt;
 &lt;&#x2F;body&gt;
 
-&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/mr_tolie/pics/raw/master/images/image-20220116212500358.png" alt="显示效果"></p>
 <h3 id="九、Emment语法"><a href="#九、Emment语法" class="headerlink" title="九、Emment语法"></a>九、Emment语法</h3><h4 id="快速生成HTML结构语法"><a href="#快速生成HTML结构语法" class="headerlink" title="快速生成HTML结构语法"></a>快速生成HTML结构语法</h4><ol>
@@ -1794,9 +1795,9 @@ div.i &#123;
 
 <h6 id="外边距典型应用——块级盒子水平居中对齐"><a href="#外边距典型应用——块级盒子水平居中对齐" class="headerlink" title="外边距典型应用——块级盒子水平居中对齐"></a>外边距典型应用——块级盒子水平居中对齐</h6><p>外边距可以让块级盒子水平居中，但是必须满足两个条件：</p>
 <ul>
-<li><p>盒子必须指定了宽度(width)；</p>
+<li><p><code>盒子必须指定了具体宽度(width)，百分号没有用</code>；</p>
 </li>
-<li><p>盒子左右的外边距都设置为auto；</p>
+<li><p><code>盒子左右的外边距都设置为auto</code>；</p>
 </li>
 </ul>
 <blockquote>
@@ -1808,7 +1809,7 @@ div.i &#123;
 </ol>
 </blockquote>
 <h6 id="外边距典型应用——行内元素或者行内块元素水平居中对齐"><a href="#外边距典型应用——行内元素或者行内块元素水平居中对齐" class="headerlink" title="外边距典型应用——行内元素或者行内块元素水平居中对齐"></a>外边距典型应用——行内元素或者行内块元素水平居中对齐</h6><blockquote>
-<p>行内元素或者行内块元素水平居中给其父元素添加<span style="color:red;font-size:20px">text -align:center</span> 即可。</p>
+<p>行内元素或者行内块元素水平居中给其父元素添加<span style="color:red;font-size:20px">text-align:center</span> 即可。</p>
 </blockquote>
 <h6 id="外边距合并问题"><a href="#外边距合并问题" class="headerlink" title="外边距合并问题"></a>外边距合并问题</h6><p>使用margin定义块元素的<code>垂直外边距</code>时，可能会出现<code>外边距的合并</code>。</p>
 <p><strong>1.相邻块元素垂直外边距的合并</strong></p>
@@ -2346,7 +2347,7 @@ div.i &#123;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">115.7k</span>&nbsp;字
+                class="white-color">124.7k</span>&nbsp;字
             
             
             
